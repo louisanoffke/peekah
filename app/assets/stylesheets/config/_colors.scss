@@ -8,13 +8,15 @@ $base-bkg: #FAF2EF;
 // Dark Text
 $text-on-bkg: #060E0E;
 // Accent color / buttons / logo
-$accent:#064420;
-$accent-dark-green: #153131;
+$accent-g:#064420; // main
+$accent-r: #99154E;
 $accent-red: #9E2A2B;
+$accent-dark-green: #153131;
 // Hover color for elements with accent colour
-$accent-h: #05381A;
-$accent-dark-green-h: #122B2B;
+$accent-g-h: #05381A; // main
+$accant-r-h: #901449;
 $accent-red-h: #912728;
+$accent-dark-green-h: #122B2B;
 // Success alert/notice color
 $alert-success: #45CB85;
 // Error alert/notice color
