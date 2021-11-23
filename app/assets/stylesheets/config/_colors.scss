@@ -1,10 +1,23 @@
 // Define variables for your color scheme
 
-// For example:
-$red: #FD1015;
-$blue: #167FFB;
-$yellow: #FFC65A;
-$orange: #E67E22;
-$green: #1EDD88;
-$gray: #0E0000;
-$light-gray: #F4F4F4;
+
+// Base background - white + rose gold nuance - prefer this one as more neutral
+$base-bkg: #FAF2EF;
+// // Base background - white + more rose gold nuance
+// $base-bkg: #FFF1EB;
+// Dark Text
+$text-on-bkg: #060E0E;
+// Accent color / buttons / logo
+$accent:#064420;
+$accent-dark-green: #153131;
+$accent-red: #9E2A2B;
+// Hover color for elements with accent colour
+$accent-h: #05381A;
+$accent-dark-green-h: #122B2B;
+$accent-red-h: #912728;
+// Success alert/notice color
+$alert-success: #45CB85;
+// Error alert/notice color
+$alert-error: #FF1B1C;
+// Stars / Golden elements
+$gold: #FFC93C;
