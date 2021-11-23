@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 2021_11_23_162949) do
     t.decimal "carb_content", precision: 2
     t.decimal "protein_content", precision: 2
     t.decimal "fat_content", precision: 2
+    t.string "source"
+    t.string "scr_url"
   end
 
   create_table "recipes", force: :cascade do |t|
