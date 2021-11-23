@@ -1,0 +1,17 @@
+<h1> My Recipes </h1>
+
+<ul>
+  <% @recipes.each do |recipe| %>
+
+  <li><%=link_to "#{recipe.name}", recipe_path(recipe) %>
+      <br> <%= link_to "Edit This Recipe", edit_recipe_path(recipe) %>
+      <br> <%= link_to "Delete This Recipe", recipe_path(recipe), method: :delete, data: { confirm: "Sure about that?"} %>
+  </li>
+  <br>
+
+  <% end %>
+</ul>
+
+<%= link_to "Add A Recipe", new_recipe_path %>
+<br>
+<%= link_to "home", root_path %>
