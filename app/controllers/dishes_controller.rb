@@ -12,13 +12,14 @@ class DishesController < ApplicationController
   end
 
   def create
-    @dish = Dish.new
-    @dish.user = current_user
+    @dish = Dish.new(dish_params)
+    @recipe = Recipe.find(params[:recipe_id])
+    @dish.recipe = @recipe
     if @dish.save
       redirect_to restaurant_path(@dish.restaurant), notice: "Dish successfully created & added to
       #{@dish.restaurant}'s menu."
     else
-      render :new
+      # render "..app/views/recipes/index"
     end
   end
 

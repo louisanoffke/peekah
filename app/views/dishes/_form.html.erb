@@ -1,0 +1,16 @@
+<p> Assign This Recipe To a Restaurant & Add a price </p>
+<%= simple_form_for([recipe, dish]) do |f| %>
+<%= f.association :restaurant, as: :select %>
+<%= f.input :description, as: :text %>
+<%= f.input :is_available, as: :select%>
+<%= f.number_field :price, as: :integer, min: 1 %>
+<br>
+<br>
+<%= f.submit 'Submit', class: "btn-pka" %>
+<% end %>
+
+
+<!--
+need to add hidden field that has recipe ID from the recipe list element
+Could we make this form a pop-up upon clicking a button for each recipe list entry?
+-->
