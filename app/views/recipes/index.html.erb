@@ -4,8 +4,16 @@
   <% @recipes.each do |recipe| %>
 
   <li><%=link_to "#{recipe.name}", recipe_path(recipe) %>
-      <br> <%= link_to "Edit This Recipe", edit_recipe_path(recipe) %>
-      <br> <%= link_to "Delete This Recipe", recipe_path(recipe), method: :delete, data: { confirm: "Sure about that?"} %>
+    <br> <%= link_to "Edit This Recipe", edit_recipe_path(recipe) %>
+    <br> <%= link_to "Delete This Recipe", recipe_path(recipe), method: :delete, data: { confirm: "Sure about that?"} %>
+    <br>
+    <br>
+    <p> Assign This Recipe To a Restaurant & add a price </p>
+    <%= simple_form_for([recipe, @recipe.restaurant) do |f| %>
+    <%= f.input :restaurant, as: :select %>
+    <%= f.input :price, as: :integer %>
+    <%= f.submit 'Submit', class: "btn-pka" %>
+    <% end %>
   </li>
   <br>
 
