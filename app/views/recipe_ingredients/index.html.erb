@@ -1,0 +1,19 @@
+<h1>hello from the recipe ingredient creator page!</h1>
+
+<h3>list of ingredients</h3>
+
+<% @recipe_ingredients.each do |r| %>
+  <%= r.recipe.name %>
+  <%= r.ingredient.name %>
+  <%= r.ingredient_amount %>
+<% end %>
+
+<h3>Add Ingredients to your recipe:</h3>
+
+<%= simple_form_for [ @recipe, @recipe_ingredient ] do |f| %>
+ <%= f.input :ingredient_id, collection: Ingredient.all %>
+
+ <%= f.input :ingredient_amount, as: :decimal %>
+
+ <%= f.submit 'Add Ingredient', class: "btn-pka" %>
+<% end %>
