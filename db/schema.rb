@@ -14,11 +14,18 @@ ActiveRecord::Schema.define(version: 2021_11_24_112718) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "allergens", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.text "note"
+  end
+
   create_table "dishes", force: :cascade do |t|
     t.float "price"
     t.boolean "is_available"
     t.string "description"
-    t.bigint "restaurant_id"
+    t.bigint "restaurant_id", null: false
     t.bigint "recipe_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -36,6 +43,8 @@ ActiveRecord::Schema.define(version: 2021_11_24_112718) do
     t.decimal "fat_content", precision: 2
     t.string "source"
     t.string "scr_url"
+    t.string "origin"
+    t.boolean "is_allergen"
   end
 
   create_table "recipe_ingredients", force: :cascade do |t|
@@ -81,6 +90,7 @@ ActiveRecord::Schema.define(version: 2021_11_24_112718) do
   end
 
   add_foreign_key "dishes", "recipes"
+  add_foreign_key "dishes", "restaurants"
   add_foreign_key "recipe_ingredients", "ingredients"
   add_foreign_key "recipe_ingredients", "recipes"
   add_foreign_key "recipes", "users"
