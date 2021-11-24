@@ -38,15 +38,14 @@ ActiveRecord::Schema.define(version: 2021_11_24_115148) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.decimal "calorie_content", precision: 6, scale: 2, null: false
-    t.decimal "carb_content", precision: 6, scale: 2
-    t.decimal "protein_content", precision: 6, scale: 2
-    t.decimal "fat_content", precision: 6, scale: 2
+    t.decimal "calorie_content", precision: 2, null: false
+    t.decimal "carb_content", precision: 2
+    t.decimal "protein_content", precision: 2
+    t.decimal "fat_content", precision: 2
     t.string "source"
     t.string "scr_url"
     t.string "origin"
     t.boolean "is_allergen"
-    t.boolean "contains_allergen"
   end
 
   create_table "recipe_ingredients", force: :cascade do |t|
@@ -54,7 +53,7 @@ ActiveRecord::Schema.define(version: 2021_11_24_115148) do
     t.bigint "ingredient_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.decimal "ingredient_amount", precision: 6, scale: 2, null: false
+    t.decimal "ingredient_amount", precision: 2, null: false
     t.index ["ingredient_id"], name: "index_recipe_ingredients_on_ingredient_id"
     t.index ["recipe_id"], name: "index_recipe_ingredients_on_recipe_id"
   end
