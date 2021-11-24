@@ -1,1 +1,54 @@
 // Specific CSS for your home-page
+
+body {
+  background-color: $base-bkg;
+}
+
+.text-container {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.slogan-container {
+  width: 520px;
+  text-align: center;
+  margin: 200px 0px 200px 120px;
+}
+
+.slogan-container #pka-slogan {
+  font-size: 35px;
+}
+
+.empty-band {
+  background-color: #eed4c9;
+  width: 100vw;
+  height: 200px;
+  margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.search-form {
+  width: 500px;
+  margin-left: 120px;
+}
+
+.search-form h3 {
+  margin: 0;
+}
+
+.image-container {
+  position: absolute;
+  top: 95px;
+  right: 70px;
+}
+
+#homepage-image {
+  height: 625px;
+  width: 550px;
+  object-fit: cover;
+  border-radius: 3px;
+  opacity: 0.8;
+}
