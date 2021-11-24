@@ -51,7 +51,7 @@ def build_allergens
   commonly found in oyster sauce or as an ingredient in fish stews."
   )
 
-  Allergen.creaate(
+  Allergen.create(
     name: "Mustard",
     note: "Liquid mustard, mustard powder and mustard seeds fall into this category.
   This ingredient can also be found in breads, curries, marinades, meat products, salad dressings, sauces and soups."

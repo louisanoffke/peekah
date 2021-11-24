@@ -3,7 +3,7 @@ def build_ingredients
 
   Ingredient.create(
     name: "Halloumi",
-    calorie_content: 200,
+    calorie_content: 99,
     protein_content: 20,
     is_allergen: true
   )
