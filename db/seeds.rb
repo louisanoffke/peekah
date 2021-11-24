@@ -8,6 +8,7 @@
 require_relative 'allergen_seeds'
 require_relative 'ingredient_seeds'
 require_relative 'restaurant_seeds'
+puts "_______________"
 
 puts ">> Restaurants"
 build_restaurants

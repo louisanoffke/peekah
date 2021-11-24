@@ -1,4 +1,7 @@
 def build_restaurants
+  puts "deleting previously created restaurants"
+  Restaurant.delete_all
+
   puts "starting to create restaurants"
 
   Restaurant.create(
@@ -113,5 +116,5 @@ A beautiful bar with irresistible Spanish crafted cocktails including a selectio
     opentable_link: "https://www.opentable.co.uk/r/el-norte-london"
   )
 
-  puts "created #{Restaurant.count} restaurants."
+  puts "created #{Restaurant.count} restaurants"
 end
