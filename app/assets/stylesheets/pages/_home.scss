@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
 
 body {
-  background-color: $base-bkg;
+background: linear-gradient(0deg, rgba(255,255,255,1) 5%, rgba(255,255,255,1) 19%, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 48%, rgba(255,254,253,1) 57%, rgba(254,251,250,1) 65%, rgba(252,247,245,1) 73%, rgba(251,244,242,1) 79%, rgba(250,242,239,1) 85%, rgba(250,242,239,1) 92%, rgba(250,242,239,1) 95%);
 }
 
 .text-container {
@@ -13,7 +13,7 @@ body {
 .slogan-container {
   width: 520px;
   text-align: center;
-  margin: 200px 0px 200px 120px;
+  margin: 200px 0px 255px 120px;
 }
 
 .slogan-container #pka-slogan {
@@ -21,7 +21,7 @@ body {
 }
 
 .empty-band {
-  background-color: #eed4c9;
+  background-color: #a2ece696;
   width: 100vw;
   height: 200px;
   margin-bottom: 200px;
@@ -41,7 +41,7 @@ body {
 
 .image-container {
   position: absolute;
-  top: 95px;
+  top: 130px;
   right: 70px;
 }
 
@@ -49,8 +49,8 @@ body {
   height: 625px;
   width: 550px;
   object-fit: cover;
-  border-radius: 3px;
-  opacity: 0.8;
+  border-radius: 8px;
+  opacity: 0.95;
 }
 
 .navbar-home {
