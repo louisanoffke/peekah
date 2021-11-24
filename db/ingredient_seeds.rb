@@ -9,7 +9,7 @@ def build_ingredients
     contains_allergen: true
   )
 
-  Ingredient.create(
+  Ingredient.create!(
     name: "Skimmed Milk",
     calorie_content: 46.5,
     protein_content: 3.7,
