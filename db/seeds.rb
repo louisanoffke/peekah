@@ -39,7 +39,7 @@ stock cubes and Worcestershire sauce."
 )
 
 Allergen.create(
-  name: "Lupin"
+  name: "Lupin",
   note: "Yes, lupin is a flower, but it’s also found in flour! Lupin flour and seeds
 can be used in some types of bread, pastries and even in pasta."
 )
