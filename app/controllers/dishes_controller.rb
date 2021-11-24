@@ -1,7 +1,5 @@
 class DishesController < ApplicationController
-
-  # before_action authenticate
-
+  # before_action authenticate user for new, create, edit, update, destroy
 
   def index
     @dishes = Dish.all
@@ -12,7 +10,13 @@ class DishesController < ApplicationController
   end
 
   def new
-
+    @dish = Dish.new
+    @dish.user = current_user
+    if @dish.save
+      redirect_to
+    else
+      render :new
+    end
   end
 
   def create

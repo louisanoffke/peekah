@@ -1,0 +1,29 @@
+.btn-pka, .btn-pka-2 {
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 8px;
+}
+
+.btn-pka {
+  background-color: $accent-r;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+}
+
+.btn-pka:hover {
+  background-color: $accant-r-h;
+  color: white;
+}
+
+.btn-pka-2 {
+  background-color: $accent-g;
+  color: white;
+  padding: 11px 16px;
+}
+
+.btn-pka-2:hover {
+  text-decoration: none;
+  background-color: $accent-g-h;
+  color: white;
+}

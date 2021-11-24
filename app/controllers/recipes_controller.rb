@@ -1,5 +1,6 @@
 class RecipesController < ApplicationController
   before_action :recipe_id, only: %i[show destroy edit update]
+  # before_action
 
   def new
     @recipe = Recipe.new
