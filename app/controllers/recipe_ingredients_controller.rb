@@ -9,6 +9,8 @@ class RecipeIngredientsController < ApplicationController
 
   def create
     @recipe_ingredient = RecipeIngredient.new(recipe_ingredient_params)
+
+    redirect_to recipe_recipe_ingredients_path(@recipe)
   end
 
   private
