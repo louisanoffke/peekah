@@ -5,10 +5,12 @@ class Ingredient < ApplicationRecord
   has_many :recipes, through: :recipe_ingredients
 
   def total_calories
-    protein_cals = :protein_content * 4
-    carb_cals = :carb_content * 4
-    fat_cals = :fat_content * 9
+    puts "about to calculate total calories for #{self.name}:"
 
-    protein_cals * carb_cals * fat_cals
+    protein_cals = self.protein_content.to_f * 4
+    carb_cals = self.carb_content.to_f * 4
+    fat_cals = self.fat_content.to_f * 9
+
+    self.calorie_content = protein_cals + carb_cals + fat_cals
   end
 end

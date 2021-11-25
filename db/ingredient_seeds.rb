@@ -56,11 +56,13 @@ def build_ingredients
   end
 
   puts "created #{Ingredient.count} ingredients"
+
+  update_ingredient_calories
 end
 
 def update_ingredient_calories
   Ingredient.all.each do |ingredient|
-    ingredient.calorie_content = ingredient.total_calories
-    puts "updated #{ingredient.name} to have #{ingredient.total_calories} calories"
+    ingredient.total_calories
+    puts "updated #{ingredient.name} to have #{ingredient.calorie_content} calories"
   end
 end
