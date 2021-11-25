@@ -8,8 +8,6 @@
     <br>
     <br>
     <br>
-
-    <%= render partial: "dishes/form", locals: { recipe: recipe, dish: Dish.new } %>
     <br>
     <p> Assign This Recipe To <%= current_user.restaurant.name %> & Add a price (need to make this form appear after clicking a button --- class active etc) </p>
     <!-- IF the recipe is not a dish then display the button for a form to convert the recipe to a dish.
