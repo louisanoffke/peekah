@@ -4,7 +4,7 @@ def build_restaurants
 
   puts "starting to create restaurants"
 
-  Restaurant.create(
+  Restaurant.create!(
     name: "Lucky Cat - Kori Kitchen Table",
     address: "10 Grovesnor Square  London,  W1K 6JP",
     description: "TThis Japanese inspired Chef's Table is designed to be booked exclusively for up to ten guests. Chefs will guide your group through each course, finishing dishes in front of you.",
