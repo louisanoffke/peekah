@@ -15,11 +15,12 @@ class DishesController < ApplicationController
     @dish = Dish.new(dish_params)
     @recipe = Recipe.find(params[:recipe_id])
     @dish.recipe = @recipe
+    @user = current_user
     if @dish.save
       redirect_to restaurant_path(@dish.restaurant), notice: "Dish successfully created & added to
-      #{@dish.restaurant}'s menu."
+      #{@dish.restaurant.name}'s menu."
     else
-      # render "..app/views/recipes/index"
+      raise
     end
   end
 
@@ -38,7 +39,7 @@ class DishesController < ApplicationController
   private
 
   def dish_params
-    params.require(:dish).permit(:price, :is_available, :recipe, :restaurant, :description)
+    params.require(:dish).permit(:price, :is_available, :recipe_id, :restaurant_id, :description)
   end
 
   def dish_id

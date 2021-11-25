@@ -6,5 +6,5 @@ Rails.application.routes.draw do
     resources :dishes, only: :create
   end
   resources :restaurants, only: :show
-  resources :dishes, only: %i[edit update show]
+  resources :dishes, only: %i[edit update show index]
 end
