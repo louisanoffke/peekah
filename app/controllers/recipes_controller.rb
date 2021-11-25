@@ -1,5 +1,6 @@
 class RecipesController < ApplicationController
   before_action :recipe_id, only: %i[show destroy edit update]
+  # before_action
 
   def new
     @recipe = Recipe.new
@@ -7,6 +8,7 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.new(recipe_params)
+    @dish = Dish.new
     @recipe.user = current_user
     if @recipe.save
       redirect_to recipe_recipe_ingredients_path(@recipe), notice: 'Recipe was successfully created.'
