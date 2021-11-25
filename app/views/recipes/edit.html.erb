@@ -1,5 +1,14 @@
+<div class=container>
+  <h1>Ingredients for <em>"<%= @recipe.name %>"</em></h1>
+    <% @recipe.ingredients.each do |i| %>
+      <li><%= i.name %></li>
+    <% end %>
+<br>
 <%= simple_form_for(@recipe) do |f| %>
  <%= f.input :name %>
  <%= f.input :method, as: :text %>
  <%= f.submit 'Update', class: "btn-pka" %>
 <% end %>
+
+<%= link_to "Add Ingredient", recipe_recipe_ingredients_path(@recipe), class: "btn-pka-2" %>
+</div>
