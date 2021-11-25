@@ -1,2 +1,12 @@
-<h1>Restaurants#show</h1>
-<p>Find me in app/views/restaurants/show.html.erb</p>
+<h1> <%=@restaurant.name%>'s Dishes </h1>
+
+<ul>
+  <% @restaurant.dishes.each do |dish| %>
+  <li><%= dish.recipe.name %> - <%= dish.description %> - £<%= dish.price %>
+      <br>
+      <%= dish.is_available ? "This dish is currently available" : "This dish is currently unavailable" %>
+      <br>
+      <%= link_to "See nutritional breakdown", dish_path(dish) %>
+  </li>
+  <%end%>
+</ul>

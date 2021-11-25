@@ -4,8 +4,11 @@
   <% @recipes.each do |recipe| %>
 
   <li><%=link_to "#{recipe.name}", recipe_path(recipe) %>
-      <br> <%= link_to "Edit This Recipe", edit_recipe_path(recipe) %>
-      <br> <%= link_to "Delete This Recipe", recipe_path(recipe), method: :delete, data: { confirm: "Sure about that?"} %>
+    <br> <%= link_to "Edit This Recipe", edit_recipe_path(recipe) %>
+    <br> <%= link_to "Delete This Recipe", recipe_path(recipe), method: :delete, data: { confirm: "Sure about that?"} %>
+    <br>
+    <br>
+    <%= render partial: "dishes/form", locals: { recipe: recipe, dish: Dish.new } %>
   </li>
   <br>
 

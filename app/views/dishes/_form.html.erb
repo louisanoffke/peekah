@@ -1,0 +1,18 @@
+<p> Assign This Recipe To [Delete comment in file once schema updated] <%#= @user.restaurant.name %> & Add a price (need to make this form appear after clicking a button --- class active etc) </p>
+<%= simple_form_for([recipe, dish]) do |f| %>
+<%#= f.hidden_field :restaurant_id, value: current_user.restaurant.id %>
+<%= f.association :restaurant, as: :select %> <p> This drop down can be deleted once the schema has been updated so line 1 works </p>
+<%= f.input :description, as: :text %>
+<%= f.input :is_available, as: :select%>
+<%= f.label "£ #{:price}" %>
+<%= f.number_field :price, min: 0 %>
+<br>
+<br>
+<%= f.submit 'Submit', class: "btn-pka" %>
+<% end %>
+
+
+<!--
+need to add hidden field that has recipe ID from the recipe list element
+Could we make this form a pop-up upon clicking a button for each recipe list entry?
+-->
