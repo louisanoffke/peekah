@@ -21,15 +21,15 @@ def build_ingredients
     contains_allergen: false
   )
 
-  # 20.times do
-  #   Ingredient.create!(
-  #     name: Faker::Food.ingredient,
-  #     calorie_content: Faker::Number.decimal(l_digits: 3, r_digits: 2),
-  #     protein_content: Faker::Number.decimal(l_digits: 2, r_digits: 2),
-  #     carb_content: Faker::Number.decimal(l_digits: 2, r_digits: 2),
-  #     fat_content: Faker::Number.decimal(l_digits: 3, r_digits: 2)
-  #   )
-  # end
+  20.times do
+    Ingredient.create!(
+      name: Faker::Food.ingredient,
+      calorie_content: Faker::Number.decimal(l_digits: 3, r_digits: 2),
+      protein_content: Faker::Number.decimal(l_digits: 2, r_digits: 2),
+      carb_content: Faker::Number.decimal(l_digits: 2, r_digits: 2),
+      fat_content: Faker::Number.decimal(l_digits: 3, r_digits: 2)
+    )
+  end
 
   puts "starting to create fruits"
 

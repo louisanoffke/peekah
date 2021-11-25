@@ -7,11 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require_relative 'allergen_seeds'
 require_relative 'ingredient_seeds'
+require_relative 'recipe_seeds'
 require_relative 'restaurant_seeds'
-puts "_______________"
 
-puts ">> Restaurants"
-build_restaurants
 puts "_______________"
 
 puts ">> Allergens"
@@ -20,6 +18,14 @@ puts "_______________"
 
 puts ">> Ingredients"
 build_ingredients
+puts "_______________"
+
+puts ">> Recipes"
+build_recipes
+puts "_______________"
+
+puts ">> Restaurants"
+build_restaurants
 puts "_______________"
 
 
