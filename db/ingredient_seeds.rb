@@ -24,10 +24,10 @@ def build_ingredients
   20.times do
     Ingredient.create!(
       name: Faker::Food.ingredient,
-      calorie_content: Faker::Number.decimal(l_digits: 3, r_digits: 2),
+      calorie_content: Faker::Number.decimal(l_digits: 2, r_digits: 2),
       protein_content: Faker::Number.decimal(l_digits: 2, r_digits: 2),
       carb_content: Faker::Number.decimal(l_digits: 2, r_digits: 2),
-      fat_content: Faker::Number.decimal(l_digits: 3, r_digits: 2)
+      fat_content: Faker::Number.decimal(l_digits: 2, r_digits: 2)
     )
   end
 
@@ -36,10 +36,10 @@ def build_ingredients
   10.times do
     Ingredient.create!(
       name: Faker::Food.fruits,
-      calorie_content: Faker::Number.decimal(l_digits: 3, r_digits: 2),
-      protein_content: 0,
+      calorie_content: Faker::Number.decimal(l_digits: 2, r_digits: 2),
+      protein_content: (0..14).to_a.sample,
       carb_content: Faker::Number.decimal(l_digits: 2),
-      fat_content: 0
+      fat_content: (0..8).to_a.sample
     )
   end
 
@@ -48,10 +48,10 @@ def build_ingredients
   10.times do
     Ingredient.create!(
       name: Faker::Food.vegetables,
-      calorie_content: Faker::Number.decimal(l_digits: 3, r_digits: 2),
-      protein_content: 0,
+      calorie_content: Faker::Number.decimal(l_digits: 2, r_digits: 2),
+      protein_content: (0..23).to_a.sample,
       carb_content: Faker::Number.decimal(l_digits: 2),
-      fat_content: 0
+      fat_content: (0..17).to_a.sample
     )
   end
 
