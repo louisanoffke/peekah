@@ -1,17 +1,14 @@
+<div class="container">
+  <h1>Ingredients for <em>"<%= @recipe.name %>"</em></h1>
+    <ul>
+      <% @recipe_ingredients.each do |r| %>
+        <% if r.recipe_id == @recipe.id %>
+          <li><%= r.ingredient.name %>: <%= r.ingredient_amount %>g </li>
+        <% end %>
+      <% end %>
+    </ul>
 
-<h1>hello from the recipe ingredient creator page!</h1>
-
-<ul>
-<h3>list of ingredients for <%= @recipe.name %>:</h3>
-
-<% @recipe_ingredients.each do |r| %>
-<% if r.recipe_id == @recipe.id %>
-
- <li> <%= r.ingredient.name %>: <%= r.ingredient_amount %>g </li>
-  <% end %>
-<% end %>
-</ul>
-<h3>Add Ingredients to your recipe:</h3>
+<h3>Please select ingredients to add to your recipe:</h3>
 
 <%= simple_form_for [ @recipe, @recipe_ingredient ] do |f| %>
  <%= f.input :ingredient_id, collection: Ingredient.all %>
@@ -20,3 +17,7 @@
 
  <%= f.submit 'Add Ingredient', class: "btn-pka" %>
 <% end %>
+
+<br>
+<%= link_to "Done", recipe_path(@recipe), class: "btn-pka-2" %>
+</div>
