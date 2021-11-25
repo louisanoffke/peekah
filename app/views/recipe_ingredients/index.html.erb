@@ -1,13 +1,16 @@
+
 <h1>hello from the recipe ingredient creator page!</h1>
 
-<h3>list of ingredients</h3>
+<ul>
+<h3>list of ingredients for <%= @recipe.name %>:</h3>
 
 <% @recipe_ingredients.each do |r| %>
-  <%= r.recipe.name %>
-  <%= r.ingredient.name %>
-  <%= r.ingredient_amount %>
-<% end %>
+<% if r.recipe_id == @recipe.id %>
 
+ <li> <%= r.ingredient.name %>: <%= r.ingredient_amount %>g </li>
+  <% end %>
+<% end %>
+</ul>
 <h3>Add Ingredients to your recipe:</h3>
 
 <%= simple_form_for [ @recipe, @recipe_ingredient ] do |f| %>

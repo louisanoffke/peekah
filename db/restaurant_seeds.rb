@@ -6,7 +6,7 @@ def build_restaurants
 
   Restaurant.create!(
     name: "Lucky Cat - Kori Kitchen Table",
-    address: "10 Grovesnor Square  London,  W1K 6JP",
+    address: "10 Grosvenor Square London, W1K 6JP",
     description: "TThis Japanese inspired Chef's Table is designed to be booked exclusively for up to ten guests. Chefs will guide your group through each course, finishing dishes in front of you.",
     opentable_link: "https://www.opentable.co.uk/r/lucky-cat-kori-kitchen-table-london"
   )
@@ -73,7 +73,7 @@ To coincide with the launch, the Hakkasan Collection menu at Hakkasan Hanway Pla
 
   Restaurant.create(
     name: "MADHU’S of Mayfair",
-    address: "The Dilly Hotel 21 Piccadilly London, Greater London W1J 0BH",
+    address: "21 Piccadilly, London W1J 0BH",
     description: "Synonymous with quality, dedication, creativity and flare, the Madhu's brand boasts more than 40 years in the business.
 Enjoy the vibrant flavours of India with our Kenyan twist in our opulent Grade II listed Oak Room. Madhu’s enjoys an unrivalled reputation for the highest standards in Indian fine dining.
 Enriched with history, our recipes have been handed down 4 generations which not only adds to our authenticity but coupled with our must try signature dishes; makes us a firm favourite and the new talk of the town!
@@ -84,7 +84,7 @@ Please note: The restaurant does adhere to a dress code policy. Elegant/Smart ca
 
   Restaurant.create(
     name: "Bond Street Kitchen",
-    address: "63 New Bond Street  London,  W1S 1RQ",
+    address: "63 New Bond Street  London, W1S 1RQ",
     description: "Synonymous with refined elegance and elevated service, Fenwick of Bond Street proudly presents Bond Street Kitchen.
 The perfect retreat from busy Mayfair, Bond Street Kitchen provides a relaxed and vibrant atmosphere, perfect for any occasion. Situated on the second floor of Fenwick, Bond Street Kitchen is ideal for shoppers needing a respite from their fashion travels, or business people looking for a stylish destination for a meeting. Guests can choose from a delicious menu of brunch, lunch and afternoon tea.
 Just as we at Fenwick of Bond Street carefully curate our edit, our chefs carefully source each ingredient to bring you a seasonal menu of modern British dishes, matched with a carefully chosen selection of wines. Offering a flavoursome, original and inspiring menu, Bond Street Kitchen provides beautifully executed cuisine in a casual dining setting.",
@@ -93,7 +93,7 @@ Just as we at Fenwick of Bond Street carefully curate our edit, our chefs carefu
 
   Restaurant.create(
     name: "Rüya London",
-    address: "30 Upper Grosvenor Street London,   W1K 7PH",
+    address: "30 Upper Grosvenor Street London, W1K 7PH",
     description: "This includes celery stalks, leaves, seeds and the root called celeriac. You can
   find celery in celery salt, salads, some meat products, soups and stock cubes.",
     opentable_link: "https://www.opentable.co.uk/r/ruya-london",
