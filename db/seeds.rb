@@ -9,6 +9,7 @@ require_relative 'allergen_seeds'
 require_relative 'ingredient_seeds'
 require_relative 'recipe_seeds'
 require_relative 'restaurant_seeds'
+require_relative 'dishes_seeds'
 
 # need to delete users to re-create test-user prior to seeding recipes
 User.delete_all
@@ -39,5 +40,9 @@ puts ">> Recipes"
 build_recipes
 puts "_______________"
 
+
+puts ">> Dishes"
+build_dishes
+puts "_______________"
 
 puts ">> Finished seeeding!"
