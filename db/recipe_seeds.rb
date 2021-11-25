@@ -5,11 +5,7 @@ def build_recipes
   puts "======"
   puts "starting to create recipes"
 
-  user = User.create!(
-    email: "user@pka.ai",
-    password: "123456"
-  )
-  puts "user created with ID = #{user.id} and email #{user.email}"
+  # dependent on test-user with user_id = 1 to exist!
 
   10.times do
     Recipe.create!(

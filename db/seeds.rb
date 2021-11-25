@@ -10,6 +10,9 @@ require_relative 'ingredient_seeds'
 require_relative 'recipe_seeds'
 require_relative 'restaurant_seeds'
 
+# need to delete users to re-create test-user prior to seeding recipes
+User.delete_all
+
 puts "_______________"
 
 puts ">> Allergens"
@@ -20,12 +23,20 @@ puts ">> Ingredients"
 build_ingredients
 puts "_______________"
 
-puts ">> Recipes"
-build_recipes
-puts "_______________"
-
 puts ">> Restaurants"
 build_restaurants
+puts "_______________"
+
+puts ">> creating TEST USER"
+user = User.create!(
+  email: "user@pka.ai",
+  password: "123456",
+  restaurant_id: 10
+)
+puts "~~> test user created with ID = #{user.id} and email #{user.email}"
+
+puts ">> Recipes"
+build_recipes
 puts "_______________"
 
 
