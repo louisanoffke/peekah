@@ -1,6 +1,6 @@
 .navbar-pka {
   justify-content: space-between;
-  background: white;
+  background: transparent;
   padding: 8px 20px;
 }
 
@@ -23,11 +23,10 @@
   border-radius: 4px;
   height: 165px;
   justify-content: center;
-
 }
 
 .dropdown-item {
-  font-family: Rubik !important;
+  font-family: Montserrat !important;
   color: #a2ece6ef !important;
   padding-bottom: 20px;
 }
@@ -40,7 +39,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 6px 16px rgba(90, 54, 54, 0.1%);
+  box-shadow: rgba(100, 100, 111, 0.14) 0px 7px 29px 0px;
 }
 
 .navbar-brand h1 {
@@ -49,12 +48,12 @@
 }
 
 .nav-link {
-  font-family: Rubik;
+  font-family: Montserrat;
   font-weight: 600 !important;
   color: white !important;
   font-size: 19px;
   margin-right: 5px;
-  text-shadow: 2px 2px 2px rgba(20,9,5,0.18);
+  text-shadow: 2px 2px 2px rgba(20,9,5,0.1);
 }
 
 .nav-item:hover {
