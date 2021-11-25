@@ -1,4 +1,8 @@
 def build_ingredients
+  puts "deleting previously created ingredients"
+  Ingredient.delete_all
+  puts "#{Ingredient.count} ingredients stored"
+  puts "======"
   puts "starting to create ingredients"
 
   Ingredient.create(
@@ -16,4 +20,40 @@ def build_ingredients
     is_allergen: true,
     contains_allergen: false
   )
+
+  20.times do
+    Ingredient.create!(
+      name: Faker::Food.ingredient,
+      calorie_content: Faker::Number.decimal(l_digits: 3, r_digits: 2),
+      protein_content: Faker::Number.decimal(l_digits: 2, r_digits: 2),
+      carb_content: Faker::Number.decimal(l_digits: 2, r_digits: 2),
+      fat_content: Faker::Number.decimal(l_digits: 3, r_digits: 2)
+    )
+  end
+
+  puts "starting to create fruits"
+
+  10.times do
+    Ingredient.create!(
+      name: Faker::Food.fruits,
+      calorie_content: Faker::Number.decimal(l_digits: 3, r_digits: 2),
+      protein_content: 0,
+      carb_content: Faker::Number.decimal(l_digits: 2),
+      fat_content: 0
+    )
+  end
+
+  puts "starting to create vegetables"
+
+  10.times do
+    Ingredient.create!(
+      name: Faker::Food.vegetables,
+      calorie_content: Faker::Number.decimal(l_digits: 3, r_digits: 2),
+      protein_content: 0,
+      carb_content: Faker::Number.decimal(l_digits: 2),
+      fat_content: 0
+    )
+  end
+
+  puts "created #{Ingredient.count} ingredients"
 end
