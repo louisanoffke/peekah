@@ -3,14 +3,18 @@
 <ul>
   <% @recipes.each do |recipe| %>
 
+
   <li><%=link_to "#{recipe.name}", recipe_path(recipe) %>
-    <br> <%= link_to "Edit This Recipe", edit_recipe_path(recipe) %>
-    <br> <%= link_to "Delete This Recipe", recipe_path(recipe), method: :delete, data: { confirm: "Sure about that?"} %>
+    <br>
+    <br>
     <br>
     <br>
     <%= render partial: "dishes/form", locals: { recipe: recipe, dish: Dish.new } %>
   </li>
   <br>
+
+  <%= link_to recipe_path(recipe), method: :delete, data: { confirm: "Sure about that?"} do %><i class="far fa-trash-alt recipe-icon"></i><% end %>
+  <%= link_to edit_recipe_path(recipe) do %><i class="far fa-edit recipe-icon"></i><% end %>
 
   <% end %>
 </ul>
