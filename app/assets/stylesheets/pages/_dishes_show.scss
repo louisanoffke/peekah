@@ -23,23 +23,25 @@
 .nutrition-row {
   display: flex;
   flex-direction: row;
-  border: solid black;
-  justify-content: space-evenly;
+  // border: solid black;
+  justify-content: space-between;
+  align-content: flex-start;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
-.nutrition-details {
+.nutrition-row-item {
   margin: 0 auto;
   // border: solid red;
 }
 
-.nutrition-chart img {
-  width: 200px;
+.nutrition-row-item img {
+  width: 100px;
   position: flex;
 }
 
-.ingredients-list {
-  position: flex;
-  font-size: larger;
+#nutrition-chart {
+  width: 200px;
 }
 
 .ingredients-list btn {
