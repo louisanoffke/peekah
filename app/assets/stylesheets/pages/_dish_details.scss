@@ -23,11 +23,15 @@
 
 .item-nutrition-chart img {
   width: 200px;
-  position: absolute;
+  position: flex;
 }
 
 .ingredients-list {
-  position: absolute;
+  position: flex;
+}
+
+.ingredients-list btn {
+  flex-wrap: wrap;
 }
 .restaurant-links {
   display: flex;

@@ -7,21 +7,23 @@
     <div class="item-nutrition-chart">
       <img src="https://www.macromealsuk.co.uk/wp-content/uploads/2018/10/PieChart503020-01-1024x1019.png" alt="pie-chart">
     </div>
-
+    <div class="row">
     <div class="ingredients-list">
       <h3>Ingredients:</h3>
       <% @dish.recipe.recipe_ingredients.each do |recipe_ingredient| %>
-        <div class="btn-pka"><%= recipe_ingredient.ingredient.name %></div>
+        <div class="btn-pka" style="width: 100px"><%= recipe_ingredient.ingredient.name %>
+        </div>
       <% end %>
       <p><%= @dish.description %> </p>
     </div>
 
     <div class="allergen-list">
     <%# a list of allergens with icons %>
-    <img src="https://img.icons8.com/dusk/64/000000/seafood.png"/>
+      <h3>Allergens</h3>
+      <img src="https://img.icons8.com/dusk/64/000000/seafood.png"/>
     </div>
   </div>
-
+  </div>
   <div class="dish-history">
   <p></p>
   </div>
