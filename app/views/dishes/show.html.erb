@@ -1,1 +1,23 @@
-<h1> <%= @dish.recipe.name %> Breakdown </h1>
+<div class="outer-box">
+  <div class="inner-box-left">
+    <h1><%= @dish.recipe.name %> | Nutrition & Details </h1>
+      <br>
+    <%# this is where the dish details go %>
+    <div class="nutrition-chart">
+      <img src="https://www.macromealsuk.co.uk/wp-content/uploads/2018/10/PieChart503020-01-1024x1019.png" alt="pie-chart">
+    </div>
+
+
+  </div>
+  <div class="inner-box-right">
+
+  <%# this is where the sidebar goes %>
+    <div class="sidebar-map">
+
+    </div>
+    <div class="restaurant-links">
+    three avatars here with links
+    </div>
+
+  </div>
+</div>

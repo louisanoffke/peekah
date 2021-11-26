@@ -1,0 +1,24 @@
+.outer-box {
+  display: flex;
+  gap: 8px;
+}
+
+.inner-box-left {
+  display: flex;
+  flex: 2;
+  background-color: aliceblue;
+  box-shadow: cadetblue;
+}
+
+.inner-box-right {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: cadetblue;
+  height: 100vh;
+}
+
+
+.nutrition-chart img {
+  width: 200px;
+}
