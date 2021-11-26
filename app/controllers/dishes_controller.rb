@@ -1,12 +1,10 @@
 class DishesController < ApplicationController
   before_action :dish_id, only: %i[show edit update]
-  skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
     @dishes = Dish.all
 
-    # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
-    @markers = @dishes.geocoded.map do |dish|
+    @markers = @dishes.map do |dish|
       {
         lat: dish.restaurant.latitude,
         lng: dish.restaurant.longitude
