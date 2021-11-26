@@ -20,7 +20,7 @@
 
   <div class="row">
     <div class="ingredients-list">
-      <h3 id=recipe-title>Ingredients:</h3>
+      <h3>Ingredients:</h3>
       <% @dish.recipe.recipe_ingredients.each do |recipe_ingredient| %>
         <div class="flex-item">
         <li><%= recipe_ingredient.ingredient.name %></li>
