@@ -1,6 +1,6 @@
 class RestaurantsController < ApplicationController
   before_action :restaurant_id, only: :show
-  skip_before_action :authenticate_user!, only: :show
+  skip_before_action :authenticate_user!, only: %i[index show]
 
   def show; end
 
