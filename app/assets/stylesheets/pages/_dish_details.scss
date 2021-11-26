@@ -1,0 +1,39 @@
+.outer-box {
+  display: flex;
+  gap: 8px;
+}
+
+.inner-box-left {
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  background-color: aliceblue;
+  box-shadow: cadetblue;
+  align-content: space-between;
+}
+
+.inner-box-right {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: lightcoral;
+  height: 100vh;
+}
+
+
+.item-nutrition-chart img {
+  width: 200px;
+  position: flex;
+}
+
+.ingredients-list {
+  position: flex;
+}
+
+.ingredients-list btn {
+  flex-wrap: wrap;
+}
+.restaurant-links {
+  display: flex;
+  flex-direction: row;
+}
