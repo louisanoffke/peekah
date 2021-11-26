@@ -8,6 +8,7 @@ class DishesController < ApplicationController
       {
         lat: dish.restaurant.latitude,
         lng: dish.restaurant.longitude
+        info_window: render_to_string(partial: "info_window", locals: { dish: dish })
       }
     end
   end
