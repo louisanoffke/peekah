@@ -1,5 +1,6 @@
 class DishesController < ApplicationController
   before_action :dish_id, only: %i[show edit update]
+  skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
     @dishes = Dish.all.includes(:restaurant, :recipe)
