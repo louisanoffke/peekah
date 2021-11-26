@@ -1,4 +1,13 @@
-<h1 style="text-align: center">Look at all these dishes. Yum!</h1>
+<div class="filter-container">
+    <%= form_tag dishes_path, method: :get, class: 'form-inline' do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control flex-grow-1",
+        placeholder: "Get closer to your dishes..."
+      %>
+      <%= submit_tag "Search", class: "btn btn-search" %>
+    <% end %>
+</div>
 
 <div style="width: 100%; height: 600px;"
   data-controller="mapbox"
