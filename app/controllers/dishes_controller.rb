@@ -1,15 +1,15 @@
 class DishesController < ApplicationController
   before_action :dish_id, only: %i[show edit update]
-  skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
-    @dishes = Dish.all
+    @dishes = Dish.all.includes(:restaurant, :recipe)
 
-    # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
-    @markers = @dishes.geocoded.map do |dish|
+    @markers = @dishes.map do |dish|
       {
         lat: dish.restaurant.latitude,
-        lng: dish.restaurant.longitude
+        lng: dish.restaurant.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { dish: dish })
+        # image_url: helpers.asset_url("https://foodisafourletterword.com/wp-content/uploads/2020/11/Japanese_Chicken_Katsu_Curry_Recipe_with_Panda_Bear_Rice_Ball_hori.jpg")
       }
     end
   end
