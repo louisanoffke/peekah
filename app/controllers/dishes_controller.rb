@@ -7,8 +7,9 @@ class DishesController < ApplicationController
     @markers = @dishes.map do |dish|
       {
         lat: dish.restaurant.latitude,
-        lng: dish.restaurant.longitude
+        lng: dish.restaurant.longitude,
         info_window: render_to_string(partial: "info_window", locals: { dish: dish })
+        # image_url: helpers.asset_url("https://foodisafourletterword.com/wp-content/uploads/2020/11/Japanese_Chicken_Katsu_Curry_Recipe_with_Panda_Bear_Rice_Ball_hori.jpg")
       }
     end
   end

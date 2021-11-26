@@ -1,4 +1,4 @@
-<h1>DISHES INDEX</h1>
+<h1 style="text-align: center">Look at all these dishes. Yum!</h1>
 
 <div style="width: 100%; height: 600px;"
   data-controller="mapbox"
@@ -9,8 +9,10 @@
 <ul>
   <%@dishes.each do |dish| %>
     <li>
+      <%= dish.id %> ------
       <%= dish.recipe.name %> ------
       <%= dish.price %> ------
+      <%= dish.restaurant.name %> ------
       <%= dish.restaurant.address %>
     </li>
   <% end %>
