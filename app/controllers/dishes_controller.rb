@@ -1,8 +1,17 @@
 class DishesController < ApplicationController
   before_action :dish_id, only: %i[show edit update]
+  skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
     @dishes = Dish.all
+
+    # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
+    @markers = @dishes.geocoded.map do |dish|
+      {
+        lat: dish.restaurant.latitude,
+        lng: dish.restaurant.longitude
+      }
+    end
   end
 
   def show; end
@@ -20,7 +29,8 @@ class DishesController < ApplicationController
       redirect_to restaurant_path(@dish.restaurant), notice: "Dish successfully created & added to
       #{@dish.restaurant.name}'s menu."
     else
-      raise
+      @recipes = Recipe.all
+      render "recipes/index"
     end
   end
 

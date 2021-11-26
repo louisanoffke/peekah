@@ -3,10 +3,10 @@
 
 <div class="recipes-container">
     <% @recipes.each do |recipe| %>
-
       <div class="card-container recipe-card">
         <p><%=link_to "#{recipe.name}", recipe_path(recipe) %></p>
-        <%= render partial: "dishes/form", locals: { recipe: recipe, dish: Dish.new } %>
+        <p> Assign This Recipe To <%= link_to "#{current_user.restaurant.name}", restaurant_path(current_user.restaurant) %> & Set a price (need to make this form appear after clicking a button --- class active etc) </p>
+        <%= render partial: "dishes/form", locals: { recipe: recipe, dish: @dish ? @dish : Dish.new } %>
         <%= link_to recipe_path(recipe), method: :delete, data: { confirm: "Sure about that?"} do %><i class="far fa-trash-alt recipe-icon"></i><% end %>
         <%= link_to edit_recipe_path(recipe) do %><i class="far fa-edit recipe-icon"></i><% end %>
       </div>
