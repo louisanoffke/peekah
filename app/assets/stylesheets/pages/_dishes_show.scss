@@ -20,8 +20,19 @@
   height: 100vh;
 }
 
+.nutrition-row {
+  display: flex;
+  flex-direction: row;
+  border: solid black;
+  justify-content: space-evenly;
+}
 
-.item-nutrition-chart img {
+.nutrition-details {
+  margin: 0 auto;
+  // border: solid red;
+}
+
+.nutrition-chart img {
   width: 200px;
   position: flex;
 }
@@ -34,6 +45,11 @@
 .ingredients-list btn {
   flex-wrap: wrap;
 }
+
+.allergen-list {
+  border: solid blue;
+}
+
 .restaurant-links {
   display: flex;
   flex-direction: row;

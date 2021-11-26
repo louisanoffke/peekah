@@ -1,33 +1,37 @@
 <div class="outer-box">
+
   <div class="inner-box-left">
     <h1><%= @dish.recipe.name %> | Nutrition & Details</h1>
     <div class="solid-line"></div>
 
     <%# this is where the dish details go %>
-  <div class="row">
-    <div class="item-nutrition-chart">
-      <img src="https://www.macromealsuk.co.uk/wp-content/uploads/2018/10/PieChart503020-01-1024x1019.png" alt="pie-chart">
-        <div class="list">
-          <ul class="d-inline">
-            <li><strong>Total Calories: 254 kcal</strong></li>
-            <li>Carbohydrates: 17g</li>
-            <li>Protein: 23g</li>
-            <li>Fat: 21g</li>
-          </ul>
-        </div>
+    <div class="nutrition-row">
+      <div class="nutrition-chart">
+        <img src="https://www.macromealsuk.co.uk/wp-content/uploads/2018/10/PieChart503020-01-1024x1019.png" alt="pie-chart">
       </div>
-  </div>
+      <div class="nutrition-details">
+        <strong>Total Calories: 254 kcal</strong>
+        <ul>
+          <li>Carbohydrates: 17g</li>
+          <li>Protein: 23g</li>
+          <li>Fat: 21g</li>
+        </ul>
+      </div>
+    </div>
 
-  <div class="row">
+    <div class="dish-description">
+      <h3>Description</h3>
+      <%= @dish.description %>
+    </div>
+
+  <div class="nutrition-row">
     <div class="ingredients-list">
       <h3>Ingredients:</h3>
       <% @dish.recipe.recipe_ingredients.each do |recipe_ingredient| %>
         <div class="flex-item">
-        <li><%= recipe_ingredient.ingredient.name %></li>
+          <li><%= recipe_ingredient.ingredient.name %></li>
         </div>
       <% end %>
-      <h3>Description</h3>
-      <p><%= @dish.description %> </p>
     </div>
 
     <div class="allergen-list">
@@ -36,6 +40,7 @@
       <img src="https://img.icons8.com/dusk/64/000000/seafood.png"/>
     </div>
   </div>
+
   <div class="dish-history">
     <h3>History</h3>
     <p>A story about this dish ....</p>
