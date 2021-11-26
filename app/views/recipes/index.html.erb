@@ -1,22 +1,17 @@
-<h1> <%= current_user.name.capitalize %>'s Dashboard </h1>
 
-<ul>
-  <% @recipes.each do |recipe| %>
+<h1> <%= current_user.name %>'s Dashboard </h1>
 
-  <li><%=link_to "#{recipe.name}", recipe_path(recipe) %>
-    <br>
-    <br>
-    <br>
-    <br>
-    <%= render partial: "dishes/form", locals: { recipe: recipe, dish: Dish.new } %>
-  </li>
-  <br>
+<div class="recipes-container">
+    <% @recipes.each do |recipe| %>
 
-  <%= link_to recipe_path(recipe), method: :delete, data: { confirm: "Sure about that?"} do %><i class="far fa-trash-alt recipe-icon"></i><% end %>
-  <%= link_to edit_recipe_path(recipe) do %><i class="far fa-edit recipe-icon"></i><% end %>
-
-  <% end %>
-</ul>
+      <div class="card-container recipe-card">
+        <p><%=link_to "#{recipe.name}", recipe_path(recipe) %></p>
+        <%= render partial: "dishes/form", locals: { recipe: recipe, dish: Dish.new } %>
+        <%= link_to recipe_path(recipe), method: :delete, data: { confirm: "Sure about that?"} do %><i class="far fa-trash-alt recipe-icon"></i><% end %>
+        <%= link_to edit_recipe_path(recipe) do %><i class="far fa-edit recipe-icon"></i><% end %>
+      </div>
+    <% end %>
+</div>
 
 <%= link_to "Add A Recipe", new_recipe_path, class: "btn-pka-2"  %>
 <br>
