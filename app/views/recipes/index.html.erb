@@ -1,29 +1,26 @@
-<h1> My Recipes </h1>
-
-<ul>
-  <% @recipes.each do |recipe| %>
-
-
-  <li><%=link_to "#{recipe.name}", recipe_path(recipe) %>
-    <br>
-    <br>
-    <br>
-    <br>
-    <p> Assign This Recipe To <%= link_to "#{current_user.restaurant.name}", restaurant_path(current_user.restaurant) %> & Set a price (need to make this form appear after clicking a button --- class active etc) </p>
-    <!-- IF the recipe is not a dish then display the button for a form to convert the recipe to a dish.
-    If it is a dish have the dish details appear instead of the button.
-    i.e. the price displayed -->
-    <%= render partial: "dishes/form", locals: { recipe: recipe, dish: @dish ? @dish : Dish.new } %>
-  </li>
+<div class="title-container">
+  <h1> <%= current_user.name %>'s Dashboard </h1>
   <br>
+  <h2>Your Restaurant: <%= link_to "#{current_user.restaurant.name}", restaurant_path(current_user.restaurant), class:"chef-restaurant"%></h2>
+</div>
 
+<div class="solid-line"></div>
 
-  <%= link_to recipe_path(recipe), method: :delete, data: { confirm: "Sure about that?"} do %><i class="far fa-trash-alt recipe-icon"></i><% end %>
-  <%= link_to edit_recipe_path(recipe) do %><i class="far fa-edit recipe-icon"></i><% end %>
-  <% end %>
-</ul>
-
-<%= link_to "Add A Recipe", new_recipe_path, class: "btn-pka-2"  %>
-<br>
-<br>
-<%= link_to "Home", root_path, class: "btn-pka-2" %>
+<div class="recipes-container">
+    <% @recipes.each do |recipe| %>
+      <div class="card-container recipe-card">
+        <div class="image-recipe-container">
+          <img src="https://insanelygoodrecipes.com/wp-content/uploads/2020/08/Mexican-Beef-Burritos.png" alt="Burrito" class="recipe-image">
+        </div>
+        <div class="recipe-content">
+          <p id="recipe-title"><%=link_to "#{recipe.name}", recipe_path(recipe) %></p>
+          <p> Make this recipe available at your restaurant:</p>
+          <%= render partial: "dishes/form", locals: { recipe: recipe, dish: @dish ? @dish : Dish.new } %>
+          <div class="icon-container">
+            <%= link_to recipe_path(recipe), method: :delete, data: { confirm: "Sure about that?"} do %><i class="far fa-trash-alt recipe-icon"></i><% end %>
+            <%= link_to edit_recipe_path(recipe) do %><i class="far fa-edit recipe-icon"></i><% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+</div>
