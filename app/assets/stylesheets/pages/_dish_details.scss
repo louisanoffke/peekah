@@ -6,19 +6,30 @@
 .inner-box-left {
   display: flex;
   flex: 2;
+  flex-direction: column;
   background-color: aliceblue;
   box-shadow: cadetblue;
+  align-content: space-between;
 }
 
 .inner-box-right {
   display: flex;
   flex: 1;
   flex-direction: column;
-  background-color: cadetblue;
+  background-color: lightcoral;
   height: 100vh;
 }
 
 
-.nutrition-chart img {
+.item-nutrition-chart img {
   width: 200px;
+  position: absolute;
+}
+
+.ingredients-list {
+  position: absolute;
+}
+.restaurant-links {
+  display: flex;
+  flex-direction: row;
 }
