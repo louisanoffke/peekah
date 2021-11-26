@@ -2,8 +2,7 @@
 <%= f.hidden_field :restaurant_id, value: current_user.restaurant_id %>
 <%= f.input :description, as: :text %>
 <%= f.input :is_available, as: :select%>
-<%= f.label "£ #{:price}" %>
-<%= f.number_field :price, min: 0 %>
+<%= f.input :price, as: :numeric, input_html: {min: '0', step: 'any', placeholder: '£££'} %>
 <br>
 <br>
 <% if @dish %>
@@ -13,7 +12,7 @@
   <% end %>
   </p>
 <% end %>
-<%= f.submit 'Submit', class: "btn-pka" %>
+<%= f.submit 'Submit', class: "btn-pka recipe-submit" %>
 <% end %>
 
 
