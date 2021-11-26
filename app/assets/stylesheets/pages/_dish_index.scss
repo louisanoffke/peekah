@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   position: sticky;
+  // padding-right: 20px;
   top: 72px;
   z-index: 1;
   background-color: $base-bkg;
@@ -13,4 +14,28 @@
   width: 100vw;
   margin: 0 auto;
   box-shadow: 2px 5px 5px 2px rgba(30, 30, 30, 0.1);
+}
+
+.dishes-map-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.dishes-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50vw;
+  justify-content: flex-start;
+  min-height: calc(100vh - 172px);
+  background-color: white;
+  padding: 50px 20px;
+}
+
+.map-div {
+  display: flex;
+  width: 50vw;
+  justify-content: center;
+  height: calc(100vh - 172px);
+  position: sticky;
 }

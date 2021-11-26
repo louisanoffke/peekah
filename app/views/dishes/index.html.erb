@@ -9,20 +9,28 @@
     <% end %>
 </div>
 
-<div style="width: 100%; height: 600px;"
-  data-controller="mapbox"
-  data-mapbox-markers-value="<%= @markers.to_json %>"
-  data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
+<div class="dishes-map-container">
+  <div class="dishes-div">
+    <% @dishes.each do |dish| %>
+      <%= link_to dish_path(dish) do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1635107420370-b9fac732b284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80)">
+              <%= dish.id %> ------
+              <%= dish.recipe.name %> ------
+              <%= dish.price %> ------
+              <%= dish.restaurant.name %> ------
+              <%= dish.restaurant.address %>
+             <%unless dish.restaurant.latitude%>
+              <span class="marker-warning">Map location unavailable</span>
+             <%end%>
 
-<ul>
-  <%@dishes.each do |dish| %>
-    <li>
-      <%= dish.id %> ------
-      <%= dish.recipe.name %> ------
-      <%= dish.price %> ------
-      <%= dish.restaurant.name %> ------
-      <%= dish.restaurant.address %>
-    </li>
-  <% end %>
-</ul>
+        </div>
+      <% end %>
+      <br>
+    <% end %>
+  </div>
+  <div id="map" class="map-div"
+    data-controller="mapbox"
+    data-mapbox-markers-value="<%= @markers.to_json %>"
+    data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+</div>
