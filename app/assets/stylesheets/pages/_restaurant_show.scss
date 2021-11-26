@@ -1,0 +1,32 @@
+.solid-line {
+  border-top: solid 1px grey;
+  margin: 40px;
+  width: 85%;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dish-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-items {
+  margin-top: 20px;
+  width: 80%;
+}
+
+.menu-item-title {
+  font-size: 23px;
+}
+
+.menu-text-container {
+  margin-left: 5px;
+}

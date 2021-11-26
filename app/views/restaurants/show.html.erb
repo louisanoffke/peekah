@@ -1,12 +1,21 @@
-<h1> <%=@restaurant.name%>'s Dishes </h1>
 
-<ul>
-  <% @restaurant.dishes.each do |dish| %>
-  <li><%= dish.recipe.name %> - <%= dish.description %> - £<%= dish.price %>
-      <br>
-      <%= dish.is_available ? "This dish is currently available" : "This dish is currently unavailable" %>
-      <br>
-      <%= link_to "See nutritional breakdown", dish_path(dish) %>
-  </li>
-  <%end%>
-</ul>
+<div class="menu-container">
+  <h1 class="title"> <%=@restaurant.name%>'s Menu </h1>
+
+  <div class="solid-line"></div>
+
+  <div class="dish-container">
+      <% @restaurant.dishes.each do |dish| %>
+      <div class="menu-items">
+          <div class="menu-item-title"><strong><%= dish.recipe.name %></strong></div>
+          <div class="menu-text-container">
+            <i><%= dish.description %></i> - £<%= dish.price %>
+            <br>
+            <%= dish.is_available ? "This dish is currently available" : "This dish is currently unavailable" %>
+            <br>
+            <%= link_to "See nutritional breakdown", dish_path(dish) %>
+          </div>
+      </div>
+      <%end%>
+  </div>
+</div>
