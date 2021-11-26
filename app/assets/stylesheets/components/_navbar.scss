@@ -26,7 +26,7 @@
 
 .dropdown-item {
   font-family: Montserrat !important;
-  color: #a2ece6ef !important;
+  color: $accent-g !important;
   padding-bottom: 20px;
 }
 
@@ -35,7 +35,7 @@
   height: 80px;
   width: 80px;
   border-radius: 50%;
-  border: solid 2px #a2ece6cb;
+  border: solid 2px $accent-g;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,16 +44,15 @@
 
 .navbar-brand h1 {
   font-size: 30px;
-  color: #a2ece6cb;
+  color: $accent-g;
 }
 
 .nav-link {
   font-family: Montserrat;
   font-weight: 600 !important;
-  color: white !important;
+  color: $accent-g !important;
   font-size: 19px;
   margin-right: 5px;
-  text-shadow: 2px 2px 2px rgba(20,9,5,0.1);
 }
 
 .nav-item:hover {
