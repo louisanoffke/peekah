@@ -3,6 +3,14 @@ class DishesController < ApplicationController
 
   def index
     @dishes = Dish.all
+
+    # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
+    @markers = @dishes.geocoded.map do |dish|
+      {
+        lat: dish.restaurant.latitude,
+        lng: dish.restaurant.longitude
+      }
+    end
   end
 
   def show; end
