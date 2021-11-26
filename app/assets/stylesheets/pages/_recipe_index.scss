@@ -10,7 +10,7 @@
 }
 
 .chef-restaurant:hover {
-  color: #6db1ab;
+  color: #0b6b33f8;
   text-decoration: none !important;
 }
 
@@ -32,6 +32,7 @@
   margin-top: 30px;
   padding: 20px;
   position: relative;
+  border-radius: 2px;
 }
 
 .image-recipe-container {
@@ -41,13 +42,13 @@
   position: absolute;
   left: 0;
   top: 0;
-  border-radius: 2rem 2rem 0 0;
+  border-radius: 2px;
 }
 
 .recipe-image {
   height: 180px;
   width: 100%;
-  border-radius: 2rem 2rem 0 0;
+  border-radius: 2px 2px 0 0;
 }
 
 .recipe-content {
@@ -81,11 +82,11 @@
 }
 
 .recipe-icon {
-  color: #6db1ab;
+  color: $accent-g;
   height: 30px;
   width: 30px;
   background: white;
-  border: solid 2px #6db1ab;
+  border: solid 2px $accent-g;
   border-radius: 50%;
   display: flex;
   justify-content: center;

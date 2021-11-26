@@ -1,7 +1,7 @@
 <div class="title-container">
-  <h1> <%= current_user.name %>'s Dashboard </h1>
+  <i><h1 class="dashboard-title"> <%= (current_user.name).capitalize %>'s Dashboard </h1></i>
   <br>
-  <h2>Your Restaurant: <%= link_to "#{current_user.restaurant.name}", restaurant_path(current_user.restaurant), class:"chef-restaurant"%></h2>
+  <h2><strong>Your Restaurant: </strong><%= link_to "#{current_user.restaurant.name}", restaurant_path(current_user.restaurant), class:"chef-restaurant"%></h2>
 </div>
 
 <div class="solid-line"></div>
