@@ -20,20 +20,44 @@
   height: 100vh;
 }
 
+.nutrition-row {
+  display: flex;
+  flex-direction: row;
+  // border: solid black;
+  justify-content: space-between;
+  align-content: flex-start;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
 
-.item-nutrition-chart img {
-  width: 200px;
+.nutrition-row-item {
+  margin: 0 auto;
+  // border: solid red;
+}
+
+.nutrition-row-item img {
+  width: 100px;
   position: flex;
 }
 
-.ingredients-list {
-  position: flex;
+#nutrition-chart {
+  width: 200px;
 }
 
 .ingredients-list btn {
   flex-wrap: wrap;
 }
+
+.allergen-list {
+  border: solid blue;
+}
+
 .restaurant-links {
   display: flex;
   flex-direction: row;
+}
+
+.sidebar-map img {
+  width: 400px;
+  margin-left: 16px;
 }
