@@ -8,6 +8,7 @@
 require_relative 'allergen_seeds'
 require_relative 'ingredient_seeds'
 require_relative 'recipe_seeds'
+require_relative 'recipe_ingredient_seeds'
 require_relative 'restaurant_seeds'
 require_relative 'dishes_seeds'
 
@@ -38,6 +39,10 @@ puts "~~> test user created with ID = #{user.id} and email #{user.email}"
 
 puts ">> Recipes"
 build_recipes
+puts "_______________"
+
+puts ">> RecipeIngredients"
+build_recipe_ingredients
 puts "_______________"
 
 
