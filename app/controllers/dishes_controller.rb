@@ -2,7 +2,7 @@ class DishesController < ApplicationController
   before_action :dish_id, only: %i[show edit update]
 
   def index
-    @dishes = Dish.all
+    @dishes = Dish.all.includes(:restaurant)
 
     @markers = @dishes.map do |dish|
       {
