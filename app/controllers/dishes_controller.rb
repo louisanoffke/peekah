@@ -28,7 +28,8 @@ class DishesController < ApplicationController
       redirect_to restaurant_path(@dish.restaurant), notice: "Dish successfully created & added to
       #{@dish.restaurant.name}'s menu."
     else
-      raise
+      @recipes = Recipe.all
+      render "recipes/index"
     end
   end
 

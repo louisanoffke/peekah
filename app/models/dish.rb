@@ -4,7 +4,6 @@ class Dish < ApplicationRecord
   validates :price, :restaurant_id, :is_available, :recipe_id, :description, presence: true
   validates :price, numericality: { greater_than_or_equal_to: 1,
                                     message: 'Price must be greater than £0' }
+  validates :restaurant, uniqueness: { scope: :recipe,
+                                       message: 'Dish already exists in that restaurant' }
 end
-
-#  validates :dish, uniqueness: { scope: :recipe :restaurant,
-#                                  message: 'cannot have the same dish twice in a restauant' }
