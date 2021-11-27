@@ -111,8 +111,15 @@ def build_allergens
   )
 
   puts "created #{Allergen.count} allergens."
+
+  upload_allergen_icons
+  puts "~~~> done with image upload"
 end
 
-def upload_allergen_icon
-
+def upload_allergen_icons
+  puts "attaching allergen icons ~~~>"
+  Allergens.all.each do |allergen|
+    file = URI.open(allergen.icon_url)
+    allergen.photo.attach(io: file, filename: "#{allergen.name}.png", content_type: "image/png")
+  end
 end
