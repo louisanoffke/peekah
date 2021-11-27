@@ -50,7 +50,8 @@ def build_allergens
   Allergen.create(
     name: "Molluscs",
     note: "These include mussels, land snails, squid and whelks, but can also be
-  commonly found in oyster sauce or as an ingredient in fish stews."
+  commonly found in oyster sauce or as an ingredient in fish stews.",
+    icon_url: "https://cdn-icons-png.flaticon.com/128/1015/1015518.png"
   )
 
   Allergen.create(
