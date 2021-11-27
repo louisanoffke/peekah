@@ -1,3 +1,5 @@
+require 'open-uri'
+
 def build_allergens
   puts "starting to create allergens"
 
