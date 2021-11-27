@@ -1,21 +1,28 @@
 <div class=container>
-  <h1><%=@recipe.name%></h1>
-    <% @recipe.recipe_ingredients.each do |i| %>
-      <li><%= i.ingredient.name %>:   <%= i.ingredient_amount %>g</li>
-    <% end %>
-<br>
+<h1><%=@recipe.name%></h1>
+<div class="recipe-header">
+  <div class="recipe-header-item">
+    <h3>Ingredients</h3>
+      <% @recipe.recipe_ingredients.each do |i| %>
+        <li><%= i.ingredient.name %>:   <%= i.ingredient_amount %>g</li>
+      <% end %>
+      <br>
+      <%= link_to "Add Ingredient", recipe_recipe_ingredients_path(@recipe), class: "btn-pka-2" %>
+  </div>
+  <div class="recipe-header-item">
+    <h3>Total Calories</h3>
+    <p><%= @recipe.calculate_recipe_calories %> kcal</p>
+  </div>
+  <div class="recipe-header-item">
+    <h3>Method Video</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZJy1ajvMU1k?start=87" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+
 <h3>Method</h3>
 <p><%= @recipe.method %></p>
-<h3>Total Calories</h3>
-<p><%= @recipe.calculate_recipe_calories %> kcal</p>
 <br>
-
 <%= link_to edit_recipe_path(@recipe) do %><i class="far fa-edit recipe-icon"></i><% end %>
 <br>
-<br>
-<br>
-
-<%= link_to "Add Ingredient", recipe_recipe_ingredients_path(@recipe), class: "btn-pka-2" %>
-<%= link_to "Home", root_path, class: "btn-pka-2" %>
 <%= link_to "Back To All Recipes", recipes_path, class: "btn-pka-2"  %>
 </div>
