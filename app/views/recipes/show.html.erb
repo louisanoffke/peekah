@@ -10,9 +10,14 @@
       <%= link_to "Add Ingredient", recipe_recipe_ingredients_path(@recipe), class: "btn-pka-2" %>
   </div>
   <div class="recipe-header-item">
-    <h3>Total Calories</h3>
-    <p><%= @recipe.calculate_recipe_calories %> kcal</p>
+    <h3>Nutritionals</h3>
+    <p>Total Calories: <%= @recipe.calculate_recipe_calories %> kcal</p>
+    <p>Carbs: <%= @recipe.calculate_carb_content %>g (<%= @recipe.calculate_carb_content * 4%> kcal)</p>
+    <p>Protein: <%= @recipe.calculate_protein_content %>g (<%= @recipe.calculate_protein_content * 4 %>kcal)</p>
+    <p>Fat: <%= @recipe.calculate_fat_content %>g (<%= @recipe.calculate_fat_content * 9 %> kcal)</p>
+
   </div>
+
   <div class="recipe-header-item">
     <h3>Method Video</h3>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/ZJy1ajvMU1k?start=87" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
