@@ -21,13 +21,13 @@
 
       <div class="nutrition-row-item">
         <h3>Nutritionals</h3>
-        <p><strong>Total Calories: <%= @dish.recipe.calculate_recipe_calories.to_i %> kcal</strong></p>
-        <p>Carbs: <%= @dish.recipe.calculate_carb_content %>g
-          (<%= @dish.recipe.calculate_carb_content.to_i * 4%> kcal)</p>
-        <p>Protein: <%= @dish.recipe.calculate_protein_content %>g
-          (<%= @dish.recipe.calculate_protein_content.to_i * 4 %>kcal)</p>
-        <p>Fat: <%= @dish.recipe.calculate_fat_content %>g
-          (<%= @dish.recipe.calculate_fat_content.to_i * 9 %> kcal)</p>
+        <p><strong>Total Calories: <%= @dish.calories %> kcal</strong></p>
+        <p>Carbs: <%= @dish.carbs %>g
+          (<%= @dish.carb_cals%> kcal)</p>
+        <p>Protein: <%= @dish.protein %>g
+          (<%= @dish.protein_cals %>kcal)</p>
+        <p>Fat: <%= @dish.fat%>g
+          (<%= @dish.fat_cals %> kcal)</p>
       </div>
 
       <div class="nutrition-row-item">

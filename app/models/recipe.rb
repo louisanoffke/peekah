@@ -12,7 +12,7 @@ class Recipe < ApplicationRecord
     self.recipe_ingredients.each do |ri|
       recipe_calories += (ri.ingredient_amount * ri.ingredient.total_calories / 100)
     end
-    recipe_calories
+    recipe_calories.to_i
   end
 
   def calculate_protein_content
