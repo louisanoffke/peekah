@@ -7,7 +7,7 @@ def build_allergens
     name: "Celery",
     note: "This includes celery stalks, leaves, seeds and the root called celeriac. You can
   find celery in celery salt, salads, some meat products, soups and stock cubes.",
-    icon_url: "https://cdn-icons.flaticon.com/png/512/381/premium/381001.png?token=exp=1638029439~hmac=725579f6c0c908453b8031941a163f0a"
+    icon_url: "http://cdn-icons.flaticon.com/png/512/381/premium/381001.png?token=exp=1638029439~hmac=725579f6c0c908453b8031941a163f0a"
   )
 
   Allergen.create(
@@ -112,14 +112,15 @@ def build_allergens
 
   puts "created #{Allergen.count} allergens."
 
-  upload_allergen_icons
-  puts "~~~> done with image upload"
+  # upload_allergen_icons
+  # puts "~~~> done with image upload"
 end
 
 def upload_allergen_icons
   puts "attaching allergen icons ~~~>"
-  Allergens.all.each do |allergen|
+  Allergen.all.each do |allergen|
     file = URI.open(allergen.icon_url)
+    puts "opened imaage for #{allergen.name}"
     allergen.photo.attach(io: file, filename: "#{allergen.name}.png", content_type: "image/png")
   end
 end
