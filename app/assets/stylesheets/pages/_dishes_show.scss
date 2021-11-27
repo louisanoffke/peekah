@@ -7,7 +7,7 @@
   display: flex;
   flex: 2;
   flex-direction: column;
-  background-color: aliceblue;
+  // background-color: aliceblue;
   box-shadow: cadetblue;
   align-content: space-between;
 }
@@ -35,10 +35,10 @@
   // border: solid red;
 }
 
-.nutrition-row-item img {
-  width: 100px;
-  position: flex;
-}
+// .nutrition-row-item img {
+//   width: 100px;
+//   position: flex;
+// }
 
 #nutrition-chart {
   width: 200px;
