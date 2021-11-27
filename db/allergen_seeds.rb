@@ -24,8 +24,7 @@ def build_allergens
   Allergen.create(
     name: "Eggs",
     note: "Eggs are often found in cakes, some meat products, mayonnaise, mousses,
-  pasta, quiche, sauces and pastries or foods brushed or glazed with egg.",
-    icon: "https://img.icons8.com/material-rounded/64/000000/kawaii-egg.png"
+  pasta, quiche, sauces and pastries or foods brushed or glazed with egg."
   )
 
   Allergen.create(
