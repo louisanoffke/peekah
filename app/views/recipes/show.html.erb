@@ -1,10 +1,13 @@
 <div class=container>
   <h1><%=@recipe.name%></h1>
-    <% @recipe.ingredients.each do |i| %>
-      <li><%= i.name %></li>
+    <% @recipe.recipe_ingredients.each do |i| %>
+      <li><%= i.ingredient.name %>:   <%= i.ingredient_amount %>g</li>
     <% end %>
 <br>
+<h3>Method</h3>
 <p><%= @recipe.method %></p>
+<h3>Total Calories</h3>
+<p><%= @recipe.calculate_recipe_calories %> kcal</p>
 <br>
 
 <%= link_to edit_recipe_path(@recipe) do %><i class="far fa-edit recipe-icon"></i><% end %>
