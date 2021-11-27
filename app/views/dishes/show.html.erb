@@ -41,9 +41,16 @@
         <h3>Description</h3>
         <div><%= @dish.description %></div>
       </div>
-
     </div>
 
+    <div class="nutrition-row">
+      <div class="allergen-icons">
+        <h3>Allergen Icons</h3>
+       <% Allergen.all.each do |allergen| %>
+       <img class="allergen-icon" src=<%= allergen.icon_url %> alt=<%= allergen.name %>>
+       <% end %>
+      </div>
+    </div>
 
   <div class="dish-history">
     <h3>History</h3>
