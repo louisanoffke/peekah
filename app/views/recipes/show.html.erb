@@ -11,11 +11,10 @@
   </div>
   <div class="recipe-header-item">
     <h3>Nutritionals</h3>
-    <p>Total Calories: <%= @recipe.calculate_recipe_calories %> kcal</p>
+    <p>Total Calories: <%= @recipe.calculate_recipe_calories.to_i %> kcal</p>
     <p>Carbs: <%= @recipe.calculate_carb_content %>g (<%= @recipe.calculate_carb_content * 4%> kcal)</p>
     <p>Protein: <%= @recipe.calculate_protein_content %>g (<%= @recipe.calculate_protein_content * 4 %>kcal)</p>
     <p>Fat: <%= @recipe.calculate_fat_content %>g (<%= @recipe.calculate_fat_content * 9 %> kcal)</p>
-
   </div>
 
   <div class="recipe-header-item">
