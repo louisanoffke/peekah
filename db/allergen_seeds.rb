@@ -7,11 +7,11 @@ def build_allergens
     name: "Celery",
     note: "This includes celery stalks, leaves, seeds and the root called celeriac. You can
   find celery in celery salt, salads, some meat products, soups and stock cubes.",
-    icon_url: ""
+    icon_url: "https://cdn-icons-png.flaticon.com/64/1581/1581855.png"
   )
 
   Allergen.create(
-    name: "Cereals containing gluten",
+    name: "Gluten",
     note: "Wheat (such as spelt and Khorasan wheat/Kamut), rye, barley and oats is
   often found in foods containing flour, such as some types of baking powder,
   batter, breadcrumbs, bread, cakes, couscous, meat products, pasta, pastry,
@@ -65,7 +65,7 @@ def build_allergens
     name: "Mustard",
     note: "Liquid mustard, mustard powder and mustard seeds fall into this category.
   This ingredient can also be found in breads, curries, marinades, meat products, salad dressings, sauces and soups.",
-    icon_url: ""
+    icon_url: "https://cdn-icons-png.flaticon.com/64/737/737014.png"
   )
 
   Allergen.create(
@@ -74,7 +74,7 @@ def build_allergens
   this ingredient refers to nuts which grow on trees, like cashew nuts, almonds and hazelnuts.
   You can find nuts in breads, biscuits, crackers, desserts, nut powders (often used in Asian
   curries), stir-fried dishes, ice cream, marzipan (almond paste), nut oils and sauces.",
-    icon_url: ""
+    icon_url: "https://cdn-icons-png.flaticon.com/64/1167/1167712.png"
   )
 
   Allergen.create(
@@ -98,7 +98,7 @@ def build_allergens
     name: "Soya",
     note: "Often found in bean curd, edamame beans, miso paste, textured soya protein,
   soya flour or tofu, soya is a staple ingredient in oriental food. It can also be found in desserts, ice cream, meat products, sauces and vegetarian products.",
-    icon_url: ""
+    icon_url: "https://cdn-icons-png.flaticon.com/64/1581/1581841.png"
   )
 
   Allergen.create(
