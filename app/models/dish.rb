@@ -1,12 +1,15 @@
 class Dish < ApplicationRecord
+  # Associations
   belongs_to :recipe
   belongs_to :restaurant
+  # Cloudinary
+  has_one_attached :photo
+  # Validations
   validates :price, :restaurant_id, :is_available, :recipe_id, :description, presence: true
   validates :price, numericality: { greater_than_or_equal_to: 1,
                                     message: 'Price must be greater than £0' }
   validates :restaurant, uniqueness: { scope: :recipe,
                                        message: 'Dish already exists in that restaurant' }
-
 
   def calories
     self.recipe.calculate_recipe_calories
