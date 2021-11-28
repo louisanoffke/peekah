@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   # Additional params for a user
   before_action :configure_permitted_parameters, if: :devise_controller?
   protect_from_forgery with: :exception
-  # Instead of here - use this for every controller that you don't want to be accesed by the non-user
+  # Instead of here - use this for every controller that you don't want to be accesed by the non-user?
   before_action :authenticate_user!
 
   def after_sign_in_path_for(resource)
