@@ -2,6 +2,8 @@ class Restaurant < ApplicationRecord
   # Associations
   has_many :dishes
   has_many :users
+  # Cloudinary
+  has_one_attached :photo
   # Geocoding
   geocoded_by :address
   before_validation :geocode, if: :will_save_change_to_address?
