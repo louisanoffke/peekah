@@ -7,13 +7,12 @@
 }
 
 .slogan-container {
-  width: 520px;
-  text-align: center;
-  margin: 200px 0px 255px 120px;
+  width: 600px;
+  margin: 175px 0px 140px 100px;
 }
 
 .slogan-container #pka-slogan {
-  font-size: 35px;
+  font-size: 60px;
 }
 
 .empty-band {
@@ -28,7 +27,7 @@
 
 .search-form {
   width: 500px;
-  margin-left: 120px;
+  margin-left: 110px;
 }
 
 .search-form h3 {
@@ -38,13 +37,18 @@
 .image-container {
   position: absolute;
   top: 130px;
-  right: 70px;
+  right: 110px;
 }
 
 #homepage-image {
-  height: 625px;
+  height: 700px;
   width: 550px;
   object-fit: cover;
   // border-radius: 5px;
   opacity: 0.95;
+}
+
+.homepage-btn {
+  font-size: 25px;
+  padding: 16px 32px;
 }

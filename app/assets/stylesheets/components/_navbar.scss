@@ -17,17 +17,27 @@
 }
 
 .dropdown-menu {
-  padding-top: 17px;
   border: none;
   border-radius: 4px;
-  height: 165px;
+  height: auto;
   justify-content: center;
+  padding: 20px 6px;
 }
 
 .dropdown-item {
   font-family: Montserrat !important;
   color: $accent-g !important;
-  padding-bottom: 20px;
+}
+
+.dropdown-line {
+  border-top: solid 1px #0644203a;
+  width: auto;
+  margin: 7px;
+}
+
+.sign-in {
+  margin: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 .navbar-brand {
@@ -49,13 +59,7 @@
 
 .nav-link {
   font-family: Montserrat;
-  font-weight: 600 !important;
   color: $accent-g !important;
   font-size: 19px;
   margin-right: 5px;
-}
-
-.nav-item:hover {
-  transition: 0.2s;
-  color: #a2ece6cb;
 }
