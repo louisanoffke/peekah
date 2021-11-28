@@ -6,11 +6,8 @@ class Allergen < ApplicationRecord
 
   # pg-search:
   include PgSearch::Model
-  pg_search_scope :global_search,
+  pg_search_scope :search_by_name_and_note,
     against: [ :name, :note ],
-    associated_against: {
-      recipe: :description
-    },
     using: {
       tsearch: { prefix: true }
     }
