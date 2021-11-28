@@ -17,5 +17,6 @@ class Ingredient < ApplicationRecord
   def identify_allergen
     allergens = Allergen.search_by_name_and_note(self.name)
     self.is_allergen = true if allergens
+    allergens
   end
 end
