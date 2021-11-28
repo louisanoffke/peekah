@@ -7,22 +7,28 @@
   display: flex;
   flex: 2;
   flex-direction: column;
-  background-color: aliceblue;
+  // background-color: aliceblue;
   box-shadow: cadetblue;
   align-content: space-between;
 }
 
+.inner-box-left h1,h3 {
+  color: $accent-r;
+}
+
 .inner-box-right {
+  color: white;
   display: flex;
   flex: 1;
   flex-direction: column;
-  background-color: lightcoral;
+  background-color: $accent-r;
   height: 100vh;
 }
 
 .nutrition-row {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   // border: solid black;
   justify-content: space-between;
   align-content: flex-start;
@@ -55,9 +61,23 @@
 .restaurant-links {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  margin: 50px;
 }
 
 .sidebar-map img {
   width: 400px;
   margin-left: 16px;
+}
+
+.allergen-icons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.allergen-icon {
+  border-radius: 50%;
+  color: $accent-dark-green;
+  border: solid;
+  padding: 1%;
 }
