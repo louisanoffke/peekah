@@ -2,6 +2,7 @@
 
   <div class="inner-box-left">
     <h1 class="text-center"><%= @dish.recipe.name %></h1>
+    <div class="text-center" style="margin: 8px"><em><%= @dish.description %></em></div>
     <div class="solid-line"></div>
 
     <%# this is where the dish details go %>
@@ -11,12 +12,6 @@
         <% @dish.recipe.recipe_ingredients.each do |recipe_ingredient| %>
           <li><%= recipe_ingredient.ingredient.name %></li>
         <% end %>
-      </div>
-
-      <div class="nutrition-row-item">
-        <%# a list of allergens with icons %>
-        <h3>Allergens</h3>
-        <img class="allergen-icon" src="https://cdn-icons-png.flaticon.com/64/1015/1015518.png" alt="molluscs">
       </div>
 
       <div class="nutrition-row-item">
@@ -36,20 +31,14 @@
       </div>
     </div>
 
-
     <div class="nutrition-row">
-      <div class="dish-description">
-        <h3>Description</h3>
-        <div><%= @dish.description %></div>
-      </div>
-    </div>
-
-    <div class="nutrition-row">
-      <h3>Allergen Icons</h3>
-      <div class="allergen-icons">
-       <% Allergen.all.each do |allergen| %>
-       <img class="allergen-icon" src=<%= allergen.icon_url %> alt=<%= allergen.name %>>
-       <% end %>
+      <div class="nutrition-row-item">
+        <h3>Allergen Icons</h3>
+        <div class="allergen-icons">
+        <% Allergen.all.each do |allergen| %>
+          <img class="allergen-icon" src=<%= allergen.icon_url %> alt=<%= allergen.name %>>
+        <% end %>
+        </div>
       </div>
     </div>
 
