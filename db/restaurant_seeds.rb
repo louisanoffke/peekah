@@ -50,7 +50,8 @@ Dine on Asian inspired small plates, Robata grilled dishes, sushi and sashimi th
     address: "150 Old Park Lane London, ENG W1K 1QZ",
     description: "Hard Rock Cafe is a global phenomenon with 185 cafes that are visited by nearly 80 million guests each year. The first Hard Rock Cafe opened on June 14, 1971, in London, England, and from there the brand has expanded to major cities and exotic locations around the world.",
     opentable_link: "https://www.opentable.co.uk/hard-rock-cafe-london"
-  )
+    ubereats_link: "https://www.ubereats.com/store/hard-rock-cafe/j2IWh1vrQ9uNJGGW7esong"
+   )
 
   Restaurant.create(
     name: "Afternoon Tea at The Chesterfield Mayfair",
@@ -97,7 +98,8 @@ Just as we at Fenwick of Bond Street carefully curate our edit, our chefs carefu
     description: "This includes celery stalks, leaves, seeds and the root called celeriac. You can
   find celery in celery salt, salads, some meat products, soups and stock cubes.",
     opentable_link: "https://www.opentable.co.uk/r/ruya-london",
-    deliveroo_link: "https://deliveroo.co.uk/menu/london/mayfair/restaurant-craft-ltd"
+    deliveroo_link: "https://deliveroo.co.uk/menu/london/mayfair/restaurant-craft-ltd",
+    "https://resizer.otstatic.com/v2/photos/wide-huge/1/25908286.jpg"
   )
 
   Restaurant.create(
