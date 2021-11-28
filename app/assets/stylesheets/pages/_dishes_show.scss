@@ -7,16 +7,21 @@
   display: flex;
   flex: 2;
   flex-direction: column;
-  background-color: aliceblue;
+  // background-color: aliceblue;
   box-shadow: cadetblue;
   align-content: space-between;
 }
 
+.inner-box-left h1,h3 {
+  color: $accent-r;
+}
+
 .inner-box-right {
+  color: white;
   display: flex;
   flex: 1;
   flex-direction: column;
-  background-color: lightcoral;
+  background-color: $accent-r;
   height: 100vh;
 }
 
