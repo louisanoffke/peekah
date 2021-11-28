@@ -112,8 +112,8 @@ def build_allergens
 
   puts "created #{Allergen.count} allergens."
 
-  upload_allergen_icons
-  puts "~~~> done with image upload"
+  # upload_allergen_icons
+  # puts "~~~> done with image upload"
 end
 
 def upload_allergen_icons
