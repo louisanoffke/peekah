@@ -9,10 +9,12 @@
 .slogan-container {
   width: 600px;
   margin: 175px 0px 140px 100px;
+  cursor: default;
 }
 
 .slogan-container #pka-slogan {
   font-size: 60px;
+  color: #064420;
 }
 
 .empty-band {
@@ -44,7 +46,7 @@
   height: 700px;
   width: 550px;
   object-fit: cover;
-  // border-radius: 5px;
+  border-radius: 5px;
   opacity: 0.95;
 }
 

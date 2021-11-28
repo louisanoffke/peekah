@@ -38,6 +38,7 @@
 .sign-in {
   margin: 0 !important;
   padding-bottom: 0 !important;
+  cursor: default;
 }
 
 .navbar-brand {
@@ -62,4 +63,8 @@
   color: $accent-g !important;
   font-size: 19px;
   margin-right: 5px;
+}
+
+.no-cursor:hover {
+  cursor: default !important;
 }
