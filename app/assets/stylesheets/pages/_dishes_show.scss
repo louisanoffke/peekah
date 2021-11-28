@@ -23,6 +23,7 @@
 .nutrition-row {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   // border: solid black;
   justify-content: space-between;
   align-content: flex-start;
@@ -64,11 +65,14 @@
   margin-left: 16px;
 }
 
-
+.allergen-icons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
 .allergen-icon {
   border-radius: 50%;
   color: $accent-dark-green;
   border: solid;
-  // width: 64px;
-  padding: 5%;
+  padding: 1%;
 }

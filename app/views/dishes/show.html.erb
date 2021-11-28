@@ -44,8 +44,8 @@
     </div>
 
     <div class="nutrition-row">
+      <h3>Allergen Icons</h3>
       <div class="allergen-icons">
-        <h3>Allergen Icons</h3>
        <% Allergen.all.each do |allergen| %>
        <img class="allergen-icon" src=<%= allergen.icon_url %> alt=<%= allergen.name %>>
        <% end %>
