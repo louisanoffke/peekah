@@ -1,10 +1,12 @@
+require "open-uri"
+
 def build_restaurants
   puts "deleting previously created restaurants"
   Restaurant.delete_all
 
   puts "starting to create restaurants"
 
-  Restaurant.create!(
+  Restaurant.create(
     name: "Lucky Cat - Kori Kitchen Table",
     address: "10 Grosvenor Square London, W1K 6JP",
     description: "TThis Japanese inspired Chef's Table is designed to be booked exclusively for up to ten guests. Chefs will guide your group through each course, finishing dishes in front of you.",
@@ -45,13 +47,40 @@ Dine on Asian inspired small plates, Robata grilled dishes, sushi and sashimi th
     opentable_link: "https://www.opentable.co.uk/galvin-at-windows"
   )
 
-  Restaurant.create(
+  # resource_type = "image"
+  # type = "upload"
+  # version = 1638101476
+  # folder = "pka-restaurant"
+  # public_id = "res_hardrockcafe"
+  # format = "jpg"
+  # signature = Cloudinary::Utils.api_sign_request({:public_id=>public_id,
+  # :version=>version}, Cloudinary.config.api_secret)
+  # photo = "#{resource_type}/#{type}/v#{version}/#{public_id}.#{format}##{signature}"
+
+  # def full_identifier(image)
+  #   params = {version: image.file.version, public_id: image.file.public_id}
+  #   signature = Cloudinary::Utils.sign_request(params)[:signature]
+  #   image.file.identifier + '#' + signature
+  # end
+
+  # current_restaurant = Restaurant.find(:id)
+  # image = full_identifier(current_restaurant.image)
+  # thumb_image = full_identifier(current_restaurant.thumb_image)
+
+  # new_folio = Folio.new(title: 'Test', body: 'Test One', position: 1, main_image: main_image, thumb_image: thumb_image)
+  # new_folio.save
+
+  hardrockcafe = Restaurant.create(
     name: "Hard Rock Cafe - London",
     address: "150 Old Park Lane London, ENG W1K 1QZ",
     description: "Hard Rock Cafe is a global phenomenon with 185 cafes that are visited by nearly 80 million guests each year. The first Hard Rock Cafe opened on June 14, 1971, in London, England, and from there the brand has expanded to major cities and exotic locations around the world.",
-    opentable_link: "https://www.opentable.co.uk/hard-rock-cafe-london"
-    ubereats_link: "https://www.ubereats.com/store/hard-rock-cafe/j2IWh1vrQ9uNJGGW7esong"
-   )
+    opentable_link: "https://www.opentable.co.uk/hard-rock-cafe-london",
+    ubereats_link: "https://www.ubereats.com/store/hard-rock-cafe/j2IWh1vrQ9uNJGGW7esong",
+    # photo: photo
+  )
+  # hardrockcafe_img = URI.open('https://resizer.otstatic.com/v2/photos/wide-huge/1/25908286.jpg')
+  # hardrockcafe.photo.attach(io: hardrockcafe_img, filename: 'hardrockcafe.png', content_type: 'image/png')
+  # p "#{hardrockcafe.photo.attached?}"
 
   Restaurant.create(
     name: "Afternoon Tea at The Chesterfield Mayfair",
@@ -98,8 +127,7 @@ Just as we at Fenwick of Bond Street carefully curate our edit, our chefs carefu
     description: "This includes celery stalks, leaves, seeds and the root called celeriac. You can
   find celery in celery salt, salads, some meat products, soups and stock cubes.",
     opentable_link: "https://www.opentable.co.uk/r/ruya-london",
-    deliveroo_link: "https://deliveroo.co.uk/menu/london/mayfair/restaurant-craft-ltd",
-    "https://resizer.otstatic.com/v2/photos/wide-huge/1/25908286.jpg"
+    deliveroo_link: "https://deliveroo.co.uk/menu/london/mayfair/restaurant-craft-ltd"
   )
 
   Restaurant.create(
