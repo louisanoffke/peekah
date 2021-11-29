@@ -36,5 +36,44 @@ def build_recipe_ingredients
       ingredient_amount: 25
     )
 
+    # recipe 2 - Homemade Pappardelle, Veal Ragú
+    RecipeIngredient.create!(
+      recipe_id: 2,
+      ingredient_id: 7,
+      ingredient_amount: 120
+    )
+
+    RecipeIngredient.create!(
+      recipe_id: 2,
+      ingredient_id: 8,
+      ingredient_amount: 200
+    )
+
+    # recipe 3 - Pasta with Squid, Prawns and Chorizo
+    RecipeIngredient.create!(
+      recipe_id: 3,
+      ingredient_id: 9,
+      ingredient_amount: 120
+    )
+
+    RecipeIngredient.create!(
+      recipe_id: 3,
+      ingredient_id: 10,
+      ingredient_amount: 50
+    )
+
+    RecipeIngredient.create!(
+      recipe_id: 3,
+      ingredient_id: 11,
+      ingredient_amount: 60
+    )
+
+    RecipeIngredient.create!(
+      recipe_id: 3,
+      ingredient_id: 12,
+      ingredient_amount: 45
+    )
+
+
   puts "created #{RecipeIngredient.count} RecipeIngredients."
 end
