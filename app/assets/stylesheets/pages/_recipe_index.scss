@@ -39,7 +39,7 @@
 }
 
 .recipe-card-expanded {
-  height: 750px !important;
+  height: 780px !important;
 }
 
 .image-recipe-container {
@@ -64,17 +64,23 @@
 
 #recipe-title a {
   font-size: 25px;
-  margin-bottom: 7px;
+  margin-bottom: 7px !important;
   color: $accent-r;
   text-decoration: none;
 }
 
+.recipe-form-button {
+  margin-bottom: 16px;
+  width: fit-content;
+  cursor: pointer;
+}
+
 .recipe-submit {
-  width: 150px;
+  width: 89%;
   position: absolute;
   bottom: 0;
   left: 0;
-  margin: 20px 20px 20px 22px;
+  margin: 25px 20px;
 }
 
 .icon-container {

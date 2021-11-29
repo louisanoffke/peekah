@@ -15,7 +15,7 @@
         <div class="recipe-content">
           <p id="recipe-title"><%=link_to "#{recipe.name}", recipe_path(recipe) %></p>
           <%# <p> Make this recipe available at your restaurant:</p> %>
-          <button type="button" class="form-button" data-action="click->hidden-form#addDish">Make available</button>
+          <div class="recipe-form-button btn-pka-2" data-action="click->hidden-form#addDish">Make available</div>
           <div class="dish-form" data-hidden-form-target="unhide" style="display: none;">
             <%= render partial: "dishes/form", locals: { recipe: recipe, dish: @dish ? @dish : Dish.new } %>
           </div>
