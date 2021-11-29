@@ -38,4 +38,13 @@ class Dish < ApplicationRecord
   def fat_cals
     fat.to_i * 9
   end
+
+  def allergens
+    dish_allergens = []
+    self.recipe.ingredients.each do |ingredient|
+      p ingredient.identify_allergens
+      dish_allergens << ingredient.identify_allergens
+    end
+    dish_allergens
+  end
 end

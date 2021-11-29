@@ -13,4 +13,10 @@ class Ingredient < ApplicationRecord
 
     self.calorie_content = protein_cals + carb_cals + fat_cals
   end
+
+  def identify_allergens
+    allergens = Allergen.search_by_name_and_note(self.name)
+    self.is_allergen = true if allergens
+    allergens
+  end
 end
