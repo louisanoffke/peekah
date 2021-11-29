@@ -20,12 +20,10 @@
             <%= render partial: "dishes/form", locals: { recipe: recipe, dish: @dish ? @dish : Dish.new } %>
           </div>
           <div class="icon-container">
-            <%= link_to recipe_path(recipe), method: :delete, data: { confirm: "Sure about that?"} do %><i class="far fa-trash-alt recipe-icon"></i><% end %>
-            <%= link_to edit_recipe_path(recipe) do %><i class="far fa-edit recipe-icon"></i><% end %>
+            <%= link_to recipe_path(recipe), method: :delete, data: { confirm: "Sure about that?"} do %><i class="far fa-trash-alt recipe-icon fa-lg"></i><% end %>
+            <%= link_to edit_recipe_path(recipe) do %><i class="far fa-edit recipe-icon fa-lg"></i><% end %>
           </div>
         </div>
       </div>
     <% end %>
 </div>
-
-<div class="recipe-line"></div>
