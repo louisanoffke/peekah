@@ -16,7 +16,7 @@ class Ingredient < ApplicationRecord
 
   def identify_allergens
     allergens = Allergen.search_by_name_and_note(self.name)
-    self.is_allergen = true if allergens
-    allergens
+    self.update(is_allergen: true) unless allergens.empty?
+    allergens unless allergens.empty?
   end
 end

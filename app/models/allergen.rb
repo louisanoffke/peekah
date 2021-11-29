@@ -9,6 +9,6 @@ class Allergen < ApplicationRecord
   pg_search_scope :search_by_name_and_note,
     against: [ :name, :note ],
     using: {
-      tsearch: { prefix: true }
+      tsearch: { any_word: true }
     }
 end

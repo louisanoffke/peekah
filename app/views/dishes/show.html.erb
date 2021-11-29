@@ -34,28 +34,15 @@
     <%# here should be ONLY the DISH ALLERGENS %>
     <div class="nutrition-row">
       <div class="nutrition-row-item">
-        <h3>Allergens in this dish</h3>
+        <h3>This Dish contains the following Allergens</h3>
         <div class="allergen-icons">
         <% @dish.allergens.each do |allergen| %>
-        <% if allergen != [] %>
-          <img class="allergen-icon" src=<%= allergen.icon_url %> alt=<%= allergen.name %>>
-        <% end %>
+          <img class="allergen-icon" src=<%= allergen[0].icon_url %> alt=<%= allergen[0].name %>>
         <% end %>
         </div>
       </div>
     </div>
 
-    <%# below are ALL ICONS %>
-    <div class="nutrition-row">
-      <div class="nutrition-row-item">
-        <h3>Allergen Icons</h3>
-        <div class="allergen-icons">
-        <% Allergen.all.each do |allergen| %>
-          <img class="allergen-icon" src=<%= allergen.icon_url %> alt=<%= allergen.name %>>
-        <% end %>
-        </div>
-      </div>
-    </div>
 
   <div class="dish-history">
     <h3>History</h3>
