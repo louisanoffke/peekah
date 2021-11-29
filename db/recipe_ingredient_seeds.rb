@@ -74,6 +74,63 @@ def build_recipe_ingredients
       ingredient_amount: 45
     )
 
+    # recipe 4 - Turbot with Artichokes, Chorizo, White Wine and Olive Oil
+    RecipeIngredient.create!(
+      recipe_id: 4,
+      ingredient_id: 13,
+      ingredient_amount: 200
+    )
+
+    RecipeIngredient.create!(
+      recipe_id: 4,
+      ingredient_id: 14,
+      ingredient_amount: 75
+    )
+
+    RecipeIngredient.create!(
+      recipe_id: 4,
+      ingredient_id: 15,
+      ingredient_amount: 125
+    )
+
+    RecipeIngredient.create!(
+      recipe_id: 4,
+      ingredient_id: 16,
+      ingredient_amount: 30
+    )
+
+    # recipe 5 - Grilled Tiger Prawns
+    RecipeIngredient.create!(
+      recipe_id: 5,
+      ingredient_id: 11,
+      ingredient_amount: 150
+    )
+
+    # recipe 6 - Salt Baked Fillet of Line Caught Sea Bass with Artichokes and Tomatoes
+    RecipeIngredient.create!(
+      recipe_id: 6,
+      ingredient_id: 17,
+      ingredient_amount: 500
+    )
+
+    RecipeIngredient.create!(
+      recipe_id: 6,
+      ingredient_id: 18,
+      ingredient_amount: 200
+    )
+
+    RecipeIngredient.create!(
+      recipe_id: 6,
+      ingredient_id: 19,
+      ingredient_amount: 125
+    )
+
+    RecipeIngredient.create!(
+      recipe_id: 6,
+      ingredient_id: 20,
+      ingredient_amount: 200
+    )
+
 
   puts "created #{RecipeIngredient.count} RecipeIngredients."
 end
