@@ -1,30 +1,17 @@
 <h1 style="text-align: center">Look at all these dishes. Yum!</h1>
 
-<div class="mx-2">
-  <div class="row no-gutters">
-    <div class="col">
-      <div class="card bg-light p-3">
-        <ul>
-          <%@dishes.each do |dish| %>
-            <li>
-              <%= dish.id %> ------
-              <%= dish.recipe.name %> ------
-              <%= dish.price %> ------
-              <%= dish.restaurant.name %> ------
-              <%= dish.restaurant.address %>
-            </li>
-          <% end %>
-        </ul>
+<div class="cards-container">
+  <!-- Cards -->
+  <div class="cards">
+    <%@dishes.each do |dish| %>
+      <div class="card" style="background-image: url(http://kitt.lewagon.com/placeholder/cities/rio)">
+        <%= dish.recipe.name %>
       </div>
-    </div>
-    <div class="col">
-      <div class="card bg-light">
-        <div style="width: 100%; height: 600px;"
-          data-controller="mapbox"
-          data-mapbox-markers-value="<%= @markers.to_json %>"
-          data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-        </div>
-      </div>
-    </div>
+    <% end %>
   </div>
+  <!-- Map-->
+  <img id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.346,48.8595,11.72,0,0/600x1000?access_token=pk.eyJ1IjoicC1rYSIsImEiOiJja3dmN2JkankwMDBzMm9wYm0xNTR5MG1tIn0.43qViY5utCyucqd_Dgfhaw'>
 </div>
+
+<br>
+<br>
