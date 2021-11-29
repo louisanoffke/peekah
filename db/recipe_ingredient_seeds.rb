@@ -1,16 +1,16 @@
 def build_recipe_ingredients
-  recipes = Recipe.all
-  ingredients = Ingredient.all
-  5.times do
-    recipes.each do |recipe|
-      ingredient = ingredients.sample
-      RecipeIngredient.create!(
-        recipe_id: recipe.id,
-        ingredient_id: ingredient.id,
-        ingredient_amount: (1..100).to_a.sample
-      )
-    end
-  end
+  # recipes = Recipe.all
+  # ingredients = Ingredient.all
+  # 5.times do
+  #   recipes.each do |recipe|
+  #     ingredient = ingredients.sample
+  #     RecipeIngredient.create!(
+  #       recipe_id: recipe.id,
+  #       ingredient_id: ingredient.id,
+  #       ingredient_amount: (1..100).to_a.sample
+  #     )
+  #   end
+  # end
   # recipe 1 - Gnocchi with Cherry Tomato Garlic and Parmesan
   RecipeIngredient.create!(
     recipe_id: 1,
@@ -154,6 +154,72 @@ def build_recipe_ingredients
       recipe_id: 7,
       ingredient_id: 16,
       ingredient_amount: 40
+    )
+
+    # recipe 8 - Pan Fried Dover Sole with a Grainy Mustard Dressing
+    RecipeIngredient.create!(
+      recipe_id: 8,
+      ingredient_id: 23,
+      ingredient_amount: 225
+    )
+
+    RecipeIngredient.create!(
+      recipe_id: 8,
+      ingredient_id: 24,
+      ingredient_amount: 50
+    )
+
+    # recipe 9 - Grilled Rib Eye Steak 400gr
+    RecipeIngredient.create!(
+      recipe_id: 9,
+      ingredient_id: 25,
+      ingredient_amount: 400
+    )
+
+    # recipe 10 - Grilled Veal Chop
+    RecipeIngredient.create!(
+      recipe_id: 10,
+      ingredient_id: 26,
+      ingredient_amount: 200
+    )
+
+    # recipe 11 - Grilled Lamb Cutlets with Smoked Aubergine
+    RecipeIngredient.create!(
+      recipe_id: 11,
+      ingredient_id: 27,
+      ingredient_amount: 225
+    )
+
+    RecipeIngredient.create!(
+      recipe_id: 11,
+      ingredient_id: 28,
+      ingredient_amount: 180
+    )
+
+    # recipe 12 - Roast Baby Chicken Marinated in Lemon
+    RecipeIngredient.create!(
+      recipe_id: 12,
+      ingredient_id: 29,
+      ingredient_amount: 150
+    )
+
+    RecipeIngredient.create!(
+      recipe_id: 12,
+      ingredient_id: 30,
+      ingredient_amount: 100
+    )
+
+    # recipe 13 - Slow Cooked Duck Legs with Orange Glaze
+    RecipeIngredient.create!(
+      recipe_id: 13,
+      ingredient_id: 31,
+      ingredient_amount: 150
+    )
+
+    RecipeIngredient.create!(
+      recipe_id: 13,
+      ingredient_id: 32,
+      ingredient_amount: 200
     )
 
   puts "created #{RecipeIngredient.count} RecipeIngredients."
