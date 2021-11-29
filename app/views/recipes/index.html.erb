@@ -4,7 +4,7 @@
   <h2><strong>Your Restaurant: </strong><%= link_to "#{current_user.restaurant.name}", restaurant_path(current_user.restaurant), class:"chef-restaurant"%></h2>
 </div>
 
-<div class="solid-line"></div>
+<div class="recipe-line"></div>
 
 <div class="recipes-container">
     <% @recipes.each do |recipe| %>
@@ -24,3 +24,5 @@
       </div>
     <% end %>
 </div>
+
+<div class="recipe-line"></div>

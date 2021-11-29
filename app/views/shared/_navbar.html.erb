@@ -9,18 +9,30 @@
         <li class="nav-item active">
           <%= link_to "Home", "/", class: "nav-link" %>
         </li>
+        <li class="nav-link">|</li>
         <li class="nav-item">
-          <%= link_to "Messages", "#", class: "nav-link" %>
+          <%= link_to "Add a Recipe", new_recipe_path, class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "https://robbreport.com/wp-content/uploads/2018/04/gordon-ramsay-1-e1523056498302.jpg?", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "My Dashboard", recipes_path, class: "dropdown-item" %>
-            <%= link_to "Add a recipe", new_recipe_path, class: "dropdown-item" %>
+            <div class="dropdown-item bg-transparent">
+              <p class="sign-in"> Signed in as </p>
+              <p class="sign-in"><strong><%= (current_user.name).capitalize %></strong></p>
+            </div>
+            <div class="dropdown-item dropdown-line bg-transparent"></div>
+            <%= link_to "Your Dashboard", recipes_path, class: "dropdown-item" %>
+            <%= link_to "Your Restaurant", restaurant_path(current_user.restaurant), class: "dropdown-item" %>
+            <%= link_to "Add a Recipe", new_recipe_path, class: "dropdown-item" %>
+            <div class="dropdown-item dropdown-line bg-transparent"></div>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
       <% else %>
+        <li class="nav-item active">
+          <%= link_to "Home", "/", class: "nav-link" %>
+        </li>
+        <li class="nav-link no-cursor">|</li>
         <li class="nav-item">
           <%= link_to "Login", new_user_session_path, class: "nav-link" %>
         </li>
