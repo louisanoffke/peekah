@@ -34,7 +34,7 @@ user = User.create!(
   name: "Alexander",
   email: "user@pka.ai",
   password: "123456",
-  restaurant_id: 10
+  restaurant_id: 1
 )
 puts "~~> test user created with ID = #{user.id} and email #{user.email}"
 

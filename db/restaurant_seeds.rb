@@ -7,6 +7,13 @@ def build_restaurants
   puts "starting to create restaurants"
 
   Restaurant.create(
+    name: "La Petit Maison London",
+    address: "53-54 Brook's Mews London, W1K 4EG",
+    description: "Chef Raphael Duntoye serves upscale French Mediterranean food to chic crowd in smart dining room. Our dress code is smart casual. No shorts or sportswear. Smart trainers are acceptable.",
+    deliveroo_link: "https://deliveroo.co.uk/menu/london/mayfair/lpm-restaurant-and-bar"
+  )
+
+  Restaurant.create(
     name: "Lucky Cat - Kori Kitchen Table",
     address: "10 Grosvenor Square London, W1K 6JP",
     description: "TThis Japanese inspired Chef's Table is designed to be booked exclusively for up to ten guests. Chefs will guide your group through each course, finishing dishes in front of you.",
