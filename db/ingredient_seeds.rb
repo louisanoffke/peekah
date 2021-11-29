@@ -70,7 +70,7 @@ def build_ingredients
   ingredients.each do |ingredient|
     Ingredient.create!(
       name: ingredient,
-      calorie_content: Faker::Number.decimal(l_digits: 2, r_digits: 2),
+      calorie_content: 0,
       protein_content: Faker::Number.decimal(l_digits: 2, r_digits: 2),
       carb_content: Faker::Number.decimal(l_digits: 2, r_digits: 2),
       fat_content: Faker::Number.decimal(l_digits: 2, r_digits: 2)

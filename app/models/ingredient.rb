@@ -11,7 +11,7 @@ class Ingredient < ApplicationRecord
     carb_cals = self.carb_content.to_f * 4
     fat_cals = self.fat_content.to_f * 9
 
-    self.calorie_content = protein_cals + carb_cals + fat_cals
+    self.update(calorie_content: (protein_cals + carb_cals + fat_cals))
   end
 
   def identify_allergens
