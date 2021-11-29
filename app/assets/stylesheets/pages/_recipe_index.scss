@@ -46,13 +46,13 @@
 }
 
 .recipe-image {
-  height: 210px;
+  height: 215px;
   width: 100%;
   border-radius: 2px 2px 0 0;
 }
 
 .recipe-content {
-  margin-top: 210px;
+  margin-top: 220px;
 }
 
 #recipe-title a {
@@ -76,17 +76,17 @@
   flex-direction: row;
   justify-content: space-around;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  top: -11px;
+  right: -12px;
   margin: 20px;
 }
 
 .recipe-icon {
-  color: $accent-g;
+  color: white;
   height: 30px;
   width: 30px;
-  background: white;
-  border: solid 2px $accent-g;
+  background: transparent;
+  border: solid 2px white;
   border-radius: 50%;
   display: flex;
   justify-content: center;
