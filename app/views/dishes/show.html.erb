@@ -36,8 +36,12 @@
       <div class="nutrition-row-item">
         <h3>This Dish contains the following Allergens</h3>
         <div class="allergen-icons">
-        <% @dish.allergens.each do |allergen| %>
-          <img class="allergen-icon" src=<%= allergen[0].icon_url %> alt=<%= allergen[0].name %>>
+        <% if @dish.allergens %>
+          <% @dish.allergens.each do |allergen| %>
+            <img class="allergen-icon" src=<%= allergen[0].icon_url %> alt=<%= allergen[0].name %>>
+          <% end %>
+        <% else %>
+          <p>no allergens recorded</p>
         <% end %>
         </div>
       </div>
