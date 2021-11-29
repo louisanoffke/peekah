@@ -30,6 +30,7 @@
         <img id="nutrition-chart-img" src="https://www.macromealsuk.co.uk/wp-content/uploads/2018/10/PieChart503020-01-1024x1019.png" alt="pie-chart">
       </div>
 
+<<<<<<< HEAD
       <div class="ingredients-container">
         <h3><strong>Ingredients</strong></h3>
         <div class="ingredients-list">
@@ -38,19 +39,20 @@
             <%= recipe_ingredient.ingredient.name %>,
             <%#= recipe_ingredient == @dish_array.last ? "and #{recipe_ingredient.ingredient.name}." : recipe_ingredient.ingredient.name %>
           </span>
-        <% end %>
+
+    <%# here should be ONLY the DISH ALLERGENS %>
+      <div class="allergen-container">
+        <h3>This Dish contains the following Allergens</h3>
+        <div class="all-allergens">
+          <% if @dish.allergens %>
+            <% @dish.allergens.each do |allergen| %>
+              <img class="allergen-icon" src=<%= allergen[0].icon_url %> alt=<%= allergen[0].name %>>
+            <% end %>
+          <% else %>
+            <p>No allergens recorded.</p>
+          <% end %>
         </div>
       </div>
-    </div>
-
-    <div class="allergen-container">
-      <h3><strong>Allergens</strong></h3>
-      <div class="all-allergens">
-        <% Allergen.all.each do |allergen| %>
-          <img class="one-allergen-icon" src=<%= allergen.icon_url %> alt=<%= allergen.name %>>
-        <% end %>
-      </div>
-    </div>
 
     <div class="dish-history">
       <h3><strong>History</strong></h3>
