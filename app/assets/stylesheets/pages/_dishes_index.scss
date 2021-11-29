@@ -43,6 +43,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+
 .dish-card h2 {
   font-size: 16px;
   font-weight: bold;
@@ -53,6 +54,15 @@
   font-size: 12px;
   opacity: .7;
   margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
 }
 
 // Container for image and dish title - flex
@@ -73,6 +83,7 @@
   font-weight: bolder;
   text-shadow: 0 0 10px rgba(0,0,0,0.7);
 }
+
 
 // Container for dish info - flex
 .dish-card .dish-infos {
