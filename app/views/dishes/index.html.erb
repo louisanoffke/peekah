@@ -5,19 +5,21 @@
   <div class="dishes-grid-cards">
     <%@dishes.each do |dish| %>
       <div class="dish-card">
-        <div class="dish-hero" style="background-image: url(http://kitt.lewagon.com/placeholder/cities/rio)">
-          <%= dish.recipe.name %>
-        </div>
-        <div class="dish-infos">
-          <div>
-            <p>Allergens: #to be added</p>
-            <p>Calories: <%= dish.calories %> kcal</p>
+        <%= link_to(dish) do %>
+          <div class="dish-hero" style="background-image: url(http://kitt.lewagon.com/placeholder/cities/rio)">
+            <%= dish.recipe.name %>
           </div>
-          <h2 class="dish-price"> £<%= dish.price %> </h2>
-        </div>
-        <div class="restaurant-info">
-            <p><i class="fas fa-map-marker-alt"></i> <%= dish.restaurant.name %></p>
-        </div>
+          <div class="dish-infos">
+            <div>
+              <p>Allergens: #to be added</p>
+              <p>Calories: <%= dish.calories %> kcal</p>
+            </div>
+            <h2 class="dish-price"> £<%= dish.price %> </h2>
+          </div>
+          <div class="restaurant-info">
+              <p><i class="fas fa-map-marker-alt"></i> <%= dish.restaurant.name %></p>
+          </div>
+        <% end %>
       </div>
     <% end %>
   </div>
