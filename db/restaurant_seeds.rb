@@ -47,16 +47,7 @@ Dine on Asian inspired small plates, Robata grilled dishes, sushi and sashimi th
     opentable_link: "https://www.opentable.co.uk/galvin-at-windows"
   )
 
-  # resource_type = "image"
-  # type = "upload"
-  # version = 1638101476
-  # folder = "pka-restaurant"
-  # public_id = "res_hardrockcafe"
-  # format = "jpg"
-  # signature = Cloudinary::Utils.api_sign_request({:public_id=>public_id,
-  # :version=>version}, Cloudinary.config.api_secret)
-  # photo = "#{resource_type}/#{type}/v#{version}/#{public_id}.#{format}##{signature}"
-
+  # https://res.cloudinary.com/p-ka/image/upload/v1638095731/development/pka_res_hardrockcafe.jpg
   # def full_identifier(image)
   #   params = {version: image.file.version, public_id: image.file.public_id}
   #   signature = Cloudinary::Utils.sign_request(params)[:signature]
@@ -70,16 +61,30 @@ Dine on Asian inspired small plates, Robata grilled dishes, sushi and sashimi th
   # new_folio = Folio.new(title: 'Test', body: 'Test One', position: 1, main_image: main_image, thumb_image: thumb_image)
   # new_folio.save
 
+  # https://res.cloudinary.com/p-ka/image/upload/v1638101476/res_hardrockcafe.jpg
+
+  # resource_type = "image"
+  # type = "upload"
+  # version = 1637066716
+  # public_id = "ikyieksnkomnwcl5gbym"
+  # format = "jpg"
+  # signature = Cloudinary::Utils.api_sign_request({:public_id=>public_id, :version=>version}, "aiVZi1o_zRUe4U0d43GlpXhVcXE")
+  # photo = "#{resource_type}/#{type}/v#{version}/#{public_id}.#{format}##{signature}"
+
   hardrockcafe = Restaurant.create(
     name: "Hard Rock Cafe - London",
     address: "150 Old Park Lane London, ENG W1K 1QZ",
     description: "Hard Rock Cafe is a global phenomenon with 185 cafes that are visited by nearly 80 million guests each year. The first Hard Rock Cafe opened on June 14, 1971, in London, England, and from there the brand has expanded to major cities and exotic locations around the world.",
     opentable_link: "https://www.opentable.co.uk/hard-rock-cafe-london",
-    ubereats_link: "https://www.ubereats.com/store/hard-rock-cafe/j2IWh1vrQ9uNJGGW7esong",
+    ubereats_link: "https://www.ubereats.com/store/hard-rock-cafe/j2IWh1vrQ9uNJGGW7esong"
+    # photo: open("https://res.cloudinary.com/p-ka/image/upload/v1638095731/development/pka_res_hardrockcafe.jpg")
     # photo: photo
   )
-  # hardrockcafe_img = URI.open('https://resizer.otstatic.com/v2/photos/wide-huge/1/25908286.jpg')
-  # hardrockcafe.photo.attach(io: hardrockcafe_img, filename: 'hardrockcafe.png', content_type: 'image/png')
+  # hardrockcafe_img = URI.open("https://res.cloudinary.com/p-ka/image/upload/w_1600,h_1600,c_crop,g_face,r_max/w_400/v1638101476/res_hardrockcafe.jpg")
+  # url_dev = "https://res.cloudinary.com/p-ka/image/upload/v1638200900/development/x2a8zemx8pjvp1d7nu9g388tr1zz.jpg"
+  # url_devv = "https://res.cloudinary.com/p-ka/image/upload/v1638201289/development/ohp1lbdnu3dubxygvhx74jui5mgx.jpg"
+  # url_r = "https://res.cloudinary.com/p-ka/image/upload/w_1600,h_1600,c_crop,g_face,r_max/w_400/v1638101476/res_hardrockcafe.jpg"
+  # hardrockcafe.photo.attach(filename: 'res_hardrockcafe.jpg', content_type: 'image/jpg', io: hardrockcafe_img)
   # p "#{hardrockcafe.photo.attached?}"
 
   Restaurant.create(

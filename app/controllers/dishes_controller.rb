@@ -3,7 +3,7 @@ class DishesController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
-    @dishes = [Dish.all.includes(:restaurant, :recipe), Dish.all.includes(:restaurant, :recipe)].flatten
+    @dishes = Dish.all.includes(:restaurant, :recipe)
 
     @markers = @dishes.map do |dish|
       {
