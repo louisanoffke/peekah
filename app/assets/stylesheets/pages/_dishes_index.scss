@@ -20,7 +20,7 @@
 
 .cards-container .cards {
   flex-grow: 1;
-  padding: 16px;
+  padding: 0px 16px;
 }
 
 .cards-container #map {
@@ -53,14 +53,14 @@
 
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
 }
 
 
 @media(max-width: 992px) {
   .cards {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr ;
   }
 }
 
