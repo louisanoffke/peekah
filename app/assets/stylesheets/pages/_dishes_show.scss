@@ -1,83 +1,124 @@
 .outer-box {
+  // border: 2px solid red;
+  position: relative;
+  height: 100%;
+}
+
+.header {
+  margin-top: 20px;
+  height: 10%;
+  width: 100%;
+  display: block;
+}
+
+.dish-description {
+  font-size: 30px;
+}
+
+.solid-line {
+  width: 90%;
+  margin: 40px auto;
+  height: 2px;
+}
+
+.left-right-container {
   display: flex;
-  gap: 8px;
+  justify-content: space-evenly;
+  // border: 2px solid black;
 }
 
 .inner-box-left {
   display: flex;
-  flex: 2;
   flex-direction: column;
-  // background-color: aliceblue;
-  box-shadow: cadetblue;
-  align-content: space-between;
+  // border: 3px solid gold;
+  width: 55%;
+  margin-top: 0px;
+  justify-content: space-between;
+  height: 500px;
 }
 
-.inner-box-left h1,h3 {
-  color: $accent-r;
+.nutritional-info {
+  width: 100%;
+  // border: 2px solid green;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15px;
+}
+
+.nutritonal-breakdown {
+  font-size: 20px;
+}
+
+.nutritional-details {
+  padding-left: 5px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.nutrition-chart {
+  height: 200px;
+  // border: 2px solid pink;
+  width: 30%;
+  position: relative;
+  right: 120px;
+  top: 30px;
+}
+
+#nutrition-chart-img {
+  height: 200px;
+  margin: 0;
+}
+
+.ingredients-container {
+  padding-left: 15px;
+}
+
+.ingredients-list {
+  padding-left: 10px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.allergen-container {
+  padding-left: 15px;
+}
+
+.all-allergens {
+  font-size: 20px;
+  margin: 0 20px 20px 0;
 }
 
 .inner-box-right {
-  color: white;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  background-color: $accent-r;
-  height: 100vh;
+  // border: 2px solid greenyellow;
+  background-color: #99154E;
+  width: 40%;
 }
 
-.nutrition-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  // border: solid black;
-  justify-content: space-between;
-  align-content: flex-start;
+.map-container {
   margin-top: 20px;
-  margin-bottom: 50px;
-}
-
-.nutrition-row-item {
-  margin: 0 auto;
-  // border: solid red;
-}
-
-// .nutrition-row-item img {
-//   width: 100px;
-//   position: flex;
-// }
-
-#nutrition-chart {
-  width: 200px;
-}
-
-.ingredients-list btn {
-  flex-wrap: wrap;
-}
-
-.allergen-list {
-  border: solid blue;
+  // border: 2px solid red;
 }
 
 .restaurant-links {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 50px;
+  justify-content: space-evenly;
+  margin-bottom: 17px;
+  margin-top: 20px;
 }
 
-.sidebar-map img {
-  width: 400px;
-  margin-left: 16px;
+.find-us {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  color: white;
 }
 
-.allergen-icons {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+.dish-history {
+  padding-left: 18px;
 }
-.allergen-icon {
-  border-radius: 50%;
-  color: $accent-dark-green;
-  border: solid;
-  padding: 1%;
+
+.dish-text {
+  padding-left: 5px;
+  font-size: 20px;
+  margin-top: 20px;
 }

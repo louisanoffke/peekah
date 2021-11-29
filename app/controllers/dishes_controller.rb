@@ -1,5 +1,5 @@
 class DishesController < ApplicationController
-  before_action :dish_id, only: %i[show edit update]
+  before_action :dish_id, only: %i[show edit update last_ingredient]
   skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
@@ -15,7 +15,14 @@ class DishesController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @markers = [@dish].map do |dish|
+      {
+        lat: dish.restaurant.latitude,
+        lng: dish.restaurant.longitude
+      }
+    end
+  end
 
   def new
     @dish = Dish.new
@@ -45,6 +52,10 @@ class DishesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def last_ingredient
+    @dish_array = @dish.recipe.recipe_ingredients # PARTIAL ?
   end
 
   private
