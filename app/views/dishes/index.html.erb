@@ -1,19 +1,36 @@
-<h1 style="text-align: center">Look at all these dishes. Yum!</h1>
-
-<div style="width: 100%; height: 600px;"
-  data-controller="mapbox"
-  data-mapbox-markers-value="<%= @markers.to_json %>"
-  data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+<div class="filter-container">
+  <h5> - <b>filters</b> and <b>searches</b> will go here - to be made sticky on scroll -</h5>
+</div>
+<div class="map-dishes-container">
+  <!-- Cards -->
+  <div class="dishes-grid-cards">
+    <%@dishes.each do |dish| %>
+      <div class="dish-card">
+        <%= link_to(dish) do %>
+          <div class="dish-hero" style="background-image: url(http://kitt.lewagon.com/placeholder/cities/rio)">
+            <%= dish.recipe.name %>
+          </div>
+          <div class="dish-infos">
+            <div>
+              <p>Allergens: #to be added</p>
+              <p>Calories: <%= dish.calories %> kcal</p>
+            </div>
+            <h2 class="dish-price"> £<%= dish.price %> </h2>
+          </div>
+          <div class="restaurant-info">
+              <p><i class="fas fa-map-marker-alt"></i> <%= dish.restaurant.name %></p>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <!-- Map-->
+  <div id="map" style="height: 100vh"
+          data-controller="mapbox"
+          data-mapbox-markers-value="<%= @markers.to_json %>"
+          data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 </div>
 
-<ul>
-  <%@dishes.each do |dish| %>
-    <li>
-      <%= dish.id %> ------
-      <%= dish.recipe.name %> ------
-      <%= dish.price %> ------
-      <%= dish.restaurant.name %> ------
-      <%= dish.restaurant.address %>
-    </li>
-  <% end %>
-</ul>
+<br>
+<br>
