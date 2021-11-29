@@ -15,7 +15,14 @@ class DishesController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @markers = [@dish].map do |dish|
+      {
+        lat: dish.restaurant.latitude,
+        lng: dish.restaurant.longitude
+      }
+    end
+  end
 
   def new
     @dish = Dish.new
