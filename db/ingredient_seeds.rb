@@ -21,37 +21,59 @@ def build_ingredients
     contains_allergen: false
   )
 
-  20.times do
+  ingredients = %w[
+    Gnocchi
+    Cherry\ Tomato
+    Garlic
+    Parmesan
+    Pappardelle
+    Veal
+    Pasta
+    Squid
+    Prawns
+    Chorizo
+    Turbot
+    Artichokes
+    White\ Wine
+    Olive\ Oil
+    Salt
+    Sea\ Bass
+    Artichokes
+    Tomatoes
+    Sea\ Bream
+    Herbs
+    Sole
+    Grainy\ Mustard
+    Rib\ Eye\ Steak
+    Veal\ Chops
+    Lamb\ Cutlets
+    Aubergine
+    Baby\ Chicken
+    Lemon
+    Duck\ Legs
+    Orange
+    Whole\ Chicken
+    Rack\ of\ Lamb
+    Couscous
+    Rib\ of\ Beef
+    Chickpeas
+    Broccoli
+    Green\ Beans
+    Potatoes
+    Mixed\ Leafs\Salad
+    Carrot
+    Onion
+    Walnut
+    Sugar
+  ]
+
+  ingredients.each do |ingredient|
     Ingredient.create!(
-      name: Faker::Food.ingredient,
+      name: ingredient,
       calorie_content: Faker::Number.decimal(l_digits: 2, r_digits: 2),
       protein_content: Faker::Number.decimal(l_digits: 2, r_digits: 2),
       carb_content: Faker::Number.decimal(l_digits: 2, r_digits: 2),
       fat_content: Faker::Number.decimal(l_digits: 2, r_digits: 2)
-    )
-  end
-
-  puts "starting to create fruits"
-
-  10.times do
-    Ingredient.create!(
-      name: Faker::Food.fruits,
-      calorie_content: Faker::Number.decimal(l_digits: 2, r_digits: 2),
-      protein_content: (0..14).to_a.sample,
-      carb_content: Faker::Number.decimal(l_digits: 2),
-      fat_content: (0..8).to_a.sample
-    )
-  end
-
-  puts "starting to create vegetables"
-
-  10.times do
-    Ingredient.create!(
-      name: Faker::Food.vegetables,
-      calorie_content: Faker::Number.decimal(l_digits: 2, r_digits: 2),
-      protein_content: (0..23).to_a.sample,
-      carb_content: Faker::Number.decimal(l_digits: 2),
-      fat_content: (0..17).to_a.sample
     )
   end
 
