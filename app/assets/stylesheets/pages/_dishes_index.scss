@@ -4,9 +4,9 @@
   justify-content: center;
   align-items: center;
   background-color: $base-bkg;
-  height: 100px;
+  height: 80px;
   width: 100vw;
-  padding: 10px;
+  padding: 20px;
 }
 
 // Container for dishes and map
@@ -37,7 +37,7 @@
 
 @media(max-width: 992px) {
   .dishes-grid-cards {
-    grid-template-columns: 1fr ;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -51,7 +51,7 @@
 .dish-card {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  box-shadow: 0 0 6px rgba(0,0,0,0.25);
 }
 
 .dish-card:hover {
