@@ -222,5 +222,105 @@ def build_recipe_ingredients
       ingredient_amount: 200
     )
 
+    # recipe 14 - Roast Black Leg Chicken
+    RecipeIngredient.create!(
+      recipe_id: 14,
+      ingredient_id: 33,
+      ingredient_amount: 225
+    )
+
+    # recipe 15 - Roast Rack of Lamb with Spiced Couscous
+    RecipeIngredient.create!(
+      recipe_id: 15,
+      ingredient_id: 34,
+      ingredient_amount: 300
+    )
+
+    RecipeIngredient.create!(
+      recipe_id: 15,
+      ingredient_id: 35,
+      ingredient_amount: 120
+    )
+
+    # recipe 16 - Rib of Beef
+    RecipeIngredient.create!(
+      recipe_id: 16,
+      ingredient_id: 36,
+      ingredient_amount: 400
+    )
+
+    # recipe 17 - Mediterranean Vegetables with Chickpeas
+    RecipeIngredient.create!(
+      recipe_id: 17,
+      ingredient_id: 28,
+      ingredient_amount: 120
+    )
+
+    RecipeIngredient.create!(
+      recipe_id: 17,
+      ingredient_id: 20,
+      ingredient_amount: 150
+    )
+
+    RecipeIngredient.create!(
+      recipe_id: 17,
+      ingredient_id: 37,
+      ingredient_amount: 60
+    )
+
+    # recipe 18 - Sautéed Broccoli
+    RecipeIngredient.create!(
+      recipe_id: 18,
+      ingredient_id: 38,
+      ingredient_amount: 100
+    )
+
+    # recipe 19 - Green Beans
+    RecipeIngredient.create!(
+      recipe_id: 19,
+      ingredient_id: 39,
+      ingredient_amount: 100
+    )
+
+    # recipe 20 -  Baked Gratinated Potatoes
+    RecipeIngredient.create!(
+      recipe_id: 20,
+      ingredient_id: 40,
+      ingredient_amount: 120
+    )
+
+    # recipe 21 - French Fried Potatoes
+    RecipeIngredient.create!(
+      recipe_id: 21,
+      ingredient_id: 40,
+      ingredient_amount: 150
+    )
+
+    # recipe 22 - Mixed Leaf Salad
+    RecipeIngredient.create!(
+      recipe_id: 22,
+      ingredient_id: 41,
+      ingredient_amount: 75
+    )
+
+    # recipe 23 - Roasted Carrot, Caramelized Onion and Candied Walnut
+    RecipeIngredient.create!(
+      recipe_id: 23,
+      ingredient_id: 42,
+      ingredient_amount: 65
+    )
+
+    RecipeIngredient.create!(
+      recipe_id: 23,
+      ingredient_id: 43,
+      ingredient_amount: 100
+    )
+
+    RecipeIngredient.create!(
+      recipe_id: 23,
+      ingredient_id: 44,
+      ingredient_amount: 35
+    )
+
   puts "created #{RecipeIngredient.count} RecipeIngredients."
 end
