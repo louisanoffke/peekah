@@ -15,17 +15,6 @@
       </div>
 
       <div class="nutrition-row-item">
-<<<<<<< HEAD
-        <%# a list of allergens with icons %>
-        <h3>Allergens</h3>
-        <%# add logic here to display the icons IF allergens are present ! %>
-        <img class="recipe-icon "src="https://img.icons8.com/material-rounded/64/000000/kawaii-egg.png"/>
-        <i class="fas fa-egg recipe-icon"></i>
-      </div>
-
-      <div class="nutrition-row-item">
-=======
->>>>>>> master
         <h3>Nutritionals</h3>
         <p><strong>Total Calories: <%= @dish.calories %> kcal</strong></p>
         <p>Carbs: <%= @dish.carbs %>g
@@ -42,6 +31,21 @@
       </div>
     </div>
 
+    <%# here should be ONLY the DISH ALLERGENS %>
+    <div class="nutrition-row">
+      <div class="nutrition-row-item">
+        <h3>Allergens in this dish</h3>
+        <div class="allergen-icons">
+        <% @dish.allergens.each do |allergen| %>
+        <% if allergen != [] %>
+          <img class="allergen-icon" src=<%= allergen.icon_url %> alt=<%= allergen.name %>>
+        <% end %>
+        <% end %>
+        </div>
+      </div>
+    </div>
+
+    <%# below are ALL ICONS %>
     <div class="nutrition-row">
       <div class="nutrition-row-item">
         <h3>Allergen Icons</h3>
