@@ -1,3 +1,14 @@
+// Filters container - flex
+.filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $base-bkg;
+  height: 100px;
+  width: 100vw;
+  padding: 10px;
+}
+
 // Container for dishes and map
 .map-dishes-container {
   margin: 10px;
@@ -40,7 +51,11 @@
 .dish-card {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+.dish-card:hover {
+   background: $base-bkg-green;
 }
 
 
@@ -80,7 +95,8 @@ a:hover {
   font-size: 22px;
   color: white;
   padding: 10px;
-  font-weight: bolder;
+  letter-spacing: 1px;
+  font-weight: 500;
   text-shadow: 0 0 10px rgba(0,0,0,0.7);
 }
 
