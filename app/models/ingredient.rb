@@ -7,11 +7,11 @@ class Ingredient < ApplicationRecord
   def total_calories
     puts "about to calculate total calories for #{self.name}:"
 
-    protein_cals = self.protein_content.to_f * 4
-    carb_cals = self.carb_content.to_f * 4
-    fat_cals = self.fat_content.to_f * 9
+    protein_cals = self.protein_content.to_i * 4
+    carb_cals = self.carb_content.to_i * 4
+    fat_cals = self.fat_content.to_i * 9
 
-    self.calorie_content = protein_cals + carb_cals + fat_cals
+    self.calorie_content = (protein_cals + carb_cals + fat_cals)
   end
 
   def identify_allergens
