@@ -1,6 +1,7 @@
 .outer-box {
   display: flex;
   gap: 8px;
+
 }
 
 .inner-box-left {
@@ -25,37 +26,102 @@
   height: 100vh;
 }
 
+.dish-title {
+  text-decoration: underline;
+}
+
+.solid-line {
+  width: 90%;
+  margin: 30px auto;
+}
+
+.dish-description {
+  font-size: 20px;
+}
+
 .nutrition-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  // border: solid black;
-  justify-content: space-between;
-  align-content: flex-start;
+  position: relative;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto auto;
+  grid-gap: 0px;
+
   margin-top: 20px;
   margin-bottom: 50px;
 }
 
-.nutrition-row-item {
-  margin: 0 auto;
-  // border: solid red;
+.nutritional-info {
+  margin: 0;
+  font-size: 22px;
+  width: 100%;
+  grid-column: 1/3 ;
+  padding-left: 20px;
 }
 
-.nutrition-row-item img {
-  width: 100px;
-  position: flex;
+.nutritional-details {
+  padding-left: 9px;
+  margin-top: 20px;
 }
 
-#nutrition-chart {
+.nutrition-chart {
+
+  width: 100%;
+  grid-column: 3/4;
+  display: flex;
+  flex-direction: column;
+}
+
+#nutrition-chart-img {
+  height: 80%;
+  width: 100%;
+
+  margin: auto auto;
+}
+
+.ingredients-container {
+
+  grid-column: 1/4;
+  margin-top: 40px;
+  width: 100%;
+  padding-left: 20px;
+}
+
+#nutrition-chart-img {
   width: 200px;
+  display: block;
 }
 
-.ingredients-list btn {
-  flex-wrap: wrap;
+.ingredients-list {
+  font-size: 20px;
+  padding-left: 8px;
 }
 
-.allergen-list {
-  border: solid blue;
+.allergen-container {
+  margin-top: 30px;
+  padding-left: 20px;
+}
+
+.all-allergens {
+  padding-left: 4px;
+  margin-top: 15px;
+}
+
+.one-allergen-icon {
+  border-radius: 50%;
+  color: $accent-dark-green;
+  border: solid;
+  margin: 0 14px 15px 0;
+}
+
+.dish-history {
+  margin-top: 60px;
+  padding-left: 20px;
+}
+
+.dish-text {
+  padding-left: 7px;
+  font-size: 17px;
+  padding-top: 10px;
 }
 
 .restaurant-links {
@@ -68,16 +134,4 @@
 .sidebar-map img {
   width: 400px;
   margin-left: 16px;
-}
-
-.allergen-icons {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-.allergen-icon {
-  border-radius: 50%;
-  color: $accent-dark-green;
-  border: solid;
-  padding: 1%;
 }

@@ -1,5 +1,5 @@
 class DishesController < ApplicationController
-  before_action :dish_id, only: %i[show edit update]
+  before_action :dish_id, only: %i[show edit update last_ingredient]
   skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
@@ -45,6 +45,10 @@ class DishesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def last_ingredient
+    @dish_array = @dish.recipe.recipe_ingredients
   end
 
   private
