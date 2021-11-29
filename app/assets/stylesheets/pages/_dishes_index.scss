@@ -1,71 +1,99 @@
-.no-gutters {
-  margin-right: 0;
-  margin-left: 0;
-
-  > .col,
-  > [class*="col-"] {
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-
-.cards-container {
-  margin: 10px, 10px;
-}
-
-
-.cards-container {
+// Container for dishes and map
+.map-dishes-container {
+  margin: 10px;
   display: flex;
 }
 
-.cards-container .cards {
-  flex-grow: 1;
+.map-dishes-container .dishes-grid-cards {
+  flex-grow: 2;
   padding: 0px 16px;
 }
 
-.cards-container #map {
+.map-dishes-container #map {
   height: 100vh;
   position: sticky;
   top: 0;
   width: 100vw;
 }
 
-.card {
-  background-size: cover;
-  background-position: center;
-  height: 150px;
-  border-radius: 1px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  font-size: 22px;
-  color: white;
-  font-weight: bolder;
-  text-shadow: 0 0 10px rgba(0,0,0,0.7);
-}
-
-.map-div {
-  display: flex;
-  width: 50vw;
-  justify-content: center;
-}
-
-.cards {
+// Container for dishes - grid
+.dishes-grid-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 300px);
   grid-gap: 16px;
 }
 
 
 @media(max-width: 992px) {
-  .cards {
+  .dishes-grid-cards {
     grid-template-columns: 1fr ;
   }
 }
 
 @media(max-width: 768px) {
-  .cards {
+  .dishes-grid-cards {
     grid-template-columns: 1fr;
   }
 }
+
+// Container for a dish - default block
+.dish-card {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.dish-card h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.dish-card p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+// Container for image and dish title - flex
+.dish-card .dish-hero {
+  background-size: cover;
+  background-position: center;
+  height: 100px;
+  width: 100%;
+  border-radius: 1px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  font-size: 22px;
+  color: white;
+  padding: 10px;
+  font-weight: bolder;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+// Container for dish info - flex
+.dish-card .dish-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.dish-card .restaurant-info {
+  padding: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+
+
+// .map-div {
+//   display: flex;
+//   width: 50vw;
+//   justify-content: center;
+// }

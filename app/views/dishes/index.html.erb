@@ -1,11 +1,23 @@
 <h1 style="text-align: center">Look at all these dishes. Yum!</h1>
 
-<div class="cards-container">
+<div class="map-dishes-container">
   <!-- Cards -->
-  <div class="cards">
+  <div class="dishes-grid-cards">
     <%@dishes.each do |dish| %>
-      <div class="card" style="background-image: url(http://kitt.lewagon.com/placeholder/cities/rio)">
-        <%= dish.recipe.name %>
+      <div class="dish-card">
+        <div class="dish-hero" style="background-image: url(http://kitt.lewagon.com/placeholder/cities/rio)">
+          <%= dish.recipe.name %>
+        </div>
+        <div class="dish-infos">
+          <div>
+            <p>Allergens: #to be added</p>
+            <p>Calories: <%= dish.calories %> kcal</p>
+          </div>
+          <h2 class="dish-price"> £<%= dish.price %> </h2>
+        </div>
+        <div class="restaurant-info">
+            <p><i class="fas fa-map-marker-alt"></i> <%= dish.restaurant.name %></p>
+        </div>
       </div>
     <% end %>
   </div>
