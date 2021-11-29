@@ -131,6 +131,30 @@ def build_recipe_ingredients
       ingredient_amount: 200
     )
 
+    # recipe 7 - Sea Bream Baked en Papillote with Lemon, Herbs and Olive Oil
+    RecipeIngredient.create!(
+      recipe_id: 7,
+      ingredient_id: 21,
+      ingredient_amount: 220
+    )
+
+    RecipeIngredient.create!(
+      recipe_id: 7,
+      ingredient_id: 22,
+      ingredient_amount: 5
+    )
+
+    RecipeIngredient.create!(
+      recipe_id: 7,
+      ingredient_id: 30,
+      ingredient_amount: 100
+    )
+
+    RecipeIngredient.create!(
+      recipe_id: 7,
+      ingredient_id: 16,
+      ingredient_amount: 40
+    )
 
   puts "created #{RecipeIngredient.count} RecipeIngredients."
 end
