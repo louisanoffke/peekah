@@ -32,6 +32,7 @@
   margin-top: 30px;
   padding: 20px;
   position: relative;
+  border-radius: 5px !important;
 }
 
 .recipe-card {
@@ -49,13 +50,13 @@
   position: absolute;
   left: 0;
   top: 0;
-  border-radius: 2px;
+  border-radius: 5px;
 }
 
 .recipe-image {
   height: 275px;
   width: 100%;
-  border-radius: 2px 2px 0 0;
+  border-radius: 5px 5px 0 0;
 }
 
 .recipe-content {
@@ -84,7 +85,7 @@
 }
 
 .icon-container {
-  width: 80px;
+  width: 90px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -96,8 +97,8 @@
 
 .recipe-icon {
   color: white;
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
   background: transparent;
   border: solid 2px white;
   border-radius: 50%;
