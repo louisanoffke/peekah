@@ -1,5 +1,5 @@
 <div class="title-container">
-  <i><h1 class="dashboard-title"> <%= (current_user.name).capitalize %>'s Dashboard </h1></i>
+  <i><h1 class="dashboard-title"> Chef <%= (current_user.name).capitalize %>'s Dashboard </h1></i>
   <br>
   <h2><strong>Your Restaurant: </strong><%= link_to "#{current_user.restaurant.name}", restaurant_path(current_user.restaurant), class:"chef-restaurant"%></h2>
 </div>
