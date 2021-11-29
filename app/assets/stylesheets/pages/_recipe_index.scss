@@ -27,12 +27,19 @@
   margin-bottom: 40px;
 }
 
-.recipe-card {
-  height: 650px !important;
+.recipe-card, .recipe-card-expanded {
   width: 371px !important;
   margin-top: 30px;
   padding: 20px;
   position: relative;
+}
+
+.recipe-card {
+  height: 350px !important;
+}
+
+.recipe-card-expanded {
+  height: 750px !important;
 }
 
 .image-recipe-container {
