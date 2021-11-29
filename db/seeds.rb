@@ -31,7 +31,7 @@ puts "_______________"
 
 puts ">> creating TEST USER"
 user = User.create!(
-  name: "Chef Mirek",
+  name: "Alexander",
   email: "user@pka.ai",
   password: "123456",
   restaurant_id: 10
