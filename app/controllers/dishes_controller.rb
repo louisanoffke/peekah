@@ -48,7 +48,7 @@ class DishesController < ApplicationController
   end
 
   def last_ingredient
-    @dish_array = @dish.recipe.recipe_ingredients
+    @dish_array = @dish.recipe.recipe_ingredients # PARTIAL ?
   end
 
   private
