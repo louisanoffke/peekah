@@ -20,11 +20,11 @@ class DishesController < ApplicationController
       end
     end
 
-    # Protein Filter: will go below
+    # Protein Filter: to find dishes with LESS THAN input amount
     if params[:protein].present?
       # raise
       @dishes = []
-      Dish.all.map do |dish|
+      Dish.all.each do |dish|
         if dish.protein <= params[:protein].to_i
           @dishes << dish
         end
