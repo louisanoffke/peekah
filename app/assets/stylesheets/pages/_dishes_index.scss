@@ -30,7 +30,7 @@
 // Container for dishes - grid
 .dishes-grid-cards {
   display: grid;
-  grid-template-columns: repeat(3, 300px);
+  grid-template-columns: repeat(2, 500px);
   grid-gap: 16px;
 }
 
@@ -55,9 +55,8 @@
 }
 
 .dish-card:hover {
-   background: $base-bkg-green;
+  background: $base-bkg-green;
 }
-
 
 .dish-card h2 {
   font-size: 16px;
@@ -71,6 +70,7 @@
   margin: 0;
 }
 
+// Disable links default style
 a {
   color: inherit;
 }
@@ -84,7 +84,7 @@ a:hover {
 .dish-card .dish-hero {
   background-size: cover;
   background-position: center;
-  height: 100px;
+  height: 150px;
   width: 100%;
   border-radius: 1px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
@@ -94,7 +94,7 @@ a:hover {
   justify-content: space-around;
   font-size: 22px;
   color: white;
-  padding: 20px 10px;
+  padding: 30px 10px;
   letter-spacing: 1px;
   font-weight: 500;
   text-shadow: 0 0 10px rgba(0,0,0,0.7);

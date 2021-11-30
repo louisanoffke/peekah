@@ -8,139 +8,139 @@ def build_recipes
   # dependent on test-user with user_id = 1 to exist!
 
   Recipe.create!(
-    name: "GNOCCHI Á LA TOMATE FRAÎCHE",
+    name: "Gnocchi á la Tomate Fraîche",
     method: "Gnocchi with Cherry Tomato Garlic and Parmesan",
     user_id: 1
   )
 
   Recipe.create!(
-    name: "PAPPARDELLE FRAICHES, SAUCE BOLOGNAISE DE VEAU",
+    name: "Pappardelle Fraiches,\nSauce Bolognaise de Veau",
     method: "Homemade Pappardelle, Veal Ragú",
     user_id: 1
   )
 
   Recipe.create!(
-    name: "PÂTES FRAÎCHES AUX CALAMARS, CREVETTES ET CHORIZO",
+    name: "Pâtes Fraîches aux Calamars,\nCrevettes et Chorizo",
     method: "Homemade Pasta with Squid, Prawns and Chorizo",
     user_id: 1
   )
 
   Recipe.create!(
-    name: "TURBOT AUX ARTICHAUTS BARIGOULE",
+    name: "Turbot aux Artichauts Barigoule",
     method: "Turbot with Artichokes, Chorizo, White Wine and Olive Oil",
     user_id: 1
   )
 
   Recipe.create!(
-    name: "GROSSES CREVETTES GRILLÉES",
+    name: "Grosses Crevettes Grillées",
     method: "Grilled Tiger Prawns",
     user_id: 1
   )
 
   Recipe.create!(
-    name: "LOUP DE MER EN CROÛTE DE SEL",
+    name: "Loup de Mer en Croûte de Sel",
     method: "Salt Baked Fillet of Line Caught Sea Bass with Artichokes and Tomatoes",
     user_id: 1
   )
 
   Recipe.create!(
-    name: "DAURADE AU CITRON",
+    name: "Daurade au Citron",
     method: "Whole Sea Bream Baked en Papillote with Lemon, Herbs and Olive Oil",
     user_id: 1
   )
 
   Recipe.create!(
-    name: "SÔLE POÊLÉE AU GRAIN DE MOUTARDE",
+    name: "Sôle Poêlée au Grain de Moutarde",
     method: "Pan Fried Dover Sole with a Grainy Mustard Dressing",
     user_id: 1
   )
 
   Recipe.create!(
-    name: "ENTRECÔTES GRILLÉE",
+    name: "Entrecôtes Grillée",
     method: "Grilled Rib Eye Steak 400gr",
     user_id: 1
   )
 
   Recipe.create!(
-    name: "CÔTES DE VEAU GRILLÉE",
+    name: "Côtes de Veau Grillée",
     method: "Grilled Veal Chop",
     user_id: 1
   )
 
   Recipe.create!(
-    name: "CÔTELETTES D'AGNEAU VIVIENNE",
+    name: "Côtelettes d'Agneau Vivienne",
     method: "Grilled Lamb Cutlets with Smoked Aubergine",
     user_id: 1
   )
 
   Recipe.create!(
-    name: "COQUELET AU CITRON CONFIT",
+    name: "Coquelet au Citron Confit",
     method: "Roast Baby Chicken Marinated in Lemon",
     user_id: 1
   )
 
   Recipe.create!(
-    name: "CANARD À L’ORANGE",
+    name: "Canard à l’Orange",
     method: "Slow Cooked Duck Legs with Orange Glaze",
     user_id: 1
   )
 
   Recipe.create!(
-    name: "POULET FAÇON “LPM”*",
-    method: "Whole Roast Black Leg Chicken *Please pre-order, subject to availability",
+    name: "Poulet Façon “LPM”",
+    method: "Whole Roast Black Leg Chicken",
     user_id: 1
   )
 
   Recipe.create!(
-    name: "CARRÉ D’ AGNEAU ENTIER*",
-    method: "Whole Roast Rack of Lamb with Spiced Couscous* Please pre-order, subject to availability",
+    name: "Carré d’Agneau Entier",
+    method: "Whole Roast Rack of Lamb with Spiced Couscous",
     user_id: 1
   )
 
   Recipe.create!(
-    name: "CÔTE DE BOEUF*",
-    method: "Rib of Beef, *Please pre-order, subject to availability",
+    name: "Côte de boeuf",
+    method: "Rib of Beef",
     user_id: 1
   )
 
   Recipe.create!(
-    name: "RATATOUILLE DE HAWAZEN",
+    name: "Ratatouille de Hawazen",
     method: "Hot Mediterranean Vegetables with Chickpeas",
     user_id: 1
   )
 
   Recipe.create!(
-    name: "BROCOLIS",
+    name: "Brocolis",
     method: "Sautéed Broccoli",
     user_id: 1
   )
 
   Recipe.create!(
-    name: "HARICOTS VERTS",
+    name: "Haricots Verts",
     method: "Green Beans",
     user_id: 1
   )
 
   Recipe.create!(
-    name: "POMMES DE TERRE GRATINÉES",
+    name: "Pommes de Terre Gratinées",
     method:"Baked Gratinated Potatoes",
     user_id: 1
   )
 
   Recipe.create!(
-    name: "FRITES",
+    name: "Frites",
     method: "French Fried Potatoes",
     user_id: 1
   )
 
   Recipe.create!(
-    name: "SALADE VERTE",
+    name: "Salade Verte",
     method: "Mixed Leaf Salad",
     user_id: 1
   )
 
   Recipe.create!(
-    name: "CAROTTE ROTIE",
+    name: "Carotte rotie",
     method: "Roasted Carrot, Caramelized Onion and Candied Walnut",
     user_id: 1
   )
