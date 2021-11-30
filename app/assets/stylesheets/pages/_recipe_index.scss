@@ -29,7 +29,7 @@
 }
 
 .recipe-card, .recipe-card-expanded {
-  width: 500px !important;
+  width: 395px !important;
   margin-top: 30px;
   padding: 20px;
   position: relative;
@@ -45,7 +45,7 @@
 }
 
 .image-recipe-container {
-  height: 275px;
+  height: 250px;
   width: 100%;
   padding: 0 !important;
   position: absolute;
@@ -55,26 +55,33 @@
 }
 
 .recipe-image {
-  height: 275px;
+  height: 250px;
   width: 100%;
   border-radius: 5px 5px 0 0;
 }
 
 .recipe-content {
-  margin-top: 275px;
+  margin-top: 250px;
+}
+
+.recipe-title-container {
+  height: 80px;
 }
 
 #recipe-title a {
-  font-size: 25px;
+  font-size: 22px;
   margin-bottom: 7px !important;
   color: $accent-r;
   text-decoration: none;
 }
 
 .recipe-form-button {
-  margin-bottom: 16px;
   width: fit-content;
   cursor: pointer;
+}
+
+.dish-form {
+  margin-top: 20px;
 }
 
 .recipe-submit {
