@@ -11,4 +11,10 @@ class Allergen < ApplicationRecord
     using: {
       tsearch: { any_word: true }
     }
+
+  pg_search_scope :search_by_name,
+    against: [ :name, :note ],
+    using: {
+      tsearch: { any_word: true }
+    }
 end

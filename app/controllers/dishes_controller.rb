@@ -4,6 +4,16 @@ class DishesController < ApplicationController
 
   def index
     @dishes = Dish.all.includes(:restaurant, :recipe)
+    if params[:query].present?
+      allergen = Allergen.search_by_name(params[:query])
+
+      @dishes = []
+      Dish.all.each do |dish|
+        unless dish.allergens == [] || dish.allergens[0].ids == allergen[0]
+          @dishes << dish
+        end
+      end
+    end
 
     @markers = @dishes.map do |dish|
       {
