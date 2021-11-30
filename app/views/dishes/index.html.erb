@@ -1,4 +1,5 @@
 <div class="filter-container">
+<%# ALLERGEN FILTER: %>
   <%= form_tag dishes_path, method: :get do %>
   <%= text_field_tag :query,
     params[:query],
@@ -6,8 +7,12 @@
     placeholder: "Exclude Dishes that contain..."
   %>
   <%= submit_tag "Find", class: "btn btn-pka-2" %>
-  <h5> - <b>filters</b> and <b>searches</b> will go here - to be made sticky on scroll -</h5>
+  <%# <h5> - <b>filters</b> and <b>searches</b> will go here - to be made sticky on scroll -</h5> %>
 <% end %>
+
+<%# PROTEIN FILTER (will go below) %>
+
+
 </div>
 <div class="map-dishes-container">
   <!-- Cards -->
