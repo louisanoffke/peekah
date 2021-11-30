@@ -1,6 +1,6 @@
 <div class="outer-box">
   <div class="header">
-    <h1 class="text-center dish-title"><i><%= @dish.recipe.name %></i></h1>
+    <h1 class="text-center dish-title"><%= @dish.recipe.name %></h1>
     <br>
     <div class="text-center dish-description"><em><%= @dish.description %></em></div>
   </div>
@@ -26,8 +26,7 @@
 
         <div class="nutrition-chart">
           <br>
-          <%# replace this with a 'chartkick' chart eventually ... %>
-          <img id="nutrition-chart-img" src="https://www.macromealsuk.co.uk/wp-content/uploads/2018/10/PieChart503020-01-1024x1019.png" alt="pie-chart">
+          <%=pie_chart Dish.find(@dish.id).total_macros %>
         </div>
       </div>
 
@@ -64,7 +63,7 @@
 
     <div class="inner-box-right">
       <br>
-      <h1 class="text-center"><i><%= @dish.restaurant.name %></i></h1>
+      <h1 class="text-center"><i><strong><%= @dish.restaurant.name %></strong></i></h1>
 
       <div class="map-container">
         <div style="width:100%; height:450px;" class="map"

@@ -61,7 +61,7 @@
   width: 30%;
   position: relative;
   right: 120px;
-  top: 30px;
+  top: 50px;
 }
 
 #nutrition-chart-img {
@@ -81,6 +81,7 @@
 
 .allergen-container {
   padding-left: 15px;
+  margin-top: 90px;
 }
 
 .all-allergens {
@@ -114,11 +115,12 @@
 }
 
 .dish-history {
-  padding-left: 18px;
+  padding-left: 38px;
 }
 
 .dish-text {
   padding-left: 5px;
   font-size: 20px;
   margin-top: 20px;
+  width: 90%;
 }
