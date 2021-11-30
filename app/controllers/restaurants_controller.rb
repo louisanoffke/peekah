@@ -2,7 +2,14 @@ class RestaurantsController < ApplicationController
   before_action :restaurant_id, only: :show
   skip_before_action :authenticate_user!, only: %i[index show]
 
-  def show; end
+  def show
+    @markers = [
+      {
+        lat: @restaurant.latitude,
+        lng: @restaurant.longitude,
+      }
+    ]
+  end
 
   def index
     @restaurants = Restaurant.all

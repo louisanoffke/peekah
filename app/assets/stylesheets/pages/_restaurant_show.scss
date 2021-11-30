@@ -2,7 +2,7 @@
 .banner {
   background-size: cover;
   background-position: center;
-  height: 300px;
+  height: 400px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -12,37 +12,98 @@
   padding: 30px 10px;
 }
 
-.banner .h1 {
-  font-size: 30px;
+#restaurant-name {
+  font-size: 50px;
   font-weight: 700;
   letter-spacing: 1px;
   text-shadow: 0 0 15px rgba(0,0,0,0.7);
 }
 
+//Container for map and menu
+.menu-res-container {
+  display: flex;
+  margin-top: 20px;
+}
+
+.dish-menu-container {
+  width: 70vw;
+  padding: 20px;
+  background: white;
+  margin: 0px 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+#menu {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.res-container {
+  width: 40vw;
+  height: 100vh;
+}
+
+
 // Cards
 .dish-menu-card {
   overflow: hidden;
-  height: 120px;
+  height: 160px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: grid;
+  box-shadow: 0 0 2px rgba(97, 50, 50, 0.2);
+  transition: all 0.1 ease-in-out 1s;
+  display: flex;
   align-items: center;
+  margin-bottom: 40px;
 }
 
-.dish-menu-card h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
+.dish-menu-card:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-.dish-menu-card p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
+// .dish-menu-card p {
+//   font-size: 12px;
+//   line-height: 1.4;
+//   opacity: .7;
+//   margin-bottom: 0;
+//   margin-top: 8px;
+// }
+
+.dish-menu-card .dish-infos {
+  padding: 30px;
 }
 
-.dish-menu-card .dish-menu-card-infos {
-  padding: 16px;
+.dish-menu-card .dish-img {
+  background-size: cover;
+  background-position: center;
+  height: 160px;
+  width: 500px;
+  border-radius: 1px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  font-size: 22px;
+  color: white;
+  // padding: 30px 10px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-shadow: 0 0 15px rgba(0,0,0,0.7);
+}
+
+.res-info-container {
+  display: flex;
+  flex-direction: column;
+  // border: 3px solid gold;
+  width: 30vw;
+  text-align: center;
+  justify-content: space-between;
+  height: auto;
+  background-color: white;
+}
+
+.map-container {
+  // margin-top: 20px;
+  padding: 0px 20px;
 }
