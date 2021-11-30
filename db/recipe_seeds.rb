@@ -1,7 +1,7 @@
 def build_recipes
   puts "deleting previously created recipes"
   Recipe.delete_all
-  puts "#{Recipe.count} ingredients stored"
+  puts "#{Recipe.count} recipes stored"
   puts "======"
   puts "starting to create recipes"
 
@@ -145,5 +145,5 @@ def build_recipes
     user_id: 1
   )
 
-  puts "created #{Recipe.count} recipes."
+  puts "created #{Recipe.count} recipes"
 end
