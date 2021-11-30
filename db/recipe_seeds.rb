@@ -1,11 +1,9 @@
 def build_recipes
   puts "deleting previously created recipes"
   Recipe.delete_all
-  puts "#{Recipe.count} ingredients stored"
+  puts "#{Recipe.count} recipes stored"
   puts "======"
   puts "starting to create recipes"
-
-  # dependent on test-user with user_id = 1 to exist!
 
   Recipe.create!(
     name: "Gnocchi á la Tomate Fraîche",
@@ -28,19 +26,19 @@ def build_recipes
   Recipe.create!(
     name: "Turbot aux Artichauts Barigoule",
     method: "Turbot with Artichokes, Chorizo, White Wine and Olive Oil",
-    user_id: 1
+    user_id: 3
   )
 
   Recipe.create!(
     name: "Grosses Crevettes Grillées",
     method: "Grilled Tiger Prawns",
-    user_id: 1
+    user_id: 2
   )
 
   Recipe.create!(
     name: "Loup de Mer en Croûte de Sel",
     method: "Salt Baked Fillet of Line Caught Sea Bass with Artichokes and Tomatoes",
-    user_id: 1
+    user_id: 3
   )
 
   Recipe.create!(
@@ -58,7 +56,7 @@ def build_recipes
   Recipe.create!(
     name: "Entrecôtes Grillée",
     method: "Grilled Rib Eye Steak 400gr",
-    user_id: 1
+    user_id: 3
   )
 
   Recipe.create!(
@@ -70,13 +68,13 @@ def build_recipes
   Recipe.create!(
     name: "Côtelettes d'Agneau Vivienne",
     method: "Grilled Lamb Cutlets with Smoked Aubergine",
-    user_id: 1
+    user_id: 2
   )
 
   Recipe.create!(
     name: "Coquelet au Citron Confit",
     method: "Roast Baby Chicken Marinated in Lemon",
-    user_id: 1
+    user_id: 2
   )
 
   Recipe.create!(
@@ -88,19 +86,19 @@ def build_recipes
   Recipe.create!(
     name: "Poulet Façon “LPM”",
     method: "Whole Roast Black Leg Chicken",
-    user_id: 1
+    user_id: 2
   )
 
   Recipe.create!(
     name: "Carré d’Agneau Entier",
     method: "Whole Roast Rack of Lamb with Spiced Couscous",
-    user_id: 1
+    user_id: 2
   )
 
   Recipe.create!(
     name: "Côte de boeuf",
     method: "Rib of Beef",
-    user_id: 1
+    user_id: 3
   )
 
   Recipe.create!(
@@ -110,7 +108,7 @@ def build_recipes
   )
 
   Recipe.create!(
-    name: "Brocolis",
+    name: "Broccoli",
     method: "Sautéed Broccoli",
     user_id: 1
   )
@@ -118,32 +116,32 @@ def build_recipes
   Recipe.create!(
     name: "Haricots Verts",
     method: "Green Beans",
-    user_id: 1
+    user_id: 3
   )
 
   Recipe.create!(
     name: "Pommes de Terre Gratinées",
-    method:"Baked Gratinated Potatoes",
-    user_id: 1
+    method: "Baked Gratinated Potatoes",
+    user_id: 2
   )
 
   Recipe.create!(
     name: "Frites",
     method: "French Fried Potatoes",
-    user_id: 1
+    user_id: 3
   )
 
   Recipe.create!(
     name: "Salade Verte",
     method: "Mixed Leaf Salad",
-    user_id: 1
+    user_id: 3
   )
 
   Recipe.create!(
     name: "Carotte rotie",
     method: "Roasted Carrot, Caramelized Onion and Candied Walnut",
-    user_id: 1
+    user_id: 2
   )
 
-  puts "created #{Recipe.count} recipes."
+  puts "created #{Recipe.count} recipes"
 end
