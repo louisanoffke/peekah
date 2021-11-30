@@ -23,7 +23,7 @@
               <p>Allergens:
                   <% if dish.allergens %>
                     <% dish.allergens.each do |allergen| %>
-                      <img class="allergen-icon" src=<%= allergen[0].icon_url %> alt=<%= allergen[0].name %>>
+                      <img style="width: 24px" src=<%= allergen[0].icon_url %> alt=<%= allergen[0].name %>>
                     <% end %>
                   <% end %>
               </p>
