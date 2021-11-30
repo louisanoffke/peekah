@@ -23,8 +23,8 @@ def build_dishes
     img_url: "https://assets.epicurious.com/photos/57c5ab5ea5138f0d58edec1a/master/w_1280,c_limit/sauteed-broccoli-rabe.jpg"
   )
 
-   Dish.create!(
-    price: 24.30 ,
+  Dish.create!(
+    price: 24.30,
     is_available: true,
     description: "Homemade Pasta with Squid, Prawns and Chorizo",
     restaurant_id: 4,
@@ -32,32 +32,32 @@ def build_dishes
     img_url: "https://everydaygourmet.tv/static/public/Pasta-with_prawns__chorizo_crumb_and_dehydrated_olives.jpg"
   )
 
-   Dish.create!(
-    price: 28.90,
-    is_available: false,
-    description: "Slow Cooked Duck Legs with Orange Glaze",
-    restaurant_id: 4,
-    recipe_id: 13,
-    img_url: "https://www.robynpuglia.com/wp-content/uploads/2016/05/Duck-leg-w-Orange-1500x1000.jpeg"
-  )
+  # Dish.create!(
+  #   price: 28.90,
+  #   is_available: false,
+  #   description: "Slow Cooked Duck Legs with Orange Glaze",
+  #   restaurant_id: 4,
+  #   recipe_id: 13,
+  #   img_url: "https://www.robynpuglia.com/wp-content/uploads/2016/05/Duck-leg-w-Orange-1500x1000.jpeg"
+  # )
 
-  Dish.create!(
-    price: 22.10,
-    is_available: false,
-    description: "Whole Sea Bream Baked en Papillote with Lemon, Herbs and Olive Oil",
-    restaurant_id: 4,
-    recipe_id: 7,
-    img_url: "https://www.find-a-seafood-recipe.com/images/Baked-whole-fish-recipe-250.jpg"
-  )
+  # Dish.create!(
+  #   price: 22.10,
+  #   is_available: false,
+  #   description: "Whole Sea Bream Baked en Papillote with Lemon, Herbs and Olive Oil",
+  #   restaurant_id: 4,
+  #   recipe_id: 7,
+  #   img_url: "https://www.find-a-seafood-recipe.com/images/Baked-whole-fish-recipe-250.jpg"
+  # )
 
-  Dish.create!(
-    price: 30.20,
-    is_available: false,
-    description: "Pan Fried Dover Sole with a Grainy Mustard Dressing",
-    restaurant_id: 4,
-    recipe_id: 8,
-    img_url: "https://media-cdn.greatbritishchefs.com/media/wsxffhf2/img70109.jpg?mode=crop&width=768&height=512"
-  )
+  # Dish.create!(
+  #   price: 30.20,
+  #   is_available: false,
+  #   description: "Pan Fried Dover Sole with a Grainy Mustard Dressing",
+  #   restaurant_id: 4,
+  #   recipe_id: 8,
+  #   img_url: "https://media-cdn.greatbritishchefs.com/media/wsxffhf2/img70109.jpg?mode=crop&width=768&height=512"
+  # )
 
   Dish.create!(
     price: 14.90,
@@ -86,14 +86,14 @@ def build_dishes
     img_url: "https://static01.nyt.com/images/2014/01/14/science/13recipehealth/13recipehealth-articleLarge.jpg"
   )
 
-  Dish.create!(
-    price: 19.80,
-    is_available: false,
-    description: "Roast Baby Chicken Marinated in Lemon",
-    restaurant_id: 2,
-    recipe_id: 12,
-    img_url: "https://www.yummytummyaarthi.com/wp-content/uploads/2015/08/1-57.jpg"
-  )
+  # Dish.create!(
+  #   price: 19.80,
+  #   is_available: false,
+  #   description: "Roast Baby Chicken Marinated in Lemon",
+  #   restaurant_id: 2,
+  #   recipe_id: 12,
+  #   img_url: "https://www.yummytummyaarthi.com/wp-content/uploads/2015/08/1-57.jpg"
+  # )
 
   Dish.create!(
     price: 22.20,
