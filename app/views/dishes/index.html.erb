@@ -20,7 +20,13 @@
           </div>
           <div class="dish-infos">
             <div>
-              <p>Allergens: #to be added</p>
+              <p>Allergens:
+                  <% if dish.allergens %>
+                    <% dish.allergens.each do |allergen| %>
+                      <img class="allergen-icon" src=<%= allergen[0].icon_url %> alt=<%= allergen[0].name %>>
+                    <% end %>
+                  <% end %>
+              </p>
               <p>Calories: <%= dish.calories %> kcal</p>
             </div>
             <h2 class="dish-price"> £<%= dish.price %> </h2>
