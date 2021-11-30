@@ -1,5 +1,13 @@
 <div class="filter-container">
   <h5> - <b>filters</b> and <b>searches</b> will go here - to be made sticky on scroll -</h5>
+  <%= form_tag dishes_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Exclude Dishe that contain..."
+  %>
+  <%= submit_tag "Find", class: "btn btn-primary" %>
+<% end %>
 </div>
 <div class="map-dishes-container">
   <!-- Cards -->
