@@ -1,3 +1,6 @@
-<h5><%= dish.restaurant.name %></h5>
-<p><%= dish.restaurant.address %></p>
-<%= link_to "View in detail", dish_path(dish), class: "btn-pka" %>
+<div>
+  <%= link_to(dish.restaurant) do %>
+    <h6><%= dish.restaurant.name %></h6>
+    <p><%= dish.restaurant.address %></p>
+  <% end %>
+</div>
