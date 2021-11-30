@@ -22,7 +22,7 @@ We make everything in house, including our cultured vegan butter, cashew crème 
     description: "With a seating capacity of 107 covers split in two different floors, a private dining room that accommodate up to 8 guests plus al fresco tables will provide the perfect setting for a thoroughly enjoyable experience.
 Taking inspiration from the Viceroy’s house of New Delhi, the restaurant will be a glamorous Indian dining room with rainforest emperador marbles, dark timber paneling, gilded walls, and Lutyens inspired furnishings. The space will reflect the vibrant colours and intricate patterns of rare Jamavar shawls, offset with brass accents, hand-cut marquetry, and a sculpted bar that will celebrate the great textile traditions of India.",
     opentable_link: "https://www.opentable.co.uk/r/jamavar-london",
-    deliveroo_link:"https://deliveroo.co.uk/menu/london/mayfair/s-fiori-ltd",
+    deliveroo_link: "https://deliveroo.co.uk/menu/london/mayfair/s-fiori-ltd",
     img_url: "https://resizer.otstatic.com/v2/photos/wide-huge/1/24940452.jpg"
   )
 

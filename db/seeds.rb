@@ -1,19 +1,12 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 require_relative 'allergen_seeds'
 require_relative 'ingredient_seeds'
 require_relative 'recipe_seeds'
 require_relative 'recipe_ingredient_seeds'
 require_relative 'restaurant_seeds'
-require_relative 'dishes_seeds'
+require_relative 'dish_seeds'
+require_relative 'user_seeds'
 
-# need to delete users to re-create test-user prior to seeding recipes
-User.delete_all
+puts ">> Started seeeding!"
 
 puts "_______________"
 
@@ -29,14 +22,9 @@ puts ">> Restaurants"
 build_restaurants
 puts "_______________"
 
-puts ">> creating TEST USER"
-user = User.create!(
-  name: "Alexander",
-  email: "user@pka.ai",
-  password: "123456",
-  restaurant_id: 1
-)
-puts "~~> test user created with ID = #{user.id} and email #{user.email}"
+puts ">> Users"
+build_users
+puts "_______________"
 
 puts ">> Recipes"
 build_recipes
@@ -46,9 +34,8 @@ puts ">> RecipeIngredients"
 build_recipe_ingredients
 puts "_______________"
 
-
 puts ">> Dishes"
 build_dishes
 puts "_______________"
 
-puts ">> Finished seeeding!"
+puts "<< Finished seeeding!"

@@ -1,6 +1,6 @@
 <div class="outer-box">
   <div class="header">
-    <h1 class="text-center dish-title"><i><%= @dish.recipe.name %></i></h1>
+    <h1 class="text-center dish-title"><%= @dish.recipe.name %></h1>
     <br>
     <div class="text-center dish-description"><em><%= @dish.description %></em></div>
   </div>
@@ -15,19 +15,18 @@
           <h3 style="font-size:33px;"><strong>Nutritional Breakdown</strong></h3>
           <div class="nutritional-details">
             <p>- <strong>Total Calories: <%= @dish.calories %> kcal</strong></p>
-            <p>- Carbs: <%= @dish.carbs %>g
-              (<%= @dish.carb_cals%> kcal)</p>
-            <p>- Protein: <%= @dish.protein %>g
-              (<%= @dish.protein_cals %>kcal)</p>
-            <p>- Fat: <%= @dish.fat%>g
-              (<%= @dish.fat_cals %> kcal)</p>
+            <p>- Carbs: <%= @dish.carbs %>g (<span style="color:rgb(255,153,2)"><%= (@dish.total_macros[:carbs]) %>%</span>)
+              <span style="font-size:15px;">(<%= @dish.carb_cals%> kcal)</span></p>
+            <p>- Fat: <%= @dish.fat%>g (<span style="color:rgb(51,102,204)"><%= (@dish.total_macros[:fat]) %>%</span>)
+              <span style="font-size:15px;">(<%= @dish.fat_cals %> kcal)</span></p>
+             <p>- Protein: <%= @dish.protein %>g (<span style="color:rgb(220,56,19)"><%= (@dish.total_macros[:protein])%>%</span>)
+              <span style="font-size:15px;">(<%= @dish.protein_cals %>kcal)</span></p>
           </div>
         </div>
 
         <div class="nutrition-chart">
           <br>
-          <%# replace this with a 'chartkick' chart eventually ... %>
-          <img id="nutrition-chart-img" src="https://www.macromealsuk.co.uk/wp-content/uploads/2018/10/PieChart503020-01-1024x1019.png" alt="pie-chart">
+          <%=pie_chart @dish.total_macros, donut: true, legend: false, class:"donut", library: { pieSliceText: 'value' } %>
         </div>
       </div>
 
@@ -64,7 +63,7 @@
 
     <div class="inner-box-right">
       <br>
-      <h1 class="text-center"><i><%= @dish.restaurant.name %></i></h1>
+      <h1 class="text-center"><i><strong><%= @dish.restaurant.name %></strong></i></h1>
 
       <div class="map-container">
         <div style="width:100%; height:450px;" class="map"

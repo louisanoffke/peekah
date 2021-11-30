@@ -39,6 +39,13 @@ class Dish < ApplicationRecord
     fat.to_i * 9
   end
 
+  def total_macros
+    total = self.fat + self.protein + self.carbs
+    {fat: ((100 * self.fat)/total).round(1),
+     protein: ((100 * self.protein)/total).round(1),
+     carbs: ((100 * self.carbs)/total).round(1) }
+  end
+
   def allergens
     dish_allergens = []
     self.recipe.ingredients.each do |ingredient|

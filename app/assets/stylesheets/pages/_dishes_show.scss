@@ -61,16 +61,16 @@
   width: 30%;
   position: relative;
   right: 120px;
-  top: 30px;
+  top: 0px;
 }
 
-#nutrition-chart-img {
-  height: 200px;
-  margin: 0;
+.donut {
+
 }
 
 .ingredients-container {
   padding-left: 15px;
+  margin-top: 20px;
 }
 
 .ingredients-list {
@@ -81,6 +81,7 @@
 
 .allergen-container {
   padding-left: 15px;
+  margin-top: 90px;
 }
 
 .all-allergens {
@@ -90,8 +91,9 @@
 
 .inner-box-right {
   // border: 2px solid greenyellow;
-  background-color: #99154E;
+  background-color: #F1C2B4;
   width: 40%;
+  margin-top: 15px;
 }
 
 .map-container {
@@ -114,11 +116,12 @@
 }
 
 .dish-history {
-  padding-left: 18px;
+  padding-left: 38px;
 }
 
 .dish-text {
   padding-left: 5px;
   font-size: 20px;
   margin-top: 20px;
+  width: 90%;
 }
