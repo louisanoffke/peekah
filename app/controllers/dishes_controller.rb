@@ -3,7 +3,10 @@ class DishesController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
+    # ALL Dishes:
     @dishes = Dish.all.includes(:restaurant, :recipe)
+
+    # Allergen Filter:
     if params[:query].present?
       query_allergen_ids = Allergen.search_by_name(params[:query]).ids
 
@@ -17,6 +20,18 @@ class DishesController < ApplicationController
       end
     end
 
+    # Protein Filter: to find dishes with LESS THAN input amount
+    if params[:protein].present?
+      # raise
+      @dishes = []
+      Dish.all.each do |dish|
+        if dish.protein <= params[:protein].to_i
+          @dishes << dish
+        end
+      end
+    end
+
+    # map markers
     @markers = @dishes.map do |dish|
       {
         lat: dish.restaurant.latitude,
