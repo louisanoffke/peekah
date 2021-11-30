@@ -11,6 +11,10 @@
 <% end %>
 
 <%# PROTEIN FILTER (will go below) %>
+<%= form_for dishes_path, method: :get do %>
+  <%= text_field_tag :protein, params[:protein], placeholder: "Enter grams protein..." %>
+  <%= submit_tag "Find", class: "btn btn-pka-2" %>
+  <% end %>
 
 
 </div>
