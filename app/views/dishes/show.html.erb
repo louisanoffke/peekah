@@ -15,12 +15,12 @@
           <h3 style="font-size:33px;"><strong>Nutritional Breakdown</strong></h3>
           <div class="nutritional-details">
             <p>- <strong>Total Calories: <%= @dish.calories %> kcal</strong></p>
-            <p>- Carbs: <%= @dish.carbs %>g
-              (<%= @dish.carb_cals%> kcal)</p>
-            <p>- Protein: <%= @dish.protein %>g
-              (<%= @dish.protein_cals %>kcal)</p>
-            <p>- Fat: <%= @dish.fat%>g
-              (<%= @dish.fat_cals %> kcal)</p>
+            <p>- Carbs: <%= @dish.carbs %>g (<span style="color:rgb(255,153,2)"><%= (@dish.total_macros[:carbs]) %>%</span>)
+              <span style="font-size:15px;">(<%= @dish.carb_cals%> kcal)</span></p>
+            <p>- Fat: <%= @dish.fat%>g (<span style="color:rgb(51,102,204)"><%= (@dish.total_macros[:fat]) %>%</span>)
+              <span style="font-size:15px;">(<%= @dish.fat_cals %> kcal)</span></p>
+             <p>- Protein: <%= @dish.protein %>g (<span style="color:rgb(220,56,19)"><%= (@dish.total_macros[:protein])%>%</span>)
+              <span style="font-size:15px;">(<%= @dish.protein_cals %>kcal)</span></p>
           </div>
         </div>
 
