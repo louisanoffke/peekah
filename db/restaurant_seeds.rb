@@ -6,6 +6,25 @@ def build_restaurants
 
   puts "starting to create restaurants"
 
+  Restaurant.create(
+    name: "Plants by Deliciously Ella",
+    address: "18 Weighhouse St, London W1K 5AH",
+    description: "Plants by DE highlights the delicious diversity and abundance of plants.
+You’ll find anything from pan-fried oyster mushroom scallops with carrot jelly; to asparagus ceviche; cauliflower schnitzel; grilled cabbage with lentil chimichurri; and the ultimate vegan pancakes with dark chocolate sauce.
+We make everything in house, including our cultured vegan butter, cashew crème fresh, and crushed walnut parmesan.",
+    opentable_link: "https://www.opentable.co.uk/r/plants-by-deliciously-ella-london",
+    img_url: "https://www.countryandtownhouse.co.uk/wp-content/uploads/2021/09/PLANTS_DELICIOUSLY-ELLA1117-min-1070x714.jpg"
+  )
+
+  Restaurant.create(
+    name: "Jamavar",
+    address: "8 Mount St, London W1K 3NF",
+    description: "With a seating capacity of 107 covers split in two different floors, a private dining room that accommodate up to 8 guests plus al fresco tables will provide the perfect setting for a thoroughly enjoyable experience.
+Taking inspiration from the Viceroy’s house of New Delhi, the restaurant will be a glamorous Indian dining room with rainforest emperador marbles, dark timber paneling, gilded walls, and Lutyens inspired furnishings. The space will reflect the vibrant colours and intricate patterns of rare Jamavar shawls, offset with brass accents, hand-cut marquetry, and a sculpted bar that will celebrate the great textile traditions of India.",
+    opentable_link: "https://www.opentable.co.uk/r/jamavar-london",
+    deliveroo_link:"https://deliveroo.co.uk/menu/london/mayfair/s-fiori-ltd",
+    img_url: "https://resizer.otstatic.com/v2/photos/wide-huge/1/24940452.jpg"
+  )
 
   Restaurant.create(
     name: "La Petit Maison London",
