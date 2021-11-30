@@ -8,7 +8,7 @@
       <div class="dish-card">
         <%= link_to(dish) do %>
           <div class="dish-hero" style="background-image: url(http://kitt.lewagon.com/placeholder/cities/rio)">
-            <%= simple_format(dish.recipe.name.capitalize, {}, wrapper_tag: "div") %>
+            <%= simple_format(dish.recipe.name, {}, wrapper_tag: "div") %>
           </div>
           <div class="dish-infos">
             <div>
