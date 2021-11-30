@@ -40,7 +40,9 @@ class Dish < ApplicationRecord
   end
 
   def total_macros
-    self.fat + self.protein + self.carbs
+    {fat: self.fat,
+     protein: self.protein,
+     carbs: self.carbs }
   end
 
   def allergens

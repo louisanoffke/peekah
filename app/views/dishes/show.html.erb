@@ -26,7 +26,7 @@
 
         <div class="nutrition-chart">
           <br>
-          <%=pie_chart Dish.find(@dish.id).total_macros %>
+          <%=pie_chart @dish.total_macros, donut: true, legend: false, class:"donut", library: { pieSliceText: 'value' } %>
         </div>
       </div>
 
