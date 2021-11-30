@@ -3,7 +3,10 @@ class DishesController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
+    # ALL Dishes:
     @dishes = Dish.all.includes(:restaurant, :recipe)
+
+    # Allergen Filter:
     if params[:query].present?
       query_allergen_ids = Allergen.search_by_name(params[:query]).ids
 
@@ -16,6 +19,8 @@ class DishesController < ApplicationController
         end
       end
     end
+
+    # Protein Filter: will go below
 
     @markers = @dishes.map do |dish|
       {
