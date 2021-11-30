@@ -9,7 +9,7 @@ def build_users
     name: "Alexander",
     email: "alex@pka.ai",
     password: "123456",
-    restaurant_id: 1
+    restaurant_id: 4
   )
 
   User.create!(
