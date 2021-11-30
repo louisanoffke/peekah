@@ -27,14 +27,6 @@ Taking inspiration from the Viceroy’s house of New Delhi, the restaurant will 
   )
 
   Restaurant.create(
-    name: "La Petit Maison London",
-    address: "53-54 Brook's Mews, London W1K 4EG",
-    description: "Chef Raphael Duntoye serves upscale French Mediterranean food to chic crowd in smart dining room. Our dress code is smart casual. No shorts or sportswear. Smart trainers are acceptable.",
-    deliveroo_link: "https://deliveroo.co.uk/menu/london/mayfair/lpm-restaurant-and-bar",
-    img_url: "https://www.telegraph.co.uk/content/dam/luxury/2020/10/02/011A2475-HDR-1_trans_NvBQzQNjv4BqWlxWmJPgkV9VyUT7QSPhw0JkFFn0JW618qGMadt37CU.jpg"
-  )
-
-  Restaurant.create(
     name: "Bocconcino",
     address: "19 Berkeley Street, London W1J 8ED",
     description: "Bocconcino is an Italian fine dining restaurant in London, nestled in the heart of Mayfair. Step away from the bustle of Berkeley Street and into a stunning space that will transport you and your guests to the gorgeous climes of Italy, featuring authentic Italian cuisine with a contemporary flair, first class service, expertly produced cocktails, and a rich selection of wines. The restaurant benefits from a lively ambiance with DJ nights and a weekend bottomless brunch.
@@ -43,6 +35,14 @@ The first Bocconcino restaurant was opened in a beautiful seaside Forte dei Marm
     opentable_link: "https://www.opentable.co.uk/bocconcino",
     deliveroo_link: "https://deliveroo.co.uk/menu/london/mayfair/bocconcino-mayfair",
     img_url: "https://headbox-media.imgix.net/uploads/space_photo/filename/107294/Untitled_design.jpg?auto=compress,format"
+  )
+
+  Restaurant.create(
+    name: "La Petit Maison London",
+    address: "53-54 Brook's Mews, London W1K 4EG",
+    description: "Chef Raphael Duntoye serves upscale French Mediterranean food to chic crowd in smart dining room. Our dress code is smart casual. No shorts or sportswear. Smart trainers are acceptable.",
+    deliveroo_link: "https://deliveroo.co.uk/menu/london/mayfair/lpm-restaurant-and-bar",
+    img_url: "https://www.telegraph.co.uk/content/dam/luxury/2020/10/02/011A2475-HDR-1_trans_NvBQzQNjv4BqWlxWmJPgkV9VyUT7QSPhw0JkFFn0JW618qGMadt37CU.jpg"
   )
 
   Restaurant.create(
