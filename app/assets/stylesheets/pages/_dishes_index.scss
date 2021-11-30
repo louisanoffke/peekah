@@ -50,12 +50,12 @@
 // Container for a dish - default block
 .dish-card {
   overflow: hidden;
-  background: white;
   box-shadow: 0 0 6px rgba(0,0,0,0.25);
 }
 
 .dish-card:hover {
-  background: $base-bkg-green;
+  background: $accent-g;
+  transition: all .1s ease-in-out 2s;
 }
 
 .dish-card h2 {
@@ -97,20 +97,46 @@ a:hover {
   padding: 30px 10px;
   letter-spacing: 1px;
   font-weight: 500;
-  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+  text-shadow: 0 0 15px rgba(0,0,0,0.7);
 }
 
+// .dish-card:hover .dish-hero {
+//   transition: all .1s ease-in 6s;
+//   background: green;
+// }
 
 // Container for dish info - flex
 .dish-card .dish-infos {
-  padding: 16px;
+  background: white;
+  padding: 16px 16px 0px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
 }
 
+.dish-card:hover .dish-infos {
+  background: $base-bkg-green;
+}
+
 .dish-card .restaurant-info {
+  padding: 16px;
+  background: white;
+  display: flex;
+  // justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+
+.dish-card:hover .restaurant-info {
+  background: $base-bkg-green;
+}
+.dish-card .restaurant-info:hover {
+  color: $accent-g;
+  font-weight: 500;
+}
+
+.dish-card .see-in-detail {
   padding: 7px;
   display: flex;
   justify-content: center;
@@ -118,9 +144,8 @@ a:hover {
   position: relative;
 }
 
-
-// .map-div {
-//   display: flex;
-//   width: 50vw;
-//   justify-content: center;
-// }
+.dish-card:hover .see-in-detail {
+  color: white;
+  font-weight: 500;
+  opacity: 1;
+}

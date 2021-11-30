@@ -7,7 +7,7 @@
     <%@dishes.each do |dish| %>
       <div class="dish-card">
         <%= link_to(dish) do %>
-          <div class="dish-hero" style="background-image: url(http://kitt.lewagon.com/placeholder/cities/rio)">
+          <div class="dish-hero" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/salad_verte_with_15684_16x9.jpg)">
             <%= simple_format(dish.recipe.name, {}, wrapper_tag: "div") %>
           </div>
           <div class="dish-infos">
@@ -17,9 +17,14 @@
             </div>
             <h2 class="dish-price"> £<%= dish.price %> </h2>
           </div>
-          <div class="restaurant-info">
-              <p><i class="fas fa-map-marker-alt"></i> <%= dish.restaurant.name %></p>
-          </div>
+            <%= link_to(dish.restaurant) do %>
+              <div class="restaurant-info">
+                  <p><i class="fas fa-map-marker-alt"></i> <%= dish.restaurant.name %></p>
+              </div>
+            <% end %>
+          <%# <div class="see-in-detail"> %>
+            <%# <p>See in detail</p> %>
+          <%# </div> %>
         <% end %>
       </div>
     <% end %>
