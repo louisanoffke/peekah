@@ -51,6 +51,6 @@ class Dish < ApplicationRecord
     self.recipe.ingredients.each do |ingredient|
       dish_allergens << ingredient.identify_allergens
     end
-    p dish_allergens.compact!
+    dish_allergens.compact
   end
 end
