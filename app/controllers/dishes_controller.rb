@@ -21,7 +21,17 @@ class DishesController < ApplicationController
     end
 
     # Protein Filter: will go below
+    if params[:protein].present?
+      # raise
+      @dishes = []
+      Dish.all.map do |dish|
+        if dish.protein <= params[:protein].to_i
+          @dishes << dish
+        end
+      end
+    end
 
+    # map markers
     @markers = @dishes.map do |dish|
       {
         lat: dish.restaurant.latitude,
