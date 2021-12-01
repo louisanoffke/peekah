@@ -44,13 +44,13 @@ def build_recipes
   Recipe.create!(
     name: "Daurade au Citron",
     method: "Whole Sea Bream Baked en Papillote with Lemon, Herbs and Olive Oil",
-    user_id: 1
+    user_id: 2
   )
 
   Recipe.create!(
     name: "Sôle Poêlée au Grain de Moutarde",
     method: "Pan Fried Dover Sole with a Grainy Mustard Dressing",
-    user_id: 1
+    user_id: 2
   )
 
   Recipe.create!(
@@ -62,7 +62,7 @@ def build_recipes
   Recipe.create!(
     name: "Côtes de Veau Grillée",
     method: "Grilled Veal Chop",
-    user_id: 1
+    user_id: 2
   )
 
   Recipe.create!(
