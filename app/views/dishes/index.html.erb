@@ -2,13 +2,13 @@
 <div class="filter-container">
 <!-- allergen filter -->
   <%= form_tag dishes_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Exclude Dishes that contain..."
+  <%= select_tag :query,
+    options_from_collection_for_select(Allergen.all, :name, :name),
+    class: "form-control"
   %>
-  <%= submit_tag "Filter", class: "btn btn-pka-2" %>
+<%= submit_tag 'Select Allergens', class: "btn-pka-2" %>
 <% end %>
+
 
 <!-- protein filter -->
 <%= form_for dishes_path, method: :get do %>
@@ -37,6 +37,8 @@
                     <% dish.allergens.each do |allergen| %>
                       <img style="width: 24px" src=<%= allergen[0].icon_url %> alt=<%= allergen[0].name %>>
                     <% end %>
+                  <% else %>
+                    <p>no allergens</p>
                   <% end %>
               </p>
               <p>Calories: <%= dish.calories %> kcal</p>
