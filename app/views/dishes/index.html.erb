@@ -45,6 +45,8 @@
                     <% dish.allergens.each do |allergen| %>
                       <img style="width: 24px" src=<%= allergen[0].icon_url %> alt=<%= allergen[0].name %>>
                     <% end %>
+                  <% else %>
+                    <p>no allergens</p>
                   <% end %>
               </p>
               <p>Calories: <%= dish.calories %> kcal</p>
