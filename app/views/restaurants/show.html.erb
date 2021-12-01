@@ -6,27 +6,35 @@
 <div class="menu-res-container">
   <!-- Menu -->
   <div class="dish-menu-container">
-    <h2 id="menu">p-KA certified Menu</h2>
-    <% @restaurant.dishes.each do |dish| %>
-      <%= link_to(dish) do %>
-        <div class="dish-menu-card mx-5">
-          <div class="dish-img" style="background-image: url(<%= dish.img_url %>)">
-          </div>
-          <div class="dish-infos">
-            <h5> <%= dish.recipe.name %></h5>
-            <p><%= dish.description %></p>
-            <p>Allergens:
-                <% if dish.allergens %>
-                  <% dish.allergens.each do |allergen| %>
-                    <img style="width: 24px" src=<%= allergen[0].icon_url %> alt=<%= allergen[0].name %>>
+    <% if @restaurant.dishes.empty? %>
+      <h2 id="no-menu">Menu under review</h2>
+      <div class="under-review-image" ><%= image_tag "under-review.svg" %></div>
+
+    <% else %>
+      <h2 id="menu">p-KA certified Menu</h2>
+      <% @restaurant.dishes.each do |dish| %>
+        <%= link_to(dish) do %>
+          <div class="dish-menu-card mx-5">
+            <div class="dish-img" style="background-image: url(<%= dish.img_url %>)">
+            </div>
+            <div class="dish-infos">
+              <h5> <%= dish.recipe.name %></h5>
+              <p><%= dish.description %></p>
+              <p>Allergens:
+                  <% if dish.allergens.empty? %>
+                    None
+                  <% else %>
+                    <% dish.allergens.each do |allergen| %>
+                      <img style="width: 24px" src=<%= allergen[0].icon_url %> alt=<%= allergen[0].name %>>
+                    <% end %>
                   <% end %>
-                <% end %>
-            </p>
+              </p>
+            </div>
+            <div class="price">
+            <h5>£<%= dish.price.to_i%></h5>
+            </div>
           </div>
-          <div class="price">
-          <h5>£<%= dish.price%></h5>
-          </div>
-        </div>
+        <% end %>
       <% end %>
     <% end %>
   </div>

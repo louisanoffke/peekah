@@ -33,10 +33,16 @@
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-#menu {
+#menu, #no-menu {
   text-align: center;
   padding-top: 20px;
   padding-bottom: 30px;
+}
+
+.under-review-image {
+  height: 350px;
+  width: 350px;
+  margin: 0 auto;
 }
 
 .res-container {
@@ -55,6 +61,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 40px;
+  position: relative;
 }
 
 
@@ -112,6 +119,9 @@
   // position: absolute;
   // right: 30px;
   justify-content: flex-end;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 
