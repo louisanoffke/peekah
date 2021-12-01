@@ -108,12 +108,11 @@
   padding: 0px 20px;
 }
 
-// .dish-infos .price {
-//   position: absolute;
-//   // right: 30px;
-//   justify-content: left;
-//   top: -30px;
-// }
+.dish-menu-card .price {
+  // position: absolute;
+  // right: 30px;
+  justify-content: flex-end;
+}
 
 // .avatar-bordered {
 //   width: 40px;
