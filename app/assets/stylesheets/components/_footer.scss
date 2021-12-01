@@ -8,7 +8,7 @@ body {
 }
 
 .footer {
-  background: white;
+  background: linear-gradient(0deg, rgba(200,244,240,1) 4%, rgba(222,243,240,1) 22%, rgba(237,242,239,1) 43%, rgba(250,242,239,1) 60%, rgba(250,242,239,1) 84%, rgba(250,242,239,1) 97%);
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -16,20 +16,14 @@ body {
   width: 100%;
   position: absolute;
   bottom: 0;
-  padding: 25px 40px;
+  padding: 20px 40px;
   color: rgba(0,0,0,0.3);
 }
 
 .footer h3 {
   color: rgb(73, 69, 69);
-  font-size: 24px;
+  font-size: 20px;
   cursor: default;
-}
-
-.footer-line {
-  height: 180px;
-  border-right: solid 1px rgb(177, 174, 174);
-  margin: 0 10px;
 }
 
 .follow-us-section-container, .about-section-container, .right-container {
@@ -47,6 +41,30 @@ body {
 .right-container {
   display: grid;
   align-content: space-between;
+}
+
+.signup-container h3 {
+  margin-bottom: 20px;
+}
+
+.subscription-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.subscription-form {
+  height: 40px;
+  width: 300px;
+  background: white;
+  border: 1px solid grey;
+  margin-right: 15px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.subscription-btn {
+  cursor: pointer;
 }
 
 .inline-container {
@@ -87,7 +105,7 @@ body {
 }
 
 .box:nth-child(1):hover {
-  background: #c32aa3;
+  background: #99154E;
   box-shadow: 0 0 10px #b315917c;
 }
 
@@ -122,11 +140,11 @@ body {
 }
 
 .instagram {
-  background: #c32aa3;
+  background: #99154E;
 }
 
 .box:hover .instagram {
-  color: #c32aa3;
+  color: #99154E;
 }
 
 .facebook {
