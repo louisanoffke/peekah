@@ -1,9 +1,6 @@
 require "open-uri"
 
 def build_restaurants
-  puts "deleting previously created restaurants"
-  Restaurant.delete_all
-
   puts "starting to create restaurants"
 
   Restaurant.create(
@@ -175,7 +172,7 @@ Just as we at Fenwick of Bond Street carefully curate our edit, our chefs carefu
     img_url: "https://viptableslondon.com/wp-content/uploads/2019/06/1470910157-sexy-fish-bar-min.jpg"
   )
 
-  Restaurant.create(
+  Restaurant.create!(
     name: "El Norte",
     address: "19 Dover St, London W1S 4LU",
     description: "Bienvenidos a El Norte!

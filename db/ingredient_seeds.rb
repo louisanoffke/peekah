@@ -1,8 +1,4 @@
 def build_ingredients
-  puts "deleting previously created ingredients"
-  Ingredient.delete_all
-  puts "#{Ingredient.count} ingredients stored"
-  puts "======"
   puts "starting to create ingredients"
 
   Ingredient.create(
@@ -53,11 +49,47 @@ def build_ingredients
     fat_content: 29
   )
 
+  Ingredient.create!(
+    name: "Papardelle",
+    calorie_content: 431,
+    protein_content: 38,
+    carb_content: 4.1,
+    fat_content: 29
+  )
+
+  Ingredient.create!(
+    name: "Veal",
+    calorie_content: 431,
+    protein_content: 38,
+    carb_content: 4.1,
+    fat_content: 29
+  )
+
+  Ingredient.create!(
+    name: "Pasta",
+    calorie_content: 431,
+    protein_content: 38,
+    carb_content: 4.1,
+    fat_content: 29
+  )
+
+  Ingredient.create!(
+    name: "Squid",
+    calorie_content: 175,
+    protein_content: 18,
+    carb_content: 8,
+    fat_content: 7
+  )
+
+  Ingredient.create!(
+    name: "Prawns",
+    calorie_content: 70,
+    protein_content: 15,
+    carb_content: 0.2,
+    fat_content: 0.3
+  )
+
   ingredients = %w[
-    Pappardelle
-    Veal
-    Pasta
-    Prawns
     Chorizo
     Turbot
     Artichokes
@@ -146,15 +178,6 @@ def build_ingredients
     protein_content: 0,
     carb_content: 0,
     fat_content: 92
-  )
-
-
-  Ingredient.create!(
-    name: "Squid",
-    calorie_content: 175,
-    protein_content: 18,
-    carb_content: 8,
-    fat_content: 7
   )
 
   Ingredient.create!(
