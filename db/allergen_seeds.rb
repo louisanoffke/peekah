@@ -14,7 +14,7 @@ def build_allergens
     name: "Gluten",
     note: "Wheat (such as spelt and Khorasan wheat/Kamut), rye, barley and oats is
   often found in foods containing flour, such as some types of baking powder,
-  batter, breadcrumbs, bread, cakes, couscous, meat products, pasta, pastry,
+  batter, breadcrumbs, bread, cakes, couscous, Gnocchi, Papardelle, meat products, pasta, pastry,
   sauces, soups and fried foods which are dusted with flour.",
     icon_url: "https://cdn-icons-png.flaticon.com/64/3662/3662349.png"
   )
@@ -77,7 +77,7 @@ def build_allergens
   Allergen.create(
     name: "Nuts",
     note: "Not to be mistaken with peanuts (which are actually a legume and grow underground),
-  this ingredient refers to nuts which grow on trees, like cashew nuts, almonds and hazelnuts.
+  this ingredient refers to nuts which grow on trees, like cashew nuts, Walnuts, almonds and hazelnuts.
   You can find nuts in breads, biscuits, crackers, desserts, nut powders (often used in Asian
   curries), stir-fried dishes, ice cream, marzipan (almond paste), nut oils and sauces.",
     icon_url: "https://cdn-icons-png.flaticon.com/64/1167/1167712.png"

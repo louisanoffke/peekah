@@ -51,26 +51,26 @@ def build_ingredients
 
   Ingredient.create!(
     name: "Papardelle",
-    calorie_content: 431,
-    protein_content: 38,
-    carb_content: 4.1,
-    fat_content: 29
+    calorie_content: 131,
+    protein_content: 5,
+    carb_content: 25,
+    fat_content: 1.1
   )
 
   Ingredient.create!(
     name: "Veal",
-    calorie_content: 431,
-    protein_content: 38,
-    carb_content: 4.1,
-    fat_content: 29
+    calorie_content: 196,
+    protein_content: 25.6,
+    carb_content: 0,
+    fat_content: 9.7
   )
 
   Ingredient.create!(
     name: "Pasta",
-    calorie_content: 431,
-    protein_content: 38,
-    carb_content: 4.1,
-    fat_content: 29
+    calorie_content: 131,
+    protein_content: 5,
+    carb_content: 25,
+    fat_content: 1.1
   )
 
   Ingredient.create!(
@@ -89,53 +89,277 @@ def build_ingredients
     fat_content: 0.3
   )
 
-  ingredients = %w[
-    Chorizo
-    Turbot
-    Artichokes
-    White\ Wine
-    Olive\ Oil
-    Salt
-    Sea\ Bass
-    Artichokes
-    Tomatoes
-    Sea\ Bream
-    Herbs
-    Sole
-    Grainy\ Mustard
-    Rib\ Eye\ Steak
-    Veal\ Chops
-    Lamb\ Cutlets
-    Aubergine
-    Baby\ Chicken
-    Lemon
-    Duck\ Legs
-    Orange
-    Whole\ Chicken
-    Rack\ of\ Lamb
-    Couscous
-    Rib\ of\ Beef
-    Chickpeas
-    Broccoli
-    Green\ Beans
-    Potatoes
-    Mixed\ Leafs\Salad
-    Carrot
-    Onion
-    Walnut
-    Sugar
-  ]
+  Ingredient.create!(
+    name: "Chorizo",
+    calorie_content: 455,
+    protein_content: 24,
+    carb_content: 1.9,
+    fat_content: 38
+  )
 
-  ingredients.each do |ingredient|
-    Ingredient.create!(
-      name: ingredient,
-      calorie_content: 0,
-      protein_content: Faker::Number.decimal(l_digits: 2, r_digits: 2),
-      carb_content: Faker::Number.decimal(l_digits: 2, r_digits: 2),
-      fat_content: Faker::Number.decimal(l_digits: 2, r_digits: 2)
-    )
-  end
+  Ingredient.create!(
+    name: "Turbot",
+    calorie_content: 122,
+    protein_content: 21,
+    carb_content: 0,
+    fat_content: 3.8
+  )
 
+  Ingredient.create!(
+    name: "Artichokes",
+    calorie_content: 47,
+    protein_content: 3.3,
+    carb_content: 11,
+    fat_content: 0.2
+  )
+
+  Ingredient.create!(
+    name: "White Wine",
+    calorie_content: 82,
+    protein_content: 0.1,
+    carb_content: 2.6,
+    fat_content: 0
+  )
+
+  Ingredient.create!(
+    name: "Olive Oil",
+    calorie_content: 884,
+    protein_content: 0,
+    carb_content: 0,
+    fat_content: 100
+  )
+
+  Ingredient.create!(
+    name: "Salt",
+    calorie_content: 0,
+    protein_content: 0,
+    carb_content: 0,
+    fat_content: 0
+  )
+
+  Ingredient.create!(
+    name: "Sea Bass",
+    calorie_content: 124,
+    protein_content: 24,
+    carb_content: 0,
+    fat_content: 2.6
+  )
+
+  Ingredient.create!(
+    name: "Artichokes",
+    calorie_content: 47,
+    protein_content: 3.3,
+    carb_content: 11,
+    fat_content: 0.2
+  )
+
+  Ingredient.create!(
+    name: "Tomatos",
+    calorie_content: 18,
+    protein_content: 0.9,
+    carb_content: 3.9,
+    fat_content: 0.2
+  )
+
+  Ingredient.create!(
+    name: "Sea Bream",
+    calorie_content: 143,
+    protein_content: 23.4,
+    carb_content: 1,
+    fat_content: 5.3
+  )
+
+  Ingredient.create!(
+    name: "Mixed Herbs",
+    calorie_content: 0,
+    protein_content: 0,
+    carb_content: 0,
+    fat_content: 0
+  )
+
+  Ingredient.create!(
+    name: "Sole",
+    calorie_content: 91,
+    protein_content: 18.9,
+    carb_content: 0,
+    fat_content: 1.9
+  )
+
+  Ingredient.create!(
+    name: "Grainy Mustard",
+    calorie_content: 220,
+    protein_content: 9.1,
+    carb_content: 15.6,
+    fat_content: 12
+  )
+
+  Ingredient.create!(
+    name: "Rib Eye Steak",
+    calorie_content: 271,
+    protein_content: 25,
+    carb_content: 0,
+    fat_content: 19
+  )
+
+  Ingredient.create!(
+    name: "Veal Chops",
+    calorie_content: 260,
+    protein_content: 30.8,
+    carb_content: 0,
+    fat_content: 14.3
+  )
+
+  Ingredient.create!(
+    name: "Lamb Cutlets",
+    calorie_content: 258,
+    protein_content: 25.6,
+    carb_content: 0,
+    fat_content: 16.5
+  )
+
+  Ingredient.create!(
+    name: "Aubergine",
+    calorie_content: 25,
+    protein_content: 1,
+    carb_content: 6,
+    fat_content: 0.2
+  )
+
+  Ingredient.create!(
+    name: "Baby Chicken",
+    calorie_content: 216,
+    protein_content: 18,
+    carb_content: 0,
+    fat_content: 16
+  )
+
+  Ingredient.create!(
+    name: "Lemon",
+    calorie_content: 29,
+    protein_content: 1.1,
+    carb_content: 9,
+    fat_content: 0.3
+  )
+
+  Ingredient.create!(
+    name: "Duck Legs",
+    calorie_content: 337,
+    protein_content: 19,
+    carb_content: 0,
+    fat_content: 28
+  )
+
+  Ingredient.create!(
+    name: "Oranges",
+    calorie_content: 49,
+    protein_content: 0,
+    carb_content: 13,
+    fat_content: 0.1
+  )
+
+  Ingredient.create!(
+    name: "Whole Chicken",
+    calorie_content: 216,
+    protein_content: 18,
+    carb_content: 0,
+    fat_content: 16
+  )
+
+  Ingredient.create!(
+    name: "Rack of Lamb",
+    calorie_content: 258,
+    protein_content: 25.6,
+    carb_content: 0,
+    fat_content: 16.5
+  )
+
+  Ingredient.create!(
+    name: "Couscous",
+    calorie_content: 164,
+    protein_content: 6.3,
+    carb_content: 31.3,
+    fat_content: 0.9
+  )
+
+  Ingredient.create!(
+    name: "Rib of Beef",
+    calorie_content: 266,
+    protein_content: 25.9,
+    carb_content: 0,
+    fat_content: 17.3
+  )
+
+  Ingredient.create!(
+    name: "Chickpeas",
+    calorie_content: 364,
+    protein_content: 19,
+    carb_content: 61,
+    fat_content: 6
+  )
+
+  Ingredient.create!(
+    name: "Broccoli",
+    calorie_content: 35,
+    protein_content: 2.1,
+    carb_content: 7.2,
+    fat_content: 0.4
+  )
+
+  Ingredient.create!(
+    name: "Green Beans",
+    calorie_content: 31,
+    protein_content: 1.8 ,
+    carb_content: 7.9,
+    fat_content: 0.3
+  )
+
+  Ingredient.create!(
+    name: "Potatoes",
+    calorie_content: 93,
+    protein_content: 2.5,
+    carb_content: 21,
+    fat_content: 0.1
+  )
+
+  Ingredient.create!(
+    name: "Mixed Leafs",
+    calorie_content: 15,
+    protein_content: 0.2,
+    carb_content: 4.2,
+    fat_content: 0.2
+  )
+
+  Ingredient.create!(
+    name: "Carrots",
+    calorie_content: 52,
+    protein_content: 1.2,
+    carb_content: 12,
+    fat_content: 0.3
+  )
+
+  Ingredient.create!(
+    name: "Onions",
+    calorie_content: 40,
+    protein_content: 1.1,
+    carb_content: 9.3,
+    fat_content: 0.1
+  )
+
+  Ingredient.create!(
+    name: "Walnuts",
+    calorie_content: 654,
+    protein_content: 15,
+    carb_content: 14,
+    fat_content: 65
+  )
+
+  Ingredient.create!(
+    name: "Sugar",
+    calorie_content: 387,
+    protein_content: 0,
+    carb_content: 100,
+    fat_content: 0
+  )
 
   Ingredient.create!(
     name: "Green Chillies",
@@ -198,7 +422,7 @@ def build_ingredients
 
   puts "created #{Ingredient.count} ingredients"
 
-  update_ingredient_calories
+  # update_ingredient_calories
 end
 
 def update_ingredient_calories
