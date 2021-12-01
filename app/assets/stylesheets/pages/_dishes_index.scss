@@ -1,12 +1,16 @@
 // Filters container - flex
 .filter-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color: $base-bkg;
   height: 80px;
   width: 100vw;
   padding: 20px;
+}
+
+.filter-item {
+  margin: 20px;
 }
 
 // Container for dishes and map
