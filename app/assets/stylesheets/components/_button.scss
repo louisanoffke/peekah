@@ -20,10 +20,23 @@
   background-color: $accent-g;
   color: white;
   padding: 8px 16px;
+  text-align: center;
 }
 
 .btn-pka-2:hover {
   text-decoration: none;
   background-color: $accent-g-h;
-  color: white;
+}
+
+.btn-pka-2-sec {
+  border: solid 2px $accent-g;
+  color: $accent-g;
+  vertical-align: middle;
+  text-align: center;
+
+  &:hover {
+    border: solid 2px $accent-g-h;
+    color: white;
+    background-color: $accent-g-h;
+  }
 }
