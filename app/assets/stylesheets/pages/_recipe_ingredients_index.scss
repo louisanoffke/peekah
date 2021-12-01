@@ -20,19 +20,15 @@
 }
 
 .form-container {
-  // background: rgb(245,245,245);
-  width: fit-content;
-  height: fit-content;
   display: grid;
   grid-template-columns: auto auto;
-  align-items: center;
   padding: 20px;
 }
 
 .ingredient-form {
   background: white;
   width: 400px;
-  height: fit-content;
+  height: 447px;
   padding: 40px;
   margin: 30px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
@@ -49,8 +45,8 @@
 
 .ingredient-list {
   background: white;
-  width: 300px;
-  height: fit-content;
+  width: 290px;
+  height: 447px;
   padding: 40px;
   margin: 30px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
