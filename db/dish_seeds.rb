@@ -6,7 +6,7 @@ def build_dishes
   puts "starting to create dishes from the recipes"
 
   Dish.create!(
-    price: 17.90,
+    price: 25,
     is_available: true,
     description: "Homemade Pappardelle, Veal Ragú",
     restaurant_id: 4,
@@ -15,7 +15,7 @@ def build_dishes
   )
 
   Dish.create!(
-    price: 7.50,
+    price: 7,
     is_available: true,
     description: "Sautéed Broccoli",
     restaurant_id: 4,
@@ -24,7 +24,7 @@ def build_dishes
   )
 
   Dish.create!(
-    price: 24.30,
+    price: 24,
     is_available: true,
     description: "Homemade Pasta with Squid, Prawns and Chorizo",
     restaurant_id: 4,
@@ -33,7 +33,7 @@ def build_dishes
   )
 
   # Dish.create!(
-  #   price: 28.90,
+  #   price: 28,
   #   is_available: false,
   #   description: "Slow Cooked Duck Legs with Orange Glaze",
   #   restaurant_id: 4,
@@ -42,7 +42,7 @@ def build_dishes
   # )
 
   # Dish.create!(
-  #   price: 22.10,
+  #   price: 27,
   #   is_available: false,
   #   description: "Whole Sea Bream Baked en Papillote with Lemon, Herbs and Olive Oil",
   #   restaurant_id: 4,
@@ -51,7 +51,7 @@ def build_dishes
   # )
 
   # Dish.create!(
-  #   price: 30.20,
+  #   price: 30,
   #   is_available: false,
   #   description: "Pan Fried Dover Sole with a Grainy Mustard Dressing",
   #   restaurant_id: 4,
@@ -60,7 +60,7 @@ def build_dishes
   # )
 
   Dish.create!(
-    price: 14.90,
+    price: 19,
     is_available: true,
     description: "Grilled Tiger Prawns",
     restaurant_id: 2,
@@ -69,7 +69,7 @@ def build_dishes
   )
 
   Dish.create!(
-    price: 21.70,
+    price: 28,
     is_available: true,
     description: "Whole Roast Rack of Lamb with Spiced Couscous",
     restaurant_id: 2,
@@ -78,7 +78,7 @@ def build_dishes
   )
 
   Dish.create!(
-    price: 6.40,
+    price: 6,
     is_available: true,
     description: "Roasted Carrot, Caramelized Onion and Candied Walnut",
     restaurant_id: 2,
@@ -87,7 +87,7 @@ def build_dishes
   )
 
   # Dish.create!(
-  #   price: 19.80,
+  #   price: 22,
   #   is_available: false,
   #   description: "Roast Baby Chicken Marinated in Lemon",
   #   restaurant_id: 2,
@@ -96,7 +96,7 @@ def build_dishes
   # )
 
   Dish.create!(
-    price: 22.20,
+    price: 27,
     is_available: true,
     description: "Turbot with Artichokes, Chorizo, White Wine and Olive Oil",
     restaurant_id: 3,
@@ -105,7 +105,7 @@ def build_dishes
   )
 
   Dish.create!(
-    price: 31.30,
+    price: 36,
     is_available: true,
     description: "Salt Baked Fillet of Line Caught Sea Bass with Artichokes and Tomatoes",
     restaurant_id: 3,
@@ -114,7 +114,7 @@ def build_dishes
   )
 
   Dish.create!(
-    price: 25.70,
+    price: 31,
     is_available: true,
     description: "Grilled Rib Eye Steak 400gr",
     restaurant_id: 3,
@@ -123,7 +123,7 @@ def build_dishes
   )
 
   Dish.create!(
-    price: 4.80,
+    price: 6,
     is_available: true,
     description: "Mixed Leaf Salad",
     restaurant_id: 3,
