@@ -1,9 +1,57 @@
+
+$tab-line: #99154e65;
+
 .title-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 30px;
 }
+
+// Tabs ribbon
+.fake-tab {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  justify-content: center;
+
+  li {
+    padding-top: 10px;
+    width: 350px;
+    height: 50px;
+    margin: 0px 5px;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  #active-dashb-tab {
+    border-top: solid 1px $tab-line;
+    border-left: solid 1px $tab-line;
+    border-right: solid 1px $tab-line;
+    background: $base-bkg;
+  }
+}
+
+.recipe-line {
+  border-top: solid 1px $tab-line;
+  width: 81%;
+  margin: auto;
+}
+
+
+.recipe-dishes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin: 100px;
+}
+
+
+
+
 
 .chef-restaurant {
   color: black;
@@ -15,11 +63,6 @@
   text-decoration: none !important;
 }
 
-.recipe-line {
-  border-top: solid 1px grey;
-  width: 80%;
-  margin: 40px auto;
-}
 
 .recipes-container {
   display: grid;

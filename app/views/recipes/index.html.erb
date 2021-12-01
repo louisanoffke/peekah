@@ -1,15 +1,45 @@
 <div class="title-container">
-  <i><h1 class="dashboard-title"> Chef <%= (current_user.name).capitalize %>'s Dashboard </h1></i>
+  <ul class="fake-tab">
+    <li>My profile</li>
+    <li id="active-dashb-tab">My recipes</li>
+    <li>My restaurant</li>
+    <li>Sections</li>
+  </ul>
+  <div class="recipe-line"></div>
   <br>
-  <h2><strong>Your Restaurant: </strong><%= link_to "#{current_user.restaurant.name}", restaurant_path(current_user.restaurant), class:"chef-restaurant"%></h2>
+  <h2 class="py-3"> Welcome to p-KA, Chef <%= (current_user.name).capitalize %> </h2>
 </div>
 
-<div class="recipe-line"></div>
+<div class="recipe-dishes-container">
+  <h3>Under development</h3>
 
+  <ul>
+   <% @unassigned_recipes.each do |recipe| %>
+    <li><%= recipe.name %></li>
+  <% end %>
+  </ul>
+  <h3>Added to <i class="fas fa-map-marker-alt"></i> <%= link_to "#{current_user.restaurant.name}", restaurant_path(current_user.restaurant) %> </h3>
+  <ul>
+   <% @assigned_recipes.each do |recipe| %>
+    <li><%= recipe.name %></li>
+  <% end %>
+  </ul>
+  <ul>
+
+    <% @recipes.each do |recipe| %>
+          <li><%= recipe.dishes.empty? %></li>
+  <% end %>
+  </ul>
+</div>
+
+
+
+
+  <br>  <br>  <br>  <br>
 <div class="recipes-container">
     <% @recipes.each do |recipe| %>
       <div class="card-container recipe-card" data-controller="hidden-form" data-hidden-form-target="expand">
-        <div class="image-recipe-container">
+      <div class="image-recipe-container">
           <img src="https://insanelygoodrecipes.com/wp-content/uploads/2020/08/Mexican-Beef-Burritos.png" alt="Burrito" class="recipe-image">
         </div>
         <div class="recipe-content">
@@ -28,3 +58,5 @@
       </div>
     <% end %>
 </div>
+
+<h2><strong>Your Restaurant: </strong><%= link_to "#{current_user.restaurant.name}", restaurant_path(current_user.restaurant), class:"chef-restaurant"%></h2>
