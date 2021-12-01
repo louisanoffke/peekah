@@ -25,7 +25,7 @@ class DishesController < ApplicationController
       # raise
       @dishes = []
       Dish.all.each do |dish|
-        if dish.protein <= params[:protein].to_i
+        if dish.protein >= params[:protein].to_i
           @dishes << dish
         end
       end
@@ -36,8 +36,8 @@ class DishesController < ApplicationController
       {
         lat: dish.restaurant.latitude,
         lng: dish.restaurant.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { dish: dish })
-        # image_url: helpers.asset_url("https://foodisafourletterword.com/wp-content/uploads/2020/11/Japanese_Chicken_Katsu_Curry_Recipe_with_Panda_Bear_Rice_Ball_hori.jpg")
+        info_window: render_to_string(partial: "info_window", locals: { dish: dish }),
+        image_url: helpers.asset_url("marker.png")
       }
     end
   end
@@ -46,7 +46,8 @@ class DishesController < ApplicationController
     @markers = [@dish].map do |dish|
       {
         lat: dish.restaurant.latitude,
-        lng: dish.restaurant.longitude
+        lng: dish.restaurant.longitude,
+        image_url: helpers.asset_url("marker.png")
       }
     end
   end
