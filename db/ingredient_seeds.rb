@@ -1,8 +1,4 @@
 def build_ingredients
-  puts "deleting previously created ingredients"
-  Ingredient.delete_all
-  puts "#{Ingredient.count} ingredients stored"
-  puts "======"
   puts "starting to create ingredients"
 
   Ingredient.create(
@@ -85,8 +81,15 @@ def build_ingredients
     fat_content: 7
   )
 
+  Ingredient.create!(
+    name: "Prawns",
+    calorie_content: 70,
+    protein_content: 15,
+    carb_content: 0.2,
+    fat_content: 0.3
+  )
+
   ingredients = %w[
-    Prawns
     Chorizo
     Turbot
     Artichokes
