@@ -27,7 +27,7 @@
 
 .dish-menu-container {
   width: 70vw;
-  padding: 20px;
+  padding: 40px;
   background: white;
   margin: 0px 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
@@ -78,7 +78,7 @@
   background-size: cover;
   background-position: center;
   height: 160px;
-  width: 500px;
+  width: 300px;
   border-radius: 1px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   display: flex;
@@ -96,7 +96,6 @@
 .res-info-container {
   display: flex;
   flex-direction: column;
-  // border: 3px solid gold;
   width: 30vw;
   text-align: center;
   justify-content: space-between;
@@ -107,4 +106,21 @@
 .map-container {
   // margin-top: 20px;
   padding: 0px 20px;
+}
+
+.dish-menu-card .price {
+  // position: absolute;
+  // right: 30px;
+  justify-content: flex-end;
+}
+
+
+// Disable links default style
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
 }

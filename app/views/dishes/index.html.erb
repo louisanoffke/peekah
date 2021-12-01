@@ -1,6 +1,6 @@
+<!-- Filters -->
 <div class="filter-container">
-<%# <h5> - <b>filters</b> and <b>searches</b> will go here - to be made sticky on scroll -</h5> %>
-<%# ALLERGEN FILTER: %>
+<!-- allergen filter -->
   <%= form_tag dishes_path, method: :get do %>
   <%= text_field_tag :query,
     params[:query],
@@ -10,7 +10,7 @@
   <%= submit_tag "Filter", class: "btn btn-pka-2" %>
 <% end %>
 
-<%# PROTEIN FILTER (will go below) %>
+<!-- protein filter -->
 <%= form_for dishes_path, method: :get do %>
   <%= text_field_tag :protein,
       params[:protein],
@@ -22,12 +22,12 @@
 
 </div>
 <div class="map-dishes-container">
-  <!-- Cards -->
+  <!-- Dish cards -->
   <div class="dishes-grid-cards">
     <%@dishes.each do |dish| %>
       <div class="dish-card">
         <%= link_to(dish) do %>
-          <div class="dish-hero" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/salad_verte_with_15684_16x9.jpg)">
+          <div class="dish-hero" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(<%= dish.img_url %>)">
             <%= simple_format(dish.recipe.name, {}, wrapper_tag: "div") %>
           </div>
           <div class="dish-infos">
