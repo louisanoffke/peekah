@@ -40,7 +40,9 @@
           <div class="dish-infos">
             <div>
             <p>
-              <% unless dish.allergens == [] %>
+              <% if dish.allergens == [] %>
+                <p>Allergens: <em>none</em>
+              <% else %>
                 <p>Allergens:
                   <% dish.allergens.each do |allergen| %>
                     <img style="width: 24px" src=<%= allergen[0].icon_url %> alt=<%= allergen[0].name %>>
