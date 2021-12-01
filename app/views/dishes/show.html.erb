@@ -1,10 +1,11 @@
 <div class="outer-box">
-  <div class="banner" style="background-image: url(<%=@dish.img_url%>);">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('<%=@dish.img_url%>');">
     <div class="text-center dish-description">
       <br>
       <h1 class="text-center dish-title"><%= @dish.recipe.name %></h1>
       <br>
       <em><%= @dish.description %></em>
+      <p class="header-restaurant">Available at <%= @dish.restaurant.name %></p>
     </div>
   </div>
   <div class="solid-line"></div>
@@ -29,7 +30,7 @@
 
         <div class="nutrition-chart">
           <br>
-          <%=pie_chart @dish.total_macros, donut: true, legend: false, class:"donut", library: { pieSliceText: 'value' } %>
+          <%=pie_chart @dish.total_macros, donut: true, legend: false, class:"donut" %>
         </div>
       </div>
 
@@ -38,11 +39,18 @@
         <h3 style="font-size:33px;"><strong>Ingredients</strong></h3>
         <div class="ingredients-list">
           <% @dish.recipe.recipe_ingredients.each do |recipe_ingredient| %>
-          <span>
-            <%= recipe_ingredient.ingredient.name %>,
-            <%#= recipe_ingredient == @dish_array.last ? "and #{recipe_ingredient.ingredient.name}." : recipe_ingredient.ingredient.name %>
-            <% end %>
-          </span>
+            <span>
+              <% if @dish.recipe.recipe_ingredients.length == 1 %>
+                <%= "#{recipe_ingredient.ingredient.name}." %>
+              <% elsif recipe_ingredient == @dish.recipe.recipe_ingredients.last %>
+                <%= "and #{recipe_ingredient.ingredient.name}." %>
+              <% elsif recipe_ingredient == @dish.recipe.recipe_ingredients[-2] %>
+                <%= recipe_ingredient.ingredient.name %>
+              <% else %>
+                <%= "#{recipe_ingredient.ingredient.name}," %>
+              <% end %>
+            </span>
+          <% end %>
         </div>
       </div>
 
@@ -66,7 +74,7 @@
 
     <div class="inner-box-right">
       <br>
-      <h1 class="text-center"><i><strong><%= @dish.restaurant.name %></strong></i></h1>
+      <h1 class="text-center restaurant-name">Find <i><strong><%= @dish.restaurant.name %></strong></i></h1>
 
       <div class="map-container">
         <div style="width:100%; height:450px;" class="map"
