@@ -36,7 +36,7 @@ def build_allergens
   Allergen.create(
     name: "Fish",
     note: "You will find this in some fish sauces, pizzas, relishes, salad dressings,
-  stock cubes and Worcestershire sauce. E.g. Sole, Sea Bass, Turbot.",
+  stock cubes and Worcestershire sauce. E.g. Sole, Sea Bass, Turbot, Sea Bream.",
     icon_url: "https://cdn-icons-png.flaticon.com/64/1691/1691086.png"
   )
 

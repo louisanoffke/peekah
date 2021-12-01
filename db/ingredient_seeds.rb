@@ -63,6 +63,7 @@ def build_ingredients
     Artichokes
     White\ Wine
     Olive\ Oil
+    Salt
     Sea\ Bass
     Artichokes
     Tomatoes
@@ -75,6 +76,7 @@ def build_ingredients
     Lamb\ Cutlets
     Aubergine
     Baby\ Chicken
+    Lemon
     Duck\ Legs
     Orange
     Whole\ Chicken
