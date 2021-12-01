@@ -25,7 +25,7 @@ class DishesController < ApplicationController
       # raise
       @dishes = []
       Dish.all.each do |dish|
-        if dish.protein <= params[:protein].to_i
+        if dish.protein >= params[:protein].to_i
           @dishes << dish
         end
       end
