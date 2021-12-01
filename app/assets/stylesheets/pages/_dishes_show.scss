@@ -15,8 +15,20 @@
   object-fit: fill;
 }
 
+.dish-title {
+  font-size: 50px;
+  font-weight: 700;
+}
+
 .dish-description {
-  font-size: 30px;
+  font-size: 35px;
+  font-weight: 300;
+}
+
+.header-restaurant {
+  position: relative;
+  bottom: -35px;
+  font-size: 25px;
 }
 
 .solid-line {
@@ -72,17 +84,17 @@
 
 .ingredients-container {
   padding-left: 15px;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .ingredients-list {
-  padding-left: 10px;
+  padding-left: 6px;
   font-size: 20px;
-  margin-top: 10px;
+  margin-top: 13px;
 }
 
 .allergen-container {
-  padding-left: 15px;
+  padding-left: 18px;
   margin-top: 90px;
 }
 
@@ -96,7 +108,11 @@
   // border: 2px solid greenyellow;
   background-color: rgb(255,255,255);
   width: 40%;
+}
 
+.restaurant-name {
+  font-weight: 300;
+  font-size: 30px;
 }
 
 .map-container {
@@ -121,7 +137,7 @@
 .dish-history {
   padding-left: 38px;
   position: relative;
-  top: -40px;
+  top: -10px;
 }
 
 .dish-text {
