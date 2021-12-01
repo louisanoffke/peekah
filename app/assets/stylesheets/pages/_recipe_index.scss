@@ -5,7 +5,7 @@ $tab-line: #99154e65;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30px;
+  // margin-top: 30px;
 }
 
 // Tabs ribbon
@@ -45,8 +45,11 @@ $tab-line: #99154e65;
 .recipe-dishes-container {
   display: flex;
   flex-direction: column;
-  align-items: left;
   margin: 0px 100px;
+
+  // h3 {
+  //   text-align: center;
+  // }
 }
 
 h3 a {
@@ -55,6 +58,7 @@ h3 a {
 
 h3 a:hover {
   color: $accent-r;
+  font-weight: bolder;
 }
 
 // Recipes container - grid layout
@@ -72,12 +76,17 @@ h3 a:hover {
   flex-direction: column;
   justify-content: space-around;
   overflow: hidden;
-  background: white;
+  background: $base-bkg;
   padding: 16px;
   box-shadow: 0 0 3px rgba(0,0,0,0.2);
 
   &:hover {
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+
+  h5 {
+    color: $accent-red;
+    font-weight: 600;
   }
 }
 
@@ -92,7 +101,7 @@ h3 a:hover {
   width: 80%;
   text-align: center;
   height: 40px;
-  padding-top: 8px;
+  padding-top: 6px;
 }
 
 .recipe-action-icons {

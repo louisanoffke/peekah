@@ -33,10 +33,28 @@
   color: $accent-g;
   vertical-align: middle;
   text-align: center;
+  font-weight: 500;
 
   &:hover {
-    border: solid 2px $accent-g-h;
-    color: white;
-    background-color: $accent-g-h;
+    border: solid 2px $accent-g;
+    color: $base-bkg;
+    background-color: $accent-g;
+  }
+}
+
+.btn-pka-sec {
+  border: solid 2px #99154e48;
+  color: #b92f6b;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: 500;
+  background-color: $base-bkg;
+  padding: 20px;
+
+  &:hover {
+    border: solid 2px $accent-r;
+    color: $accent-r;
+    font-weight: 600;
+    // background-color: $accent-g-r;
   }
 }
