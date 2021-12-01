@@ -13,7 +13,14 @@
         </div>
         <div class="dish-infos">
           <h5> <%= dish.recipe.name %></h5>
-          <p><%= dish.recipe.method %></p>
+          <p><%= dish.description %></p>
+          <p>Allergens:
+              <% if dish.allergens %>
+                <% dish.allergens.each do |allergen| %>
+                  <img style="width: 24px" src=<%= allergen[0].icon_url %> alt=<%= allergen[0].name %>>
+                <% end %>
+              <% end %>
+          </p>
         </div>
       </div>
     <% end %>
