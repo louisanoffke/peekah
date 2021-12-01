@@ -1,31 +1,33 @@
 <!-- Filters -->
 <div class="filter-container">
-<!-- allergen filter -->
-<div class="filter-item"> I'm allergic to: </div>
-<div class="filter-item">
-  <%= form_tag dishes_path, method: :get, class: 'form-inline' do %>
-  <%= select_tag :query,
-    options_from_collection_for_select(Allergen.all, :name, :name),
-    class: "form-control",
-    placeholder: "I'm allergic to.."
-  %>
-<%= submit_tag 'Filter Dishes', class: "btn-pka-2" %>
-<% end %>
-</div>
-
-<!-- protein filter -->
-<div class="filter-item"> Find dishes with more than .. </div>
-<div class="filter-item">
-<%= form_tag dishes_path, method: :get, class: 'form-inline' do %>
-  <%= text_field_tag :protein, params[:protein],
+  <!-- allergen filter -->
+  <div class="filter-item"> I'm allergic to: </div>
+  <div class="filter-item">
+    <%= form_tag dishes_path, method: :get, class: 'form-inline' do %>
+    <%= select_tag :query,
+      options_from_collection_for_select(Allergen.all, :name, :name),
       class: "form-control",
-      placeholder: ".. grams of protein" %>
-  <%= submit_tag "Find", class: "btn btn-pka-2" %>
-<% end %>
+      placeholder: "I'm allergic to.."
+    %>
+  <%= submit_tag 'Filter Dishes', class: "btn-pka-2" %>
+  <% end %>
+  </div>
+
+  <!-- protein filter -->
+  <div class="filter-item">
+  Find dishes with more than ..
+  </div>
+  <div class="filter-item">
+    <%= form_tag dishes_path, method: :get, class: 'form-inline' do %>
+      <%= text_field_tag :protein, params[:protein],
+          class: "form-control",
+          placeholder: ".. grams of protein" %>
+      <%= submit_tag "Find", class: "btn btn-pka-2" %>
+    <% end %>
+  </div>
 </div>
 
 
-</div>
 <div class="map-dishes-container">
   <!-- Dish cards -->
   <div class="dishes-grid-cards">
