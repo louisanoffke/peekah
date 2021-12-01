@@ -1,0 +1,55 @@
+.recipe-title {
+  width: 55%;
+  margin: 30px auto;
+  text-align: center;
+  font-size: 60px;
+  font-family: "Montserrat";
+}
+
+.recipe-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 70%;
+  height: 500px;
+  margin: auto;
+  margin-top: 60px;
+  font-family: "Rubik";
+  background-color: whitesmoke;
+  box-shadow: 0 0px 10px rgba(0,0,0,0.2);
+  border-radius: 2px;
+  position: relative;
+}
+
+.recipe-name {
+  margin: 20px;
+  width: 40%;
+  font-size: 25px;
+}
+
+.recipe-method {
+  margin-top: 30px;
+  margin-left: 20px;
+  width: 95%;
+  font-size: 25px;
+  height: 200px;
+}
+
+.submit-btn {
+  width: 95%;
+  font-family: "Rubik";
+  margin-top: 50px;
+  position: absolute;
+  margin-left: 30px;
+  bottom: 20px;
+}
+
+.btn-submit {
+  width: 99%;
+  height: 50px;
+  font-size: 20px;
+}
+
+.btn-submit:hover {
+  background-color: #901449;
+}

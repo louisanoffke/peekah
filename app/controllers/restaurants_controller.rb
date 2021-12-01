@@ -7,6 +7,7 @@ class RestaurantsController < ApplicationController
       {
         lat: @restaurant.latitude,
         lng: @restaurant.longitude,
+        image_url: helpers.asset_url("marker.png")
       }
     ]
   end
@@ -17,7 +18,8 @@ class RestaurantsController < ApplicationController
     @markers = @restaurants.geocoded.map do |restaurant|
       {
         lat: restaurant.latitude,
-        lng: restaurant.longitude
+        lng: restaurant.longitude,
+        image_url: helpers.asset_url("marker.png")
       }
     end
   end
