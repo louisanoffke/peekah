@@ -2,21 +2,13 @@
 <div class="filter-container">
 <!-- allergen filter -->
   <%= form_tag dishes_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Exclude Dishes that contain..."
+  <%= select_tag :query,
+    options_from_collection_for_select(Allergen.all, :name, :name),
+    class: "form-control"
   %>
-  <%= submit_tag "Filter", class: "btn btn-pka-2" %>
+<%= submit_tag 'Select Allergens', class: "btn-pka-2" %>
 <% end %>
 
-<!-- simple form with dropdown -->
-<%= form_tag dishes_path, method: :get do |f| %>
-<%= select_tag :allergen_id %>
-<%= options_from_collection_for_select(Allergen.all, :id, :name) %>
-
-<%= submit_tag 'Select Allergens', class: "btn-pka" %>
-<% end %>
 
 <!-- protein filter -->
 <%= form_for dishes_path, method: :get do %>
