@@ -1,8 +1,4 @@
 def build_users
-  puts "deleting previously created users"
-  User.delete_all
-  puts "currently #{User.count} users stored"
-  puts "======"
   puts "starting to create users"
 
   User.create!(

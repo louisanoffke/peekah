@@ -1,8 +1,4 @@
 def build_dishes
-  puts "deleting previously created dishes"
-  Dish.delete_all
-  puts "currently #{Dish.count} dishes stored"
-  puts "======"
   puts "starting to create dishes from the recipes"
 
   Dish.create!(

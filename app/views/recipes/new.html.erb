@@ -1,5 +1,17 @@
-<%= simple_form_for(@recipe) do |f| %>
- <%= f.input :name %>
- <%= f.input :method, as: :text %>
- <%= f.submit 'Submit', class: "btn-pka" %>
-<% end %>
+<div class="recipe-title"> Add a recipe </div>
+
+<div class="recipe-form">
+  <%= simple_form_for(@recipe) do |f| %>
+  <div class="recipe-name">
+    <%= f.input :name %>
+  </div>
+
+  <div class="recipe-method">
+    <%= f.input :method, as: :text, class: "text-box", input_html: { rows: 8 } %>
+  </div>
+
+  <div class="submit-btn">
+    <%= f.submit 'Start Adding Ingredients', class: "btn-pka btn-submit" %>
+  </div>
+  <% end %>
+</div>

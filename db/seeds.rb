@@ -14,6 +14,28 @@ puts ">> Allergens"
 build_allergens
 puts "_______________"
 
+puts "=== clearing up ==="
+puts "deleting previously created RecipeIngredients"
+RecipeIngredient.delete_all
+
+puts "deleting previously created Dishes"
+Dish.delete_all
+
+puts "deleting previously created Recipes"
+Recipe.delete_all
+
+puts "deleting previously created ingredients"
+Ingredient.delete_all
+
+puts "deleting previously created Users"
+User.delete_all
+
+puts "deleting previously created Restaurants"
+Restaurant.delete_all
+puts "=== done ==="
+
+
+
 puts ">> Ingredients"
 build_ingredients
 puts "_______________"

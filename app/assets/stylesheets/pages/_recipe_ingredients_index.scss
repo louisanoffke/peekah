@@ -1,0 +1,61 @@
+.main-form-container {
+  margin-top: 50px;
+}
+
+.main-form-container h1 {
+  font-weight: 700;
+  text-align: center;
+}
+
+.inline-recipe-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.recipe-form-image {
+  height: 550px;
+  width: 550px;
+  padding: 10px;
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 20px;
+}
+
+.ingredient-form {
+  background: white;
+  width: 400px;
+  height: 447px;
+  padding: 40px;
+  margin: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.ingredient-form h4 {
+  margin-bottom: 20px;
+}
+
+.btn-container, .ingredient-btn  {
+  width: 100%;
+  margin: 10px 0 20px 0;
+}
+
+.ingredient-list {
+  background: white;
+  width: 290px;
+  height: 447px;
+  padding: 40px;
+  margin: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.ingredient-list ul {
+  margin-top: 20px;
+}
+
+.ingredient-list li {
+  font-size: 16px;
+}

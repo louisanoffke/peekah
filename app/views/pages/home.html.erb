@@ -7,7 +7,8 @@
 
     <div class="empty-band">
         <div class="search-form">
-          <%= link_to dishes_path, class: 'btn-pka-2 homepage-btn' do %>
+          <%= link_to dishes_path, class: 'btn-pka-2 homepage-btn',
+          data: { turbolinks: false } do %>
             <i class="fas fa-search"></i>
             <span>Start Peeking</span>
           <% end %>

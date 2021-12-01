@@ -6,13 +6,29 @@
 
 .header {
   margin-top: 20px;
-  height: 10%;
+  height: 200px;
   width: 100%;
   display: block;
+  // border: 1px solid black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: fill;
+}
+
+.dish-title {
+  font-size: 50px;
+  font-weight: 700;
 }
 
 .dish-description {
-  font-size: 30px;
+  font-size: 35px;
+  font-weight: 300;
+}
+
+.header-restaurant {
+  position: relative;
+  bottom: -35px;
+  font-size: 25px;
 }
 
 .solid-line {
@@ -24,7 +40,7 @@
 .left-right-container {
   display: flex;
   justify-content: space-evenly;
-  // border: 2px solid black;
+ // border: 2px solid red;
 }
 
 .inner-box-left {
@@ -34,7 +50,9 @@
   width: 55%;
   margin-top: 0px;
   justify-content: space-between;
-  height: 500px;
+  height: 100%;
+  background-color: rgb(255,255,255);
+  padding-top: 30px;
 }
 
 .nutritional-info {
@@ -60,36 +78,41 @@
   // border: 2px solid pink;
   width: 30%;
   position: relative;
-  right: 120px;
-  top: 0px;
+  right: 110px;
+  top: -20px;
 }
 
 .ingredients-container {
   padding-left: 15px;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .ingredients-list {
-  padding-left: 10px;
+  padding-left: 6px;
   font-size: 20px;
-  margin-top: 10px;
+  margin-top: 13px;
 }
 
 .allergen-container {
-  padding-left: 15px;
+  padding-left: 18px;
   margin-top: 90px;
 }
 
 .all-allergens {
-  font-size: 20px;
-  margin: 0 20px 20px 0;
+  font-size: 18px;
+  margin: 20px 20px 20px 0;
+  padding-left: 10px;
 }
 
 .inner-box-right {
   // border: 2px solid greenyellow;
-  background-color: #F1C2B4;
+  background-color: rgb(255,255,255);
   width: 40%;
-  margin-top: 15px;
+}
+
+.restaurant-name {
+  font-weight: 300;
+  font-size: 30px;
 }
 
 .map-container {
@@ -107,12 +130,14 @@
 .find-us {
   position: relative;
   top: 10px;
-  left: 10px;
-  color: white;
+  left: 22px;
+  color: black;
 }
 
 .dish-history {
   padding-left: 38px;
+  position: relative;
+  top: -10px;
 }
 
 .dish-text {

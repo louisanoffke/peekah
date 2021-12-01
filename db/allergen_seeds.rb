@@ -36,7 +36,7 @@ def build_allergens
   Allergen.create(
     name: "Fish",
     note: "You will find this in some fish sauces, pizzas, relishes, salad dressings,
-  stock cubes and Worcestershire sauce. E.g. Sole, Sea Bass, Turbot.",
+  stock cubes and Worcestershire sauce. E.g. Sole, Sea Bass, Turbot, Sea Bream.",
     icon_url: "https://cdn-icons-png.flaticon.com/64/1691/1691086.png"
   )
 
@@ -55,7 +55,7 @@ def build_allergens
 
   Allergen.create(
     name: "Milk",
-    note: "Milk is a common ingredient in butter, cheese, eg Halloumi, cream, milk powders and yoghurt. It can
+    note: "Milk is a common ingredient in butter, cheese, eg Halloumi, Parmesan, cream, milk powders and yoghurt. It can
   also be found in foods brushed or glazed with milk, and in powdered soups and sauces.",
     icon_url: "https://cdn-icons-png.flaticon.com/64/684/684614.png"
   )
