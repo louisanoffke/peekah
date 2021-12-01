@@ -11,7 +11,31 @@
 </div>
 
 <div class="recipe-dishes-container">
-
+  <h3 class="py-4">Under development</h3>
+  <div class="btn-pka-2 mb-4">
+    <%= link_to "Add a Recipe", new_recipe_path %>
+  </div>
+  <!-- recipes in development -->
+  <div class="recipes-grid-container">
+    <% @unassigned_recipes.each do |recipe| %>
+      <div class="recipe-card" data-controller="hidden-form" data-hidden-form-target="expand">
+        <%= link_to(recipe.dishes.first) do %>
+          <h5><%= recipe.name %></h5>
+          <p> <%= recipe.method %></p>
+        <% end %>
+        <div class="recipe-actions">
+          <div class="recipe-form-button btn-pka-2-sec" data-action="click->hidden-form#addDish">Make available</div>
+          <div id="recipe-action-icons">
+            <%= link_to recipe_path(recipe), method: :delete, data: { confirm: "Sure about that?"} do %><i class="far fa-trash-alt btn-pka-2-sec act-recipe-icon"></i><% end %>
+            <%= link_to edit_recipe_path(recipe) do %><i class="far fa-edit btn-pka-2-sec act-recipe-icon"></i><% end %>
+          </div>
+        </div>
+        <div class="dish-form" data-hidden-form-target="unhide" style="display: none;">
+          <%= render partial: "dishes/form", locals: { recipe: recipe, dish: @dish ? @dish : Dish.new } %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 
   <h3 class="py-4">Added to <i class="fas fa-map-marker-alt"></i> <%= link_to "#{current_user.restaurant.name}", restaurant_path(current_user.restaurant) %> </h3>
   <div>
