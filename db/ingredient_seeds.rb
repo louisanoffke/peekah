@@ -7,8 +7,8 @@ def build_ingredients
 
   Ingredient.create(
     name: "Halloumi",
-    calorie_content: 99,
-    protein_content: 20,
+    calorie_content: 400,
+    protein_content: 30,
     is_allergen: false,
     contains_allergen: true
   )
@@ -21,22 +21,115 @@ def build_ingredients
     contains_allergen: false
   )
 
+  Ingredient.create!(
+    name: "Green Chillies",
+    calorie_content: 40,
+    carb_content: 9,
+    protein_content: 1.9
+  )
+
+  Ingredient.create!(
+    name: "Potato Starch",
+    calorie_content: 357,
+    carb_content: 83,
+    protein_content: 7
+  )
+
+  Ingredient.create!(
+    name: "Black Pepper",
+    calorie_content: 318,
+    carb_content: 62,
+    protein_content: 10
+  )
+
+  Ingredient.create!(
+    name: "Lemon Zest",
+    calorie_content: 29,
+    carb_content: 9,
+    protein_content: 1.1
+  )
+
+  Ingredient.create!(
+    name: "Lemon",
+    calorie_content: 29,
+    carb_content: 9,
+    protein_content: 1.1
+  )
+
+  Ingredient.create!(
+    name: "Ground Paprika",
+    calorie_content: 300,
+    carb_content: 60,
+    protein_content: 10
+  )
+
+  Ingredient.create!(
+    name: "Vegetable Oil",
+    calorie_content: 812,
+    protein_content: 0,
+    carb_content: 0,
+    fat_content: 92
+  )
+
+  Ingredient.create!(
+    name: "Parmesan",
+    calorie_content: 431,
+    protein_content: 38,
+    carb_content: 4.1 ,
+    fat_content: 29
+  )
+
+  Ingredient.create!(
+    name: "Squid",
+    calorie_content: 175,
+    protein_content: 18,
+    carb_content: 8,
+    fat_content: 7
+  )
+
+  Ingredient.create!(
+    name: "Baby Squid",
+    calorie_content: 175,
+    protein_content: 18,
+    carb_content: 8,
+    fat_content: 7
+  )
+
+  Ingredient.create!(
+    name: "Maldon Salt",
+    calorie_content: 0,
+    protein_content: 0,
+    carb_content: 0,
+    fat_content:0
+  )
+
+  Ingredient.create!(
+    name: "Cherry Tomato",
+    calorie_content: 18,
+    protein_content: 1.1,
+    carb_content: 3.6,
+    fat_content: 0.8
+  )
+
+  Ingredient.create!(
+    name: "Garlic",
+    calorie_content: 149,
+    protein_content: 6.4,
+    carb_content: 33,
+    fat_content: 0.5
+  )
+
+
   ingredients = %w[
-    Gnocchi
-    Cherry\ Tomato
-    Garlic
-    Parmesan
     Pappardelle
     Veal
     Pasta
-    Squid
     Prawns
     Chorizo
     Turbot
     Artichokes
     White\ Wine
     Olive\ Oil
-    Salt
     Sea\ Bass
     Artichokes
     Tomatoes
@@ -49,7 +142,6 @@ def build_ingredients
     Lamb\ Cutlets
     Aubergine
     Baby\ Chicken
-    Lemon
     Duck\ Legs
     Orange
     Whole\ Chicken
