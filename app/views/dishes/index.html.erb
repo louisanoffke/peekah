@@ -7,10 +7,10 @@
     <%= select_tag :query,
       options_from_collection_for_select(Allergen.all, :name, :name),
       class: "form-control",
-      placeholder: "I'm allergic to.."
+      include_blank: "select allergen"
     %>
-  <%= submit_tag 'Filter Dishes', class: "btn-pka-2" %>
-  <% end %>
+  <%#= submit_tag 'Filter Dishes', class: "btn-pka-2" %>
+  <%# end %>
   </div>
 
   <!-- protein filter -->
@@ -18,11 +18,11 @@
   Find dishes with more than ..
   </div>
   <div class="filter-item">
-    <%= form_tag dishes_path, method: :get, class: 'form-inline' do %>
+    <%#= form_tag dishes_path, method: :get, class: 'form-inline' do %>
       <%= text_field_tag :protein, params[:protein],
           class: "form-control",
           placeholder: ".. grams of protein" %>
-      <%= submit_tag "Find", class: "btn btn-pka-2" %>
+      <%= submit_tag "Filter", class: "btn btn-pka-2" %>
     <% end %>
   </div>
 </div>
