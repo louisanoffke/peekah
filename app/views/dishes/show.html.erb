@@ -47,12 +47,12 @@
       <div class="allergen-container">
         <h3 style="font-size:33px;"><strong>This Dish contains the following Allergens:</strong></h3>
         <div class="all-allergens">
-          <% if @dish.allergens %>
+          <% if @dish.allergens == [] %>
+            <p><em>no allergens recorded for this dish</em></p>
+          <% else %>
             <% @dish.allergens.each do |allergen| %>
               <img class="allergen-icon" src=<%= allergen[0].icon_url %> alt=<%= allergen[0].name %>>
             <% end %>
-          <% else %>
-            <p>no allergens recorded</p>
           <% end %>
         </div>
       </div>
