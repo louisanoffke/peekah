@@ -1,5 +1,5 @@
 <div class="main-form-container">
-  <h1>Ingredients for <em>"<%= @recipe.name %>"</em></h1>
+  <h1>Add Ingredients for <em>"<%= @recipe.name %>"</em></h1>
 
   <div class="recipe-line"></div>
 
@@ -26,7 +26,7 @@
         <ul>
           <% @recipe_ingredients.each do |r| %>
             <% if r.recipe_id == @recipe.id %>
-              <li><%= r.ingredient.name %>: <%= r.ingredient_amount %>g </li>
+              <li><%= r.ingredient_amount %>g <%= r.ingredient.name %> </li>
             <% end %>
           <% end %>
         </ul>
