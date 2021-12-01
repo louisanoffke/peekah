@@ -6,9 +6,13 @@
 
 .header {
   margin-top: 20px;
-  height: 10%;
+  height: 200px;
   width: 100%;
   display: block;
+  // border: 1px solid black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: fill;
 }
 
 .dish-description {
@@ -24,7 +28,7 @@
 .left-right-container {
   display: flex;
   justify-content: space-evenly;
-  // border: 2px solid black;
+ // border: 2px solid red;
 }
 
 .inner-box-left {
@@ -34,7 +38,9 @@
   width: 55%;
   margin-top: 0px;
   justify-content: space-between;
-  height: 500px;
+  height: 100%;
+  background-color: rgb(255,255,255);
+  padding-top: 30px;
 }
 
 .nutritional-info {
@@ -88,9 +94,9 @@
 
 .inner-box-right {
   // border: 2px solid greenyellow;
-  background-color: #F1C2B4;
+  background-color: rgb(255,255,255);
   width: 40%;
-  margin-top: 15px;
+
 }
 
 .map-container {
@@ -108,12 +114,14 @@
 .find-us {
   position: relative;
   top: 10px;
-  left: 10px;
-  color: white;
+  left: 22px;
+  color: black;
 }
 
 .dish-history {
   padding-left: 38px;
+  position: relative;
+  top: -40px;
 }
 
 .dish-text {
