@@ -6,22 +6,18 @@ class DishesController < ApplicationController
     # ALL Dishes:
     @dishes = Dish.all.includes(:restaurant, :recipe)
 
-    # Allergen Filter:
-    if params[:query].present?
-      query_allergen_ids = Allergen.search_by_name(params[:query]).ids
+    # use both filters:
+    if params[:query].present? && params[:protein].present?
+      filtered_dishes = apply_allergen_filter
+      # raise
+      @dishes = filtered_dishes.select { |dish| dish.protein >= params[:protein].to_i }
 
-      @dishes = []
-      Dish.all.each do |dish|
-        allergen_array = dish.allergens.reduce(&:+) || []
-        no_matching_allergens = (allergen_array.map(&:id) & query_allergen_ids).empty?
-        if dish.allergens.empty? || no_matching_allergens
-          @dishes << dish
-        end
-      end
-    end
+    elsif params[:query].present?
+    # Allergen Filter:
+      apply_allergen_filter
 
     # Protein Filter: to find dishes with LESS THAN input amount
-    if params[:protein].present?
+    elsif params[:protein].present?
       # raise
       @dishes = []
       Dish.all.each do |dish|
@@ -84,6 +80,19 @@ class DishesController < ApplicationController
 
   def last_ingredient
     @dish_array = @dish.recipe.recipe_ingredients # PARTIAL ?
+  end
+
+  def apply_allergen_filter
+    query_allergen_ids = Allergen.search_by_name(params[:query]).ids
+
+    @dishes = []
+    Dish.all.each do |dish|
+      allergen_array = dish.allergens.reduce(&:+) || []
+      no_matching_allergens = (allergen_array.map(&:id) & query_allergen_ids).empty?
+      if dish.allergens.empty? || no_matching_allergens
+        @dishes << dish
+      end
+    end
   end
 
   private

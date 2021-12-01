@@ -1,28 +1,24 @@
 <!-- Filters -->
 <div class="filter-container">
+<h3>Find dishes that suit YOU!</h3>
   <!-- allergen filter -->
-  <div class="filter-item"> I'm allergic to: </div>
-  <div class="filter-item">
+  <div class="filter-item"> I'm allergic to:
     <%= form_tag dishes_path, method: :get, class: 'form-inline' do %>
     <%= select_tag :query,
       options_from_collection_for_select(Allergen.all, :name, :name),
       class: "form-control",
-      placeholder: "I'm allergic to.."
+      include_blank: "select allergen"
     %>
-  <%= submit_tag 'Filter Dishes', class: "btn-pka-2" %>
-  <% end %>
   </div>
-
   <!-- protein filter -->
   <div class="filter-item">
-  Find dishes with more than ..
-  </div>
-  <div class="filter-item">
-    <%= form_tag dishes_path, method: :get, class: 'form-inline' do %>
+    I want dishes with more than ..
       <%= text_field_tag :protein, params[:protein],
           class: "form-control",
-          placeholder: ".. grams of protein" %>
-      <%= submit_tag "Find", class: "btn btn-pka-2" %>
+          placeholder: ".. enter grams of protein" %>
+  </div>
+  <div class="filter-item">
+      <%= submit_tag "Filter", class: "btn btn-pka-2" %>
     <% end %>
   </div>
 </div>
