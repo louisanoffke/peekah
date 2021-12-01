@@ -53,10 +53,39 @@ def build_ingredients
     fat_content: 29
   )
 
+  Ingredient.create!(
+    name: "Papardelle",
+    calorie_content: 431,
+    protein_content: 38,
+    carb_content: 4.1,
+    fat_content: 29
+  )
+
+  Ingredient.create!(
+    name: "Veal",
+    calorie_content: 431,
+    protein_content: 38,
+    carb_content: 4.1,
+    fat_content: 29
+  )
+
+  Ingredient.create!(
+    name: "Pasta",
+    calorie_content: 431,
+    protein_content: 38,
+    carb_content: 4.1,
+    fat_content: 29
+  )
+
+  Ingredient.create!(
+    name: "Squid",
+    calorie_content: 175,
+    protein_content: 18,
+    carb_content: 8,
+    fat_content: 7
+  )
+
   ingredients = %w[
-    Pappardelle
-    Veal
-    Pasta
     Prawns
     Chorizo
     Turbot
@@ -146,15 +175,6 @@ def build_ingredients
     protein_content: 0,
     carb_content: 0,
     fat_content: 92
-  )
-
-
-  Ingredient.create!(
-    name: "Squid",
-    calorie_content: 175,
-    protein_content: 18,
-    carb_content: 8,
-    fat_content: 7
   )
 
   Ingredient.create!(
