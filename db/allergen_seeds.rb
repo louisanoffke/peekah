@@ -11,15 +11,6 @@ def build_allergens
   )
 
   Allergen.create(
-    name: "Gluten",
-    note: "Wheat (such as spelt and Khorasan wheat/Kamut), rye, barley and oats is
-  often found in foods containing flour, such as some types of baking powder,
-  batter, breadcrumbs, bread, cakes, couscous, Gnocchi, Papardelle, meat products, pasta, pastry,
-  sauces, soups and fried foods which are dusted with flour.",
-    icon_url: "https://cdn-icons-png.flaticon.com/64/3662/3662349.png"
-  )
-
-  Allergen.create(
     name: "Crustaceans",
     note: "Crabs, lobster, prawns and scampi are crustaceans. Shrimp paste, often used in
   Thai and south-east Asian curries or salads, is an ingredient to look out for.",
@@ -41,9 +32,17 @@ def build_allergens
   )
 
   Allergen.create(
+    name: "Gluten",
+    note: "Wheat (such as spelt and Khorasan wheat/Kamut), rye, barley and oats is
+  often found in foods containing flour, such as baking powder,
+  batter, breadcrumbs, bread, cakes, couscous, Gnocchi, Papardelle, meat products, pasta, pastry,
+  sauces, soups and fried foods which are dusted with flour.",
+    icon_url: "https://cdn-icons-png.flaticon.com/64/3662/3662349.png"
+  )
+
+  Allergen.create(
     name: "Lupin",
-    note: "Yes, lupin is a flower, but it’s also found in flour! Lupin flour and seeds
-  can be used in some types of bread, pastries and even in pasta.",
+    note: "Yes, lupin is a flower, but it’s also found in flour! Lupin flour and seeds can sometimes be used in some bread, pastries and even in pasta.",
     icon_url: "https://cdn-icons-png.flaticon.com/64/1496/1496997.png"
   )
 
@@ -108,8 +107,8 @@ def build_allergens
   )
 
   Allergen.create(
-    name: "Sulphur dioxide or Sulphites",
-    note: "Or Sulfites. This is an ingredient often used in dried fruit such as raisins, dried apricots
+    name: "Sulphites",
+    note: "Sulphur dioxide or Sulfites. This is an ingredient often used in dried fruit such as raisins, dried apricots
   and prunes. You might also find it in meat products, soft drinks, vegetables
   as well as in wine and beer. If you have asthma, you have a higher risk
   of developing a reaction to sulphur dioxide.",
