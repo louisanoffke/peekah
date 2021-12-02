@@ -30,9 +30,8 @@
     <%@dishes.each do |dish| %>
       <div class="dish-card">
         <%= link_to(dish) do %>
-          <%# check if image available on cloudinary: %>
           <% if dish.photo.attached?  %>
-            <div class="dish-hero" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('<%= cl_image_path @dish.photo.key %>')">
+            <div class="dish-hero" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('<%= cl_image_path dish.photo.key %>')">
           <% else %>
             <div class="dish-hero" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(<%= dish.img_url %>)">
           <% end %>
