@@ -1,3 +1,5 @@
+<%= javascript_pack_tag 'tooltips' %>
+
 <div class="outer-box">
    <% if @dish.photo.attached?  %>
     <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('<%= cl_image_path @dish.photo.key %>')">
@@ -81,7 +83,7 @@
             <p style="line-height:1.5;"><em>No allergens are recorded for this dish</em></p>
           <% else %>
             <% @dish.allergens.each do |allergen| %>
-              <img class="allergen-icon" style="height:55px;"src=<%= allergen[0].icon_url %> alt=<%= allergen[0].name %>>
+              <img class="allergen-icon" data-toggle="tooltip" data-placement="top" title=<%= allergen[0].name %> style="height:55px;"src=<%= allergen[0].icon_url %> alt=<%= allergen[0].name %>>
             <% end %>
           <% end %>
         </div>
