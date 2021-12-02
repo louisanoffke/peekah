@@ -81,23 +81,31 @@
   padding: 30px;
 }
 
-.dish-menu-card .dish-img {
+.dish-img {
   background-size: cover;
   background-position: center;
   height: 160px;
   width: 300px;
   border-radius: 1px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: space-around;
-  font-size: 22px;
-  color: white;
+  // box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  // display: flex;
+  // align-items: center;
+  // text-align: center;
+  // justify-content: space-around;
+  // font-size: 22px;
+  // color: white;
   // padding: 30px 10px;
-  letter-spacing: 1px;
-  font-weight: 400;
-  text-shadow: 0 0 15px rgba(0,0,0,0.7);
+  // letter-spacing: 1px;
+  // font-weight: 400;
+  // text-shadow: 0 0 15px rgba(0,0,0,0.7);
+}
+
+.dish-img-dashboard {
+  background-size: cover;
+  background-position: center;
+  height: 160px;
+  width: 600px;
+  border-radius: 1px;
 }
 
 .res-info-container {

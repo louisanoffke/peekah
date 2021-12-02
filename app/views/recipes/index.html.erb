@@ -45,9 +45,9 @@
      <%= link_to(recipe.dishes.first) do %>
           <div class="dish-menu-card mx-5">
           <% if recipe.dishes.first.photo.attached?  %>
-              <div class="dish-img" style="background-image: url('<%= cl_image_path recipe.dishes.first.photo.key %>')">
+              <div class="dish-img-dashboard" style="background-image: url('<%= cl_image_path recipe.dishes.first.photo.key %>')">
             <% else %>
-              <div class="dish-img" style="background-image: url(<%= recipe.dishes.first.img_url %>)">
+              <div class="dish-img-dashboard" style="background-image: url(<%= recipe.dishes.first.img_url %>)">
             <% end %>
             </div>
             <div class="dish-infos">
