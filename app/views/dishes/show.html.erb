@@ -9,7 +9,7 @@
       <h1 class="text-center dish-title"><%= @dish.recipe.name %></h1>
       <br>
       <em><%= @dish.description %></em>
-      <p class="header-restaurant">Available at <%= @dish.restaurant.name %></p>
+      <p class="header-restaurant">Available at <span class="restaurant-link"><%= link_to "#{@dish.restaurant.name}", restaurant_path(@dish.restaurant) %></span></p>
     </div>
   </div>
 
@@ -17,7 +17,7 @@
   <br>
 
   <div class="dish-history">
-    <h3 style="font-size:33px;"><strong>About this dish</strong></h3>
+    <h2><strong>About this dish</strong></h3>
     <div class="dish-text">
       <p><i>The Chef says...</i></p>
       <p>
@@ -35,7 +35,7 @@
       <%# this is where the dish details go %>
       <div class="nutritional-info">
         <div class="nutritional-breakdown">
-          <h3 style="font-size:33px;"><strong>Nutritional Breakdown</strong></h3>
+          <h2><strong>Nutritional Breakdown</strong></h3>
           <div class="nutritional-details">
             <p>- <strong>Total Calories: <%= @dish.calories %> kcal</strong></p>
             <p>- Carbs: <%= @dish.carbs %>g (<span style="color:rgb(255,153,2)"><%= (@dish.total_macros[:Carbs]) %>%</span>)
@@ -55,7 +55,7 @@
 
 
       <div class="ingredients-container">
-        <h3 style="font-size:33px;"><strong>Ingredients</strong></h3>
+        <h2><strong>Ingredients</strong></h3>
         <div class="ingredients-list">
           <% @dish.recipe.recipe_ingredients.each do |recipe_ingredient| %>
             <span>
@@ -75,13 +75,13 @@
 
       <%# here should be ONLY the DISH ALLERGENS %>
       <div class="allergen-container">
-        <h3 style="font-size:33px;"><strong>This Dish contains the following Allergens:</strong></h3>
-        <div class="all-allergens">
+        <h2><strong>This Dish contains the following Allergens:</strong></h3>
+        <div class="all-allergens" style="height: 40px;">
           <% if @dish.allergens == [] %>
-            <p><em>No allergens are recorded for this dish</em></p>
+            <p style="line-height:1.5;"><em>No allergens are recorded for this dish</em></p>
           <% else %>
             <% @dish.allergens.each do |allergen| %>
-              <img class="allergen-icon" src=<%= allergen[0].icon_url %> alt=<%= allergen[0].name %>>
+              <img class="allergen-icon" style="height:55px;"src=<%= allergen[0].icon_url %> alt=<%= allergen[0].name %>>
             <% end %>
           <% end %>
         </div>
@@ -95,8 +95,8 @@
       <br>
       <h1 class="text-center restaurant-name">Find <i><strong><%= @dish.restaurant.name %></strong></i></h1>
 
-      <div class="map-container">
-        <div style="width:100%; height:393px;" class="map"
+      <div class="map-container" style="margin:0; padding:0;">
+        <div style="width:100%; height:412px; margin:0;" class="map"
             data-controller="mapbox"
             data-mapbox-markers-value="<%= @markers.to_json %>"
             data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
