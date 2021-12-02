@@ -1,3 +1,4 @@
+<%= javascript_pack_tag 'tooltips' %>
  <!-- Hero section -->
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(<%= @restaurant.img_url %>)">
     <h1 id="restaurant-name"><%= @restaurant.name %></h1>
@@ -29,7 +30,7 @@
                     None
                   <% else %>
                     <% dish.allergens.each do |allergen| %>
-                      <img style="width: 24px" src=<%= allergen[0].icon_url %> alt=<%= allergen[0].name %>>
+                      <img style="width: 24px" src=<%= allergen[0].icon_url %> alt=<%= allergen[0].name %> data-toggle="tooltip" data-placement="top" title=<%= allergen[0].name %>>
                     <% end %>
                   <% end %>
               </p>
