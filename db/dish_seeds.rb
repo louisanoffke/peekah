@@ -189,7 +189,7 @@ def build_dishes
     description: "French Fried Potatoes",
     restaurant_id: 9, # Amin
     recipe_id: 21,
-    img_url: "https://www.thespruceeats.com/thmb/IHKuXcx3uUI1IWkM_cnnQdFH-zQ=/3485x2323/filters:fill(auto,1)/how-to-make-homemade-french-fries-2215971-hero-01-02f62a016f3e4aa4b41d0c27539885c3.jpg"
+    img_url: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-french-fries-horizontal-1537551908.jpg"
   )
 
   # -- Recipe for Alex
