@@ -2,7 +2,7 @@ def build_dishes
   puts "starting to create dishes from the recipes"
 
   Dish.create!(
-    price: 25,
+    price: 14,
     is_available: true,
     description: "Gnocchi with Cherry Tomato Garlic and Parmesan",
     restaurant_id: 6, # Raeesa
@@ -60,7 +60,7 @@ def build_dishes
   #   price: 27,
   #   is_available: true,
   #   description: "Whole Sea Bream Baked en Papillote with Lemon, Herbs and Olive Oil",
-  #   restaurant_id: 4,
+  #   restaurant_id: 4, # Recipe for Alex
   #   recipe_id: 7,
   #   img_url: "https://www.find-a-seafood-recipe.com/images/Baked-whole-fish-recipe-250.jpg"
   # )
@@ -70,7 +70,7 @@ def build_dishes
   #   price: 30,
   #   is_available: true,
   #   description: "Pan Fried Dover Sole with a Grainy Mustard Dressing",
-  #   restaurant_id: 4,
+  #   restaurant_id: 4, # Recipe for Alex
   #   recipe_id: 8,
   #   img_url: "https://media-cdn.greatbritishchefs.com/media/wsxffhf2/img70109.jpg?mode=crop&width=768&height=512"
   # )
@@ -85,7 +85,7 @@ def build_dishes
   )
 
   Dish.create!(
-    price: 31,
+    price: 52,
     is_available: true,
     description: "Grilled Veal Chop",
     restaurant_id: 13, # Pepe
@@ -94,7 +94,7 @@ def build_dishes
   )
 
   Dish.create!(
-    price: 31,
+    price: 46,
     is_available: true,
     description: "Grilled Lamb Cutlets with Smoked Aubergine",
     restaurant_id: 3, # Aaron
@@ -121,7 +121,7 @@ def build_dishes
   )
 
   Dish.create!(
-    price: 28,
+    price: 25,
     is_available: true,
     description: "Whole Roast Black Leg Chicken",
     restaurant_id: 10, # Marco
@@ -130,7 +130,7 @@ def build_dishes
   )
 
   Dish.create!(
-    price: 28,
+    price: 16,
     is_available: true,
     description: "Whole Roast Rack of Lamb with Spiced Couscous",
     restaurant_id: 7, # Yilun
@@ -139,7 +139,7 @@ def build_dishes
   )
 
   Dish.create!(
-    price: 28,
+    price: 47,
     is_available: true,
     description: "Rib of Beef",
     restaurant_id: 8, # Giorgio
@@ -166,7 +166,7 @@ def build_dishes
   )
 
   Dish.create!(
-    price: 7,
+    price: 10,
     is_available: true,
     description: "Green Beans",
     restaurant_id: 14, # Marva
@@ -175,7 +175,7 @@ def build_dishes
   )
 
   Dish.create!(
-    price: 7,
+    price: 12,
     is_available: true,
     description: "Baked Gratinated Potatoes",
     restaurant_id: 15, # Issy
@@ -184,7 +184,7 @@ def build_dishes
   )
 
   Dish.create!(
-    price: 7,
+    price: 9,
     is_available: true,
     description: "French Fried Potatoes",
     restaurant_id: 9, # Amin
@@ -203,7 +203,7 @@ def build_dishes
   # )
 
   Dish.create!(
-    price: 6,
+    price: 35,
     is_available: true,
     description: "Roasted Carrot, Caramelized Onion and Candied Walnut",
     restaurant_id: 2, # Nico
