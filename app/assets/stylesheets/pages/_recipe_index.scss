@@ -72,6 +72,18 @@ h3 a:hover {
   margin-bottom: 40px;
 }
 
+@media(max-width: 992px) {
+  .recipes-grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .recipes-grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
 // Container for a dish - default block
 .recipe-card {
   display: flex;
