@@ -48,7 +48,7 @@ def build_allergens
 
   Allergen.create(
     name: "Meat",
-    note: "Beef, Veal, Veal Chops, Chorizo, Lamb, Chicken, Baby Chicken, Rib Eye Steak",
+    note: "Beef, Veal, Veal Chops, Chorizo, Lamb, Chicken, Rib Eye Steak",
     icon_url: "https://cdn-icons-png.flaticon.com/64/3076/3076067.png"
   )
 

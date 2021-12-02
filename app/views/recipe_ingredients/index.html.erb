@@ -1,3 +1,5 @@
+<%= javascript_pack_tag 'select2', 'data-turbolinks-track': 'reload', defer: true %>
+
 <div class="main-form-container">
   <h1>Add Ingredients for <em>"<%= @recipe.name %>"</em></h1>
 
@@ -10,7 +12,7 @@
       <div class="ingredient-form">
         <h4>Please select ingredients to add to your recipe:</h4>
         <%= simple_form_for [ @recipe, @recipe_ingredient ] do |f| %>
-          <%= f.input :ingredient_id, collection: Ingredient.all %>
+          <%= f.input :ingredient_id, collection: Ingredient.all.sort_by(&:name).uniq(&:name), input_html: {class: "drodpwon"} %>
 
           <%= f.input :ingredient_amount, as: :decimal, input_html: { min: '0', step: 'any' }  %>
           <div class="btn-container">

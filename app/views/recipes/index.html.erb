@@ -1,3 +1,5 @@
+<%= javascript_pack_tag 'tooltips' %>
+
 <div class="title-container">
   <h2 class="py-5"> Welcome to p-KA, Chef <%= (current_user.name).capitalize %> </h2>
   <%# <div class="recipe-line"></div> %>
@@ -58,7 +60,7 @@
                     None
                   <% else %>
                     <% recipe.dishes.first.allergens.each do |allergen| %>
-                      <img style="width: 24px" src=<%= allergen[0].icon_url %> alt=<%= allergen[0].name %>>
+                      <img style="width: 24px" src=<%= allergen[0].icon_url %> alt=<%= allergen[0].name %> data-toggle="tooltip" data-placement="top" title=<%= allergen[0].name %>>
                     <% end %>
                   <% end %>
               </p>
