@@ -20,7 +20,7 @@
   <div class="recipes-grid-container">
     <% @unassigned_recipes.each do |recipe| %>
       <div class="recipe-card" data-controller="hidden-form" data-hidden-form-target="expand">
-        <%= link_to(recipe.dishes.first) do %>
+        <%= link_to(recipe) do %>
           <h5><%= recipe.name %></h5>
           <p> <%= recipe.method %></p>
         <% end %>
