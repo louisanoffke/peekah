@@ -25,6 +25,10 @@
   font-weight: 300;
 }
 
+.restaurant-link:hover {
+  text-decoration: underline;
+}
+
 .header-restaurant {
   position: relative;
   bottom: -35px;
@@ -40,8 +44,9 @@
 .left-right-container {
   display: flex;
   justify-content: space-evenly;
-  // border: 2px solid green;
+  border: 2px solid green;
   padding: 0;
+  height: fit-content;
 }
 
 .inner-box-left {
@@ -54,7 +59,7 @@
   background-color: rgb(255,255,255);
   padding-top: 30px;
   box-shadow: 0 0px 10px rgba(0,0,0,0.2);
-  height: 100%;
+  height: inherit;
   // border: 1px solid red;
 }
 
@@ -109,7 +114,7 @@
 }
 
 .inner-box-right {
-  // border: 2px solid black;
+  height: inherit;
   background-color: rgb(255,255,255);
   width: 40%;
   box-shadow: 0 0px 10px rgba(0,0,0,0.2);

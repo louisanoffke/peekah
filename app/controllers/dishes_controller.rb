@@ -43,7 +43,8 @@ class DishesController < ApplicationController
       {
         lat: dish.restaurant.latitude,
         lng: dish.restaurant.longitude,
-        image_url: helpers.asset_url("marker.png")
+        image_url: helpers.asset_url("marker.png"),
+        info_window: render_to_string(partial: "info_window", locals: { dish: dish })
       }
     end
   end
