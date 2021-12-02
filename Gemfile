@@ -38,6 +38,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'devise'
 gem 'faker'
 gem 'pg_search', '~> 2.3.0'
+gem "select2-rails" # for 'add-ingredients' selection of ingredients
 
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
