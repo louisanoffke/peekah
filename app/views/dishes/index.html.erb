@@ -52,7 +52,7 @@
               </p>
               <p>Calories: <%= dish.calories %> kcal</p>
             </div>
-            <h2 class="dish-price"> £<%= dish.price %> </h2>
+            <h2 class="dish-price"> £<%= dish.price.to_i %> </h2>
           </div>
             <%= link_to(dish.restaurant) do %>
               <div class="restaurant-info">
