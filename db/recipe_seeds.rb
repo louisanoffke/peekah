@@ -130,7 +130,7 @@ def build_recipes
   Recipe.create!(
     name: "Salade Verte",
     method: "Mixed Leaf Salad",
-    user_id: 4 # Dish for Alex
+    user_id: 4 # Recipe for Alex
   )
 
   Recipe.create!(
