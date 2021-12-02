@@ -84,14 +84,11 @@
           <% else %>
             <% @dish.allergens.each do |allergen| %>
               <img class="allergen-icon" data-toggle="tooltip" data-placement="top" title=<%= allergen[0].name %> style="height:55px;"src=<%= allergen[0].icon_url %> alt=<%= allergen[0].name %>>
-
             <% end %>
           <% end %>
         </div>
       </div>
     </div>
-
-<%# <p style="line-height:1.5;"> <%= allergen[0].name %>
 
     <%# below is where the sidebar goes: %>
 
