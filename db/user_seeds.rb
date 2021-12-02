@@ -3,7 +3,7 @@ def build_users
 
   User.create!(
     name: "Marie",
-    email: "marieo@pka.ai",
+    email: "marie@pka.ai",
     password: "123456",
     restaurant_id: 1
   )
