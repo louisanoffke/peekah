@@ -18,7 +18,13 @@ class RecipesController < ApplicationController
   end
 
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.where(user: current_user)
+    @assigned_recipes = Recipe.joins(:dishes).where(user: current_user) # Faster results
+    @dishes_recipes = @assigned_recipes.map do |recipe|
+        Dish.joins(:recipe).where(recipe: recipe)
+    end
+    # @assigned_recipes = @recipes.reject { |r| r.dishes.empty? }
+    @unassigned_recipes = @recipes.select { |r| r.dishes.empty? }
   end
 
   def show; end

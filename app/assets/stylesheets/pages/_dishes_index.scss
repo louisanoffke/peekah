@@ -57,10 +57,10 @@
   box-shadow: 0 0 6px rgba(0,0,0,0.25);
 }
 
-.dish-card:hover {
-  background: $accent-g;
-  transition: all .1s ease-in-out 2s;
-}
+// .dish-card:hover {
+//   background: $accent-g;
+//   transition: all .1s ease-in-out 2s;
+// }
 
 .dish-card h2 {
   font-size: 16px;
@@ -135,6 +135,7 @@ a:hover {
 .dish-card:hover .restaurant-info {
   background: $base-bkg-green;
 }
+
 .dish-card .restaurant-info:hover {
   color: $accent-g;
   font-weight: 500;

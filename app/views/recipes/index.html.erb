@@ -1,30 +1,69 @@
 <div class="title-container">
-  <i><h1 class="dashboard-title"> Chef <%= (current_user.name).capitalize %>'s Dashboard </h1></i>
+  <h2 class="py-5"> Welcome to p-KA, Chef <%= (current_user.name).capitalize %> </h2>
+  <%# <div class="recipe-line"></div> %>
+  <ul class="fake-tab">
+    <li>My profile</li>
+    <li id="active-dashb-tab">My recipes</li>
+    <li>My restaurant</li>
+    <li>Sections</li>
+  </ul>
+  <div class="recipe-line"></div>
   <br>
-  <h2><strong>Your Restaurant: </strong><%= link_to "#{current_user.restaurant.name}", restaurant_path(current_user.restaurant), class:"chef-restaurant"%></h2>
 </div>
 
-<div class="recipe-line"></div>
-
-<div class="recipes-container">
-    <% @recipes.each do |recipe| %>
-      <div class="card-container recipe-card" data-controller="hidden-form" data-hidden-form-target="expand">
-        <div class="image-recipe-container">
-          <img src="https://insanelygoodrecipes.com/wp-content/uploads/2020/08/Mexican-Beef-Burritos.png" alt="Burrito" class="recipe-image">
+<div class="recipe-dishes-container">
+  <h3 class="py-4">Under development</h3>
+  <div class="btn-pka-sec mb-4">
+    <%= link_to "Add a new recipe", new_recipe_path %>
+  </div>
+  <!-- recipes in development -->
+  <div class="recipes-grid-container">
+    <% @unassigned_recipes.each do |recipe| %>
+      <div class="recipe-card" data-controller="hidden-form" data-hidden-form-target="expand">
+        <%= link_to(recipe.dishes.first) do %>
+          <h5><%= recipe.name %></h5>
+          <p> <%= recipe.method %></p>
+        <% end %>
+        <div class="recipe-actions">
+          <div class="recipe-form-button btn-pka-2-sec" data-action="click->hidden-form#addDish">Make available</div>
+          <div id="recipe-action-icons">
+            <%= link_to recipe_path(recipe), method: :delete, data: { confirm: "Sure about that?"} do %><i class="far fa-trash-alt btn-pka-2-sec act-recipe-icon"></i><% end %>
+            <%= link_to edit_recipe_path(recipe) do %><i class="far fa-edit btn-pka-2-sec act-recipe-icon"></i><% end %>
+          </div>
         </div>
-        <div class="recipe-content">
-          <div class="recipe-title-container">
-            <p id="recipe-title"><%=link_to "#{recipe.name}", recipe_path(recipe) %></p>
-          </div>
-          <div class="recipe-form-button btn-pka-2" data-action="click->hidden-form#addDish">Make available</div>
-          <div class="dish-form" data-hidden-form-target="unhide" style="display: none;">
-            <%= render partial: "dishes/form", locals: { recipe: recipe, dish: @dish ? @dish : Dish.new } %>
-          </div>
-          <div class="icon-container">
-            <%= link_to recipe_path(recipe), method: :delete, data: { confirm: "Sure about that?"} do %><i class="far fa-trash-alt recipe-icon fa-lg"></i><% end %>
-            <%= link_to edit_recipe_path(recipe) do %><i class="far fa-edit recipe-icon fa-lg"></i><% end %>
-          </div>
+        <div class="dish-form" data-hidden-form-target="unhide" style="display: none;">
+          <%= render partial: "dishes/form", locals: { recipe: recipe, dish: @dish ? @dish : Dish.new } %>
         </div>
       </div>
     <% end %>
+  </div>
+
+  <h3 class="py-4">Added to <i class="fas fa-map-marker-alt"></i> <%= link_to "#{current_user.restaurant.name}", restaurant_path(current_user.restaurant) %> </h3>
+  <div>
+  <!-- recipes that were converted to dishes at the restaurant -->
+   <% @assigned_recipes.each do |recipe| %>
+     <%= link_to(recipe.dishes.first) do %>
+          <div class="dish-menu-card mx-5">
+            <div class="dish-img" style="background-image: url(<%= recipe.dishes.first.img_url %>)">
+            </div>
+            <div class="dish-infos">
+              <h5> <%= recipe.name %></h5>
+              <p><%= recipe.dishes.first.description %></p>
+              <p>Allergens:
+                  <% if recipe.dishes.first.allergens.empty? %>
+                    None
+                  <% else %>
+                    <% recipe.dishes.first.allergens.each do |allergen| %>
+                      <img style="width: 24px" src=<%= allergen[0].icon_url %> alt=<%= allergen[0].name %>>
+                    <% end %>
+                  <% end %>
+              </p>
+            </div>
+            <div class="price">
+            <h5>£<%= recipe.dishes.first.price.to_i%></h5>
+            </div>
+          </div>
+        <% end %>
+  <% end %>
+  </div>
 </div>
