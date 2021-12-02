@@ -17,15 +17,15 @@ def build_users
 
   User.create!(
     name: "Aaron",
-    email: "jeremy@pka.ai",
+    email: "aaron@pka.ai",
     password: "123456",
     restaurant_id: 3
   )
 
   User.create!(
-    name: "Alexander",
+    name: "Alex",
     email: "alex@pka.ai",
-    password: "123456",
+    password: "Alex12345",
     restaurant_id: 4
   )
 
