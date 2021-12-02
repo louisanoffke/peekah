@@ -72,6 +72,18 @@ h3 a:hover {
   margin-bottom: 40px;
 }
 
+@media(max-width: 992px) {
+  .recipes-grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .recipes-grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
 // Container for a dish - default block
 .recipe-card {
   display: flex;
@@ -100,17 +112,17 @@ h3 a:hover {
 }
 
 .recipe-form-button {
-  width: 80%;
+  width: 78%;
   text-align: center;
   height: 40px;
   padding-top: 6px;
 }
 
-.recipe-action-icons {
-  // align-items: flex-end;
-  margin-right: 16px;
-  padding-top: 20px;
-}
+// .recipe-action-icons {
+//   // align-items: flex-end;
+//   margin-right: 16px;
+//   padding-top: 20px;
+// }
 
 .act-recipe-icon {
   color: $accent-g;
@@ -123,6 +135,7 @@ h3 a:hover {
   display: inline-block;
   vertical-align: middle;
   padding-top: 8px;
+  margin-left: 4px;
 }
 
 .recipe-form-button {

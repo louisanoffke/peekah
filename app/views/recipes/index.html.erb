@@ -26,10 +26,10 @@
         <% end %>
         <div class="recipe-actions">
           <div class="recipe-form-button btn-pka-2-sec" data-action="click->hidden-form#addDish">Make available</div>
-          <div id="recipe-action-icons">
+          <%# <div id="recipe-action-icons"> %>
             <%= link_to recipe_path(recipe), method: :delete, data: { confirm: "Sure about that?"} do %><i class="far fa-trash-alt btn-pka-2-sec act-recipe-icon"></i><% end %>
             <%= link_to edit_recipe_path(recipe) do %><i class="far fa-edit btn-pka-2-sec act-recipe-icon"></i><% end %>
-          </div>
+          <%# </div> %>
         </div>
         <div class="dish-form" data-hidden-form-target="unhide" style="display: none;">
           <%= render partial: "dishes/form", locals: { recipe: recipe, dish: @dish ? @dish : Dish.new } %>
@@ -44,7 +44,11 @@
    <% @assigned_recipes.each do |recipe| %>
      <%= link_to(recipe.dishes.first) do %>
           <div class="dish-menu-card mx-5">
-            <div class="dish-img" style="background-image: url(<%= recipe.dishes.first.img_url %>)">
+          <% if recipe.dishes.first.photo.attached?  %>
+              <div class="dish-img-dashboard" style="background-image: url('<%= cl_image_path recipe.dishes.first.photo.key %>')">
+            <% else %>
+              <div class="dish-img-dashboard" style="background-image: url(<%= recipe.dishes.first.img_url %>)">
+            <% end %>
             </div>
             <div class="dish-infos">
               <h5> <%= recipe.name %></h5>

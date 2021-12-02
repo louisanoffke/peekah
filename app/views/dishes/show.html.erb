@@ -1,5 +1,9 @@
 <div class="outer-box">
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('<%=@dish.img_url%>');">
+   <% if @dish.photo.attached?  %>
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('<%= cl_image_path @dish.photo.key %>')">
+  <% else %>
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('<%=@dish.img_url%>');">
+  <% end %>
     <div class="text-center dish-description">
       <br>
       <h1 class="text-center dish-title"><%= @dish.recipe.name %></h1>
