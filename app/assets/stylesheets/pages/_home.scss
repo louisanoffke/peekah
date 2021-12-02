@@ -31,6 +31,7 @@
   color: #0b5a2c;
   border: solid 2px #06442058;
   border-radius: 15px;
+  transition: border 300ms;
 
   &:hover {
     border: solid 2px $accent-g-h;
