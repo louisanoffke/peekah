@@ -44,7 +44,7 @@
 .left-right-container {
   display: flex;
   justify-content: space-evenly;
-  border: 2px solid green;
+  // border: 2px solid green;
   padding: 0;
   height: fit-content;
 }
@@ -60,6 +60,7 @@
   padding-top: 30px;
   box-shadow: 0 0px 10px rgba(0,0,0,0.2);
   height: inherit;
+  padding-left: 10px;
   // border: 1px solid red;
 }
 
