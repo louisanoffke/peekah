@@ -49,12 +49,17 @@
   .dishes-grid-cards {
     grid-template-columns: 1fr;
   }
+
+  .dishes-card {
+    height: 294px;
+  }
 }
 
 // Container for a dish - default block
 .dish-card {
   overflow: hidden;
   box-shadow: 0 0 6px rgba(0,0,0,0.25);
+  height: 258px;
 }
 
 // .dish-card:hover {
