@@ -39,13 +39,14 @@ def build_recipes
 
   Recipe.create!(
     name: "Daurade au Citron",
-    method: "Whole Sea Bream Baked en Papillote with Lemon, Herbs and Olive Oil",
+    method: "Preheat the oven to 200°C fan. Clean the fish, sprinkle with salt and stuff with a few sliced lemons and herbs. Add to the pan and layer a few thinly slices of lemon on top, bake for ten minutes at 200°C then twenty minutes at 180°C.",
     user_id: 1
   )
 
   Recipe.create!(
     name: "Sôle Poêlée au Grain de Moutarde",
-    method: "Pan Fried Dover Sole with a Grainy Mustard Dressing",
+    method: "Trim away the frills from either side of the fish. Clean the inside, wash the fish, then pat dry with kitchen paper, then flour it. Place the floured fish in the pan, skinned side down. Shake the pan a little, then cook the fish, undisturbed, for about 4 mins until golden brown.
+",
     user_id: 1
   )
 
@@ -129,7 +130,7 @@ def build_recipes
 
   Recipe.create!(
     name: "Salade Verte",
-    method: "Mixed Leaf Salad",
+    method: "Quarter, core, and tear radicchio and Boston lettuce into bite-size pieces; trim tough stems from spinach. Rinse leaves and dry well. Toss together in a large bowl and dress.",
     user_id: 3
   )
 
