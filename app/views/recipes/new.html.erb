@@ -1,17 +1,21 @@
-<div class="recipe-title"> Add a recipe </div>
+<div class="recipe-title-container">
+  <h1>Add a recipe </h1>
+</div>
 
-<div class="recipe-form">
-  <%= simple_form_for(@recipe) do |f| %>
-  <div class="recipe-name">
+<div class="recipe-line"></div>
+
+<div class="inline-new-recipe-container">
+
+  <div class="new-recipe-form">
+    <h4>Please add the name and method of your new <em>p</em> -KA recipe:</h4>
+    <%= simple_form_for(@recipe) do |f| %>
     <%= f.input :name %>
+    <div class="recipe-method">
+      <%= f.input :method, as: :text, input_html: { rows: 8 } %>
+    </div>
+    <%= f.submit 'Start Adding Ingredients', class:"btn-pka submit-btn" %>
+    <% end %>
   </div>
 
-  <div class="recipe-method">
-    <%= f.input :method, as: :text, class: "text-box", input_html: { rows: 8 } %>
-  </div>
-
-  <div class="submit-btn">
-    <%= f.submit 'Start Adding Ingredients', class: "btn-pka btn-submit" %>
-  </div>
-  <% end %>
+  <%= image_tag "the-chef.svg", class:"recipe-form-image" %>
 </div>

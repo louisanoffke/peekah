@@ -25,6 +25,10 @@
   font-weight: 300;
 }
 
+.restaurant-link:hover {
+  text-decoration: underline;
+}
+
 .header-restaurant {
   position: relative;
   bottom: -35px;
@@ -40,19 +44,24 @@
 .left-right-container {
   display: flex;
   justify-content: space-evenly;
- // border: 2px solid red;
+  // border: 2px solid green;
+  padding: 0;
+  height: fit-content;
 }
 
 .inner-box-left {
   display: flex;
   flex-direction: column;
-  // border: 3px solid gold;
   width: 55%;
-  margin-top: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
   justify-content: space-between;
-  height: 100%;
   background-color: rgb(255,255,255);
   padding-top: 30px;
+  box-shadow: 0 0px 10px rgba(0,0,0,0.2);
+  height: inherit;
+  padding-left: 10px;
+  // border: 1px solid red;
 }
 
 .nutritional-info {
@@ -84,7 +93,7 @@
 
 .ingredients-container {
   padding-left: 15px;
-  margin-top: 25px;
+  margin-top: 45px;
 }
 
 .ingredients-list {
@@ -95,7 +104,8 @@
 
 .allergen-container {
   padding-left: 18px;
-  margin-top: 90px;
+  margin-top: 80px;
+  margin-bottom: 10px;
 }
 
 .all-allergens {
@@ -105,9 +115,10 @@
 }
 
 .inner-box-right {
-  // border: 2px solid greenyellow;
+  height: inherit;
   background-color: rgb(255,255,255);
   width: 40%;
+  box-shadow: 0 0px 10px rgba(0,0,0,0.2);
 }
 
 .restaurant-name {
@@ -124,7 +135,7 @@
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 17px;
-  margin-top: 20px;
+  margin-top: 35px;
 }
 
 .find-us {

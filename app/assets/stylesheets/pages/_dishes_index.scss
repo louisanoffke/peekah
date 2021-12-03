@@ -1,4 +1,4 @@
-// Filters container - flex
+ // Filters container - flex
 .filter-container {
   display: flex;
   justify-content: space-around;
@@ -38,6 +38,17 @@
   grid-gap: 16px;
 }
 
+@media(max-width: 1600px) {
+  .dishes-grid-cards {
+    grid-template-columns: repeat(2, 425px);
+  }
+}
+
+@media(max-width: 1366px) {
+  .dishes-grid-cards {
+    grid-template-columns: repeat(2, 350px);
+  }
+}
 
 @media(max-width: 992px) {
   .dishes-grid-cards {

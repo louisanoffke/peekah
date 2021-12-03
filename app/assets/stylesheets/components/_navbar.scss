@@ -14,6 +14,11 @@
   object-fit: cover;
   cursor: pointer;
   box-shadow: 0 6px 16px rgba(97, 54, 54, 0.12);
+  margin-left: 5px;
+
+  &:hover {
+    border: solid 3px $accent-g;
+  }
 }
 
 .dropdown-menu {
@@ -25,8 +30,8 @@
 }
 
 .dropdown-item {
-  font-family: Montserrat !important;
-  color: $accent-g !important;
+  font-family: Montserrat;
+  color: $accent-g;
 }
 
 .dropdown-line {
@@ -36,8 +41,8 @@
 }
 
 .sign-in {
-  margin: 0 !important;
-  padding-bottom: 0 !important;
+  margin: 0;
+  padding-bottom: 0;
   cursor: default;
 }
 
@@ -60,11 +65,20 @@
 
 .nav-link {
   font-family: Montserrat;
-  color: $accent-g !important;
+  color: $accent-g;
   font-size: 19px;
   margin-right: 5px;
+  font-weight: 500;
+
+  &:hover {
+    color: $accent-g-h;
+    font-weight: 600;
+    padding-right: 0.4rem !important;
+  }
 }
 
 .no-cursor:hover {
-  cursor: default !important;
+  cursor: default;
+  font-weight: 500;
+  color: $accent-g;
 }
