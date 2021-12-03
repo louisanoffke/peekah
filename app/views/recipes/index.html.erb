@@ -14,7 +14,7 @@
 </div>
 
 <div class="recipe-dishes-container">
-  <h3 class="py-4">Under development</h3>
+  <h3 class="py-4">Recipes under development</h3>
   <div class="btn-pka-sec mb-4">
     <%= link_to "Add a new recipe", new_recipe_path %>
   </div>
@@ -40,12 +40,12 @@
     <% end %>
   </div>
 
-  <h3 class="py-4">Added to <i class="fas fa-map-marker-alt"></i> <%= link_to "#{current_user.restaurant.name}", restaurant_path(current_user.restaurant) %> </h3>
+  <h3 class="py-4">Recipes added to <i class="fas fa-map-marker-alt"></i> <%= link_to "#{current_user.restaurant.name}", restaurant_path(current_user.restaurant) %> </h3>
   <div>
   <!-- recipes that were converted to dishes at the restaurant -->
    <% @assigned_recipes.each do |recipe| %>
      <%= link_to(recipe.dishes.first) do %>
-          <div class="dish-menu-card">
+          <div class="dish-menu-card-dashboard">
           <% if recipe.dishes.first.photo.attached?  %>
               <div class="dish-img-dashboard" style="background-image: url('<%= cl_image_path recipe.dishes.first.photo.key %>')">
             <% else %>
@@ -66,7 +66,7 @@
               </p>
             </div>
             <div class="price">
-            <h5>£<%= recipe.dishes.first.price.to_i%></h5>
+              <h5>£ <%= recipe.dishes.first.price.to_i%></h5>
             </div>
           </div>
         <% end %>
