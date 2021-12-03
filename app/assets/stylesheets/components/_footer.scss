@@ -8,7 +8,7 @@ body {
 }
 
 .footer {
-  background: linear-gradient(0deg, rgba(200,244,240,1) 4%, rgba(222,243,240,1) 22%, rgba(237,242,239,1) 43%, rgba(250,242,239,1) 60%, rgba(250,242,239,1) 84%, rgba(250,242,239,1) 97%);
+  background: linear-gradient(0deg, rgba(200,244,240,0.9318102240896359) 1%, rgba(222,243,240,1) 10%, rgba(226,243,240,1) 19%, rgba(237,242,239,1) 30%, rgba(250,242,239,1) 58%, rgba(250,242,239,1) 71%, rgba(250,242,239,1) 100%);
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -57,14 +57,15 @@ body {
   width: 300px;
   background: white;
   border: 1px solid grey;
-  margin-right: 15px;
+  border-right: transparent;
   padding: 15px;
   display: flex;
   align-items: center;
 }
 
-.subscription-btn {
+.subscription-btn  {
   cursor: pointer;
+  border-radius: 0;
 }
 
 .inline-container {
@@ -105,7 +106,7 @@ body {
 }
 
 .box:nth-child(1):hover {
-  background: #99154E;
+  background: #c32aa3;
   box-shadow: 0 0 10px #b315917c;
 }
 
@@ -140,11 +141,11 @@ body {
 }
 
 .instagram {
-  background: #99154E;
+  background: #c32aa3;
 }
 
 .box:hover .instagram {
-  color: #99154E;
+  color: #c32aa3;
 }
 
 .facebook {
