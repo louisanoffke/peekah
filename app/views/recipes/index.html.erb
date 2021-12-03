@@ -57,7 +57,7 @@
               <p style="height:48px"><%= recipe.dishes.first.description %></p>
               <p>Allergens:
                   <% if recipe.dishes.first.allergens.empty? %>
-                    None
+                    <i>None</i>
                   <% else %>
                     <% recipe.dishes.first.allergens.each do |allergen| %>
                       <img style="width: 24px" src=<%= allergen[0].icon_url %> alt=<%= allergen[0].name %> data-toggle="tooltip" data-placement="top" title=<%= allergen[0].name %>>

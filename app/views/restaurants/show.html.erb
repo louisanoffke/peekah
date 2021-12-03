@@ -27,7 +27,7 @@
               <p style="height:48px"><%= dish.description %></p>
               <p>Allergens:
                   <% if dish.allergens.empty? %>
-                    None
+                    <i>None</i>
                   <% else %>
                     <% dish.allergens.each do |allergen| %>
                       <img style="width: 24px" src=<%= allergen[0].icon_url %> alt=<%= allergen[0].name %> data-toggle="tooltip" data-placement="top" title=<%= allergen[0].name %>>
