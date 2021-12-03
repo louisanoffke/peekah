@@ -52,7 +52,7 @@ def build_dishes
     description: "Salt Baked Fillet of Line Caught Sea Bass with Artichokes and Tomatoes",
     restaurant_id: 4, # Dish for Alex
     recipe_id: 6,
-    img_url: "https://media-cdn.tripadvisor.com/media/photo-s/16/6d/a2/77/loup-de-mer-prepare-en.jpg"
+    img_url: "https://media-cdn.greatbritishchefs.com/media/aa5flxaz/img19193.jpg"
   )
 
   # -- Recipe for Alex
