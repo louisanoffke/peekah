@@ -24,7 +24,7 @@
             </div>
             <div class="dish-infos">
               <h5> <%= dish.recipe.name %></h5>
-              <p><%= dish.description %></p>
+              <p style="height:48px"><%= dish.description %></p>
               <p>Allergens:
                   <% if dish.allergens.empty? %>
                     None
@@ -36,7 +36,7 @@
               </p>
             </div>
             <div class="price">
-            <h5>£<%= dish.price.to_i%></h5>
+            <h5>£ <%= dish.price.to_i%></h5>
             </div>
           </div>
         <% end %>

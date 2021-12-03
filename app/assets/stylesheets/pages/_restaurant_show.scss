@@ -96,6 +96,7 @@ $card-height-dashboard: 200px;
   height: $card-height;
   width: 300px;
   border-radius: 1px;
+  width: 35%;
 }
 
 .dish-img-dashboard {
@@ -108,7 +109,12 @@ $card-height-dashboard: 200px;
 
 .dish-infos {
   padding: 30px;
-  width: 70%;
+  width: 65%;
+
+  h5 {
+    font-weight:600;
+    color: $accent-r;
+  }
 }
 
 .dish-infos-dashboard {
@@ -125,8 +131,8 @@ $card-height-dashboard: 200px;
   position: absolute;
   top: 10px;
   right: 10px;
-  margin: 10px;
-  padding: 10px;
+  margin-right: 10px;
+  padding: 4px;
   font-weight: 600;
 }
 
