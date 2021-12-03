@@ -59,3 +59,22 @@
     // background-color: $accent-g-r;
   }
 }
+
+.log-in-button {
+  width: 100%;
+}
+
+.log-in-text {
+  color: $accent-r;
+  text-align: center;
+
+}
+
+.log-in-actions {
+  padding: 10px 0px;
+
+  &:hover {
+    color: $accent-r;
+    font-weight: 400;
+  }
+}
