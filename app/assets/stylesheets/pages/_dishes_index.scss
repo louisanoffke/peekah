@@ -126,7 +126,7 @@ a:hover {
 // }
 
 // Container for dish info - flex
-.dish-card .dish-infos {
+.dish-card .dish-infos-pka {
   background: white;
   padding: 16px 16px 0px;
   display: flex;
@@ -135,7 +135,7 @@ a:hover {
   position: relative;
 }
 
-.dish-card:hover .dish-infos {
+.dish-card:hover .dish-infos-pka {
   background: $base-bkg-green;
 }
 
