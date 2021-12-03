@@ -14,7 +14,7 @@
 </div>
 
 <div class="recipe-dishes-container">
-  <h3 class="py-4"><i class="fas fa-caret-right"></i> Recipes under development</h3>
+  <h3 class="py-4">Recipes under development</h3>
   <div class="btn-pka-sec mb-4">
     <%= link_to "Add a new recipe", new_recipe_path %>
   </div>
@@ -24,14 +24,18 @@
       <div class="recipe-card" data-controller="hidden-form" data-hidden-form-target="expand">
         <%= link_to(recipe) do %>
           <h5><%= recipe.name %></h5>
-          <p> <%= truncate(recipe.method, length: 150) %></p>
+          <p class="recipe-method-text"><%= truncate(recipe.method, length: 165) %></p>
         <% end %>
-        <div class="recipe-actions">
+        <div class="recipe-actions" data-hidden-form-target="acthide">
           <div class="recipe-form-button btn-pka-2-sec" data-action="click->hidden-form#addDish">Make available</div>
-          <%# <div id="recipe-action-icons"> %>
-            <%= link_to recipe_path(recipe), method: :delete, data: { confirm: "Sure about that?"} do %><i class="far fa-trash-alt btn-pka-2-sec act-recipe-icon"></i><% end %>
-            <%= link_to edit_recipe_path(recipe) do %><i class="far fa-edit btn-pka-2-sec act-recipe-icon"></i><% end %>
-          <%# </div> %>
+        <%# <div id="recipe-action-icons"> %>
+          <%= link_to recipe_path(recipe), method: :delete, data: { confirm: "Sure about that?"} do %><i class="far fa-trash-alt btn-pka-2-sec act-recipe-icon"></i><% end %>
+          <%= link_to edit_recipe_path(recipe) do %><i class="far fa-edit btn-pka-2-sec act-recipe-icon"></i><% end %>
+        <%# </div> %>
+        </div>
+        <div id="form-actions" data-hidden-form-target="x" style="display: none;">
+          <p class="title-for-form"> Add your dish information below:</p>
+          <div class="cancel-button-form" data-action="click->hidden-form#undo"><i class="far fa-times-circle"></i></div>
         </div>
         <div class="dish-form" data-hidden-form-target="unhide" style="display: none;">
           <%= render partial: "dishes/form", locals: { recipe: recipe, dish: @dish ? @dish : Dish.new } %>
@@ -39,8 +43,8 @@
       </div>
     <% end %>
   </div>
-
-  <h3 class="py-4 mt-4"><i class="fas fa-caret-right"></i> Recipes added to <i class="fas fa-map-marker-alt"></i> <%= link_to "#{current_user.restaurant.name}", restaurant_path(current_user.restaurant) %> </h3>
+  <div class="under-dev-line"></div>
+  <h3 class="py-4 mt-4">Recipes added to <i class="fas fa-map-marker-alt"></i> <%= link_to "#{current_user.restaurant.name}", restaurant_path(current_user.restaurant) %> </h3>
   <div>
   <!-- recipes that were converted to dishes at the restaurant -->
    <% @assigned_recipes.each do |recipe| %>

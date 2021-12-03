@@ -1,11 +1,9 @@
 <%= simple_form_for([recipe, dish]) do |f| %>
   <%= f.hidden_field :restaurant_id, value: current_user.restaurant_id %>
   <%= f.input :description, as: :text %>
-  <%= f.input :is_available, as: :select %>
+  <%= f.input :is_available, as: :radio_buttons %>
   <%= f.input :photo, as: :file %>
   <%= f.input :price, as: :numeric, input_html: {min: '0', step: 'any', placeholder: '£££'} %>
-  <br>
-  <br>
   <% if @dish %>
     <p style="color:red;">
     <% @dish.errors.full_messages.each do |message|%>
@@ -13,7 +11,7 @@
     <% end %>
     </p>
   <% end %>
-  <%= f.submit 'Submit', class: "btn-pka recipe-submit" %>
+  <%= f.submit 'Add to my restaurant', class: "btn-pka recipe-submit" %>
 <% end %>
 
 

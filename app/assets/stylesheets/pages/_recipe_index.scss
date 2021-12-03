@@ -76,9 +76,17 @@ h3 a:hover {
   margin-bottom: 40px;
 }
 
-@media(max-width: 992px) {
+@media(max-width: 1366px) {
   .recipes-grid-container {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .recipe-card {
+    height: 216px;
+  }
+
+  .recipe-card-expanded {
+    height: 690px;
   }
 }
 
@@ -89,7 +97,7 @@ h3 a:hover {
 }
 
 // Container for a dish - default block
-.recipe-card {
+.recipe-card, .recipe-card-expanded {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -107,6 +115,16 @@ h3 a:hover {
     font-weight: 600;
   }
 }
+
+
+.recipe-card {
+  height: 192px;
+}
+
+// .recipe-card-expanded {
+//   height: 10px;
+// }
+
 
 .recipe-actions {
   display: flex;
@@ -147,6 +165,54 @@ h3 a:hover {
   border-radius: 5px;
 }
 
+// .dish-form {
+//   margin-top: 10px;
+// }
+
+.recipe-submit {
+  width: 100%;
+}
+
+#form-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  // margin-bottom: -10px;
+  // margin-top:-10px;
+}
+
+
+.cancel-button-form {
+  font-size: 20px;
+  // align-items: flex-end;
+  color: #0644202f;
+  cursor: pointer;
+
+  &:hover {
+    color: $accent-g-h;
+    font-weight: 500;
+  }
+}
+
+
+.title-for-form {
+  font-weight: 500;
+  padding-top: 12px;
+  color: $accent-g;
+}
+
+.recipe-method-text {
+  height: 72px;
+  padding-bottom: 4px;
+}
+
+.under-dev-line {
+  border-bottom: solid 2px rgba(0, 0, 0, 0.11);
+  width: 100%;
+  margin: auto;
+  padding-top: 22px;
+}
 
 
 // .recipe-icon {
@@ -221,9 +287,7 @@ h3 a:hover {
 // }
 
 
-// .dish-form {
-//   margin-top: 20px;
-// }
+
 
 // .recipe-submit {
 //   width: 92%;
