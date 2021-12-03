@@ -24,7 +24,7 @@
       <div class="recipe-card" data-controller="hidden-form" data-hidden-form-target="expand">
         <%= link_to(recipe) do %>
           <h5><%= recipe.name %></h5>
-          <p> <%= recipe.method %></p>
+          <p> <%= truncate(recipe.method, length: 150) %></p>
         <% end %>
         <div class="recipe-actions">
           <div class="recipe-form-button btn-pka-2-sec" data-action="click->hidden-form#addDish">Make available</div>
