@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-pka">
   <%= link_to "/", class: "pka-logo py-1" do %>
-    <%= image_tag "logo.png", alt: "p-KA", width: 100, class:"m-2" %>
+    <%= image_tag "logo.png", alt: "p-KA", width: 100, class:"m-2", onmouseover: "this.src='#{asset_path('logo-h.png')}'", onmouseout: "this.src='#{asset_path('logo.png')}'" %>
   <% end %>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
