@@ -38,7 +38,7 @@
           <% end %>
               <%= simple_format(dish.recipe.name, {}, wrapper_tag: "div") %>
             </div>
-          <div class="dish-infos">
+          <div class="dish-infos-pka">
             <div>
             <p>
               <% if dish.allergens == [] %>
@@ -52,7 +52,7 @@
               </p>
               <p>Calories: <%= dish.calories %> kcal</p>
             </div>
-            <h2 class="dish-price"> £<%= dish.price.to_i %> </h2>
+            <h2> £<%= dish.price.to_i %> </h2>
           </div>
             <%= link_to(dish.restaurant) do %>
               <div class="restaurant-info">
