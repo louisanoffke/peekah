@@ -45,7 +45,7 @@
   <!-- recipes that were converted to dishes at the restaurant -->
    <% @assigned_recipes.each do |recipe| %>
      <%= link_to(recipe.dishes.first) do %>
-          <div class="dish-menu-card mx-5">
+          <div class="dish-menu-card">
           <% if recipe.dishes.first.photo.attached?  %>
               <div class="dish-img-dashboard" style="background-image: url('<%= cl_image_path recipe.dishes.first.photo.key %>')">
             <% else %>

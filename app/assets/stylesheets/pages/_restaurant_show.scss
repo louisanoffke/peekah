@@ -64,6 +64,8 @@
   align-items: center;
   margin-bottom: 40px;
   position: relative;
+  // justify-content: space-between;
+  margin: 5px 40px 40px;
 }
 
 
@@ -79,8 +81,9 @@
 //   margin-top: 8px;
 // }
 
-.dish-menu-card .dish-infos {
+.dish-infos {
   padding: 30px;
+  width: 70%;
 }
 
 .dish-img {
@@ -102,11 +105,16 @@
   // text-shadow: 0 0 15px rgba(0,0,0,0.7);
 }
 
+.dish-infos-dashboard {
+  padding: 30px;
+  width: 30%;
+}
+
 .dish-img-dashboard {
   background-size: cover;
   background-position: center;
   height: 160px;
-  width: 600px;
+  width: 70%;
   border-radius: 1px;
 }
 
@@ -145,3 +153,27 @@ a:hover {
   text-decoration: none;
   color: inherit;
 }
+
+// @media(max-width: 1600px) {
+//   .dish-img-dashboard {
+//       width: 600px;
+//   }
+// }
+
+// @media(max-width: 1366px) {
+//   .dish-img-dashboard {
+//       width: 480px;
+//   }
+// }
+
+// @media(max-width: 992px) {
+//   .dish-img-dashboard {
+//       width: 400px;
+//   }
+// }
+
+// @media(max-width: 768px) {
+//   .dish-img-dashboard {
+//       width: 300px;
+//   }
+// }
