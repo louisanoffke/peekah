@@ -16,7 +16,9 @@
   box-shadow: 0 6px 16px rgba(97, 54, 54, 0.12);
   margin-left: 5px;
 
-
+  &:hover {
+    border: solid 3px $accent-g;
+  }
 }
 
 .dropdown-menu {
