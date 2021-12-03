@@ -25,8 +25,8 @@
 }
 
 .dropdown-item {
-  font-family: Montserrat !important;
-  color: $accent-g !important;
+  font-family: Montserrat;
+  color: $accent-g;
 }
 
 .dropdown-line {
@@ -36,8 +36,8 @@
 }
 
 .sign-in {
-  margin: 0 !important;
-  padding-bottom: 0 !important;
+  margin: 0;
+  padding-bottom: 0;
   cursor: default;
 }
 
@@ -60,11 +60,11 @@
 
 .nav-link {
   font-family: Montserrat;
-  color: $accent-g !important;
+  color: $accent-g;
   font-size: 19px;
   margin-right: 5px;
 }
 
 .no-cursor:hover {
-  cursor: default !important;
+  cursor: default;
 }
