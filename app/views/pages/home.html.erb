@@ -1,22 +1,24 @@
 <div class="main-container">
   <div class="text-container">
 
-    <div class="slogan-container">
-      <h3 id="pka-slogan"><strong><em>p</em>-KA</strong> - lets you take a peek at any restaurant menu, or dish... in detail!</h3>
+    <div class="image-slogan-container">
+      <div class="image-container">
+        <img id="homepage-image" src="https://cdn-prod.medicalnewstoday.com/content/images/articles/322/322303/selection-of-chinese-food-that-may-cause-chinese-restaurant-syndrome.jpg" alt="Chinese food">
+      </div>
 
-      <div class="search-form">
-        <%= link_to dishes_path, class: 'btn-pka-sec homepage-btn',
-        data: { turbolinks: false } do %>
-          <i class="fas fa-search"></i>
-          <span>Start Peeking</span>
-        <% end %>
+      <div class="slogan-container">
+        <h3 id="pka-slogan"><strong><em>p</em>-KA</strong> - lets you take a peek at any restaurant menu, or dish... in detail!</h3>
+
+        <div class="search-form">
+          <%= link_to dishes_path, class: 'btn-pka-sec homepage-btn',
+          data: { turbolinks: false } do %>
+            <i class="fas fa-search"></i>
+            <span>Start Peeking</span>
+          <% end %>
+        </div>
       </div>
     </div>
 
     <div class="empty-band"></div>
-  </div>
-
-  <div class="image-container">
-    <img id="homepage-image" src="https://cdn-prod.medicalnewstoday.com/content/images/articles/322/322303/selection-of-chinese-food-that-may-cause-chinese-restaurant-syndrome.jpg" alt="Chinese food">
   </div>
 </div>
