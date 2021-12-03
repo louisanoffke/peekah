@@ -14,6 +14,9 @@
   object-fit: cover;
   cursor: pointer;
   box-shadow: 0 6px 16px rgba(97, 54, 54, 0.12);
+  margin-left: 5px;
+
+
 }
 
 .dropdown-menu {
@@ -68,7 +71,7 @@
   &:hover {
     color: $accent-g-h;
     font-weight: 600;
-    padding-right: 0px;
+    padding-right: 0.4rem !important;
   }
 }
 
