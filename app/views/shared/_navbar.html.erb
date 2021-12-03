@@ -1,6 +1,6 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-pka">
+<div class="navbar navbar-expand-sm navbar-pka">
   <%= link_to "/", class: "pka-logo py-1" do %>
-    <%= image_tag "logo.png", alt: "p-KA", width: 100 %>
+    <%= image_tag "logo.png", alt: "p-KA", width: 100, class:"m-2" %>
   <% end %>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -9,9 +9,9 @@
         <li class="nav-item active">
           <%= link_to "Dashboard", recipes_path, class: "nav-link" %>
         </li>
-        <li class="nav-link">|</li>
+        <li class="nav-link no-cursor">|</li>
         <li class="nav-item">
-          <%= link_to "Add a Recipe", new_recipe_path, class: "nav-link" %>
+          <%= link_to "My restaurant", restaurant_path(current_user.restaurant), class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "https://robbreport.com/wp-content/uploads/2018/04/gordon-ramsay-1-e1523056498302.jpg?", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -21,8 +21,8 @@
               <p class="sign-in"><strong><%= (current_user.name).capitalize %></strong></p>
             </div>
             <div class="dropdown-item dropdown-line bg-transparent"></div>
-            <%= link_to "Your Dashboard", recipes_path, class: "dropdown-item" %>
-            <%= link_to "Your Restaurant", restaurant_path(current_user.restaurant), class: "dropdown-item" %>
+            <%= link_to "Dashboard", recipes_path, class: "dropdown-item" %>
+            <%= link_to "My Restaurant", restaurant_path(current_user.restaurant), class: "dropdown-item" %>
             <%= link_to "Add a Recipe", new_recipe_path, class: "dropdown-item" %>
             <div class="dropdown-item dropdown-line bg-transparent"></div>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
@@ -30,7 +30,7 @@
         </li>
       <% else %>
         <li class="nav-item active">
-          <%= link_to "Home", "/", class: "nav-link" %>
+          <%= link_to "Take a Peek", dishes_path, class: "nav-link" %>
         </li>
         <li class="nav-link no-cursor">|</li>
         <li class="nav-item">

@@ -63,8 +63,17 @@
   color: $accent-g;
   font-size: 19px;
   margin-right: 5px;
+  font-weight: 500;
+
+  &:hover {
+    color: $accent-g-h;
+    font-weight: 600;
+    padding-right: 0px;
+  }
 }
 
 .no-cursor:hover {
   cursor: default;
+  font-weight: 500;
+  color: $accent-g;
 }
