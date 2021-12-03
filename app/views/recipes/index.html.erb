@@ -1,7 +1,7 @@
 <%= javascript_pack_tag 'tooltips' %>
 
 <div class="title-container">
-  <h2 class="py-5"> Welcome to p-KA, Chef <%= (current_user.name).capitalize %> </h2>
+  <h2> Welcome to p-KA, Chef <%= (current_user.name).capitalize %> </h2>
   <%# <div class="recipe-line"></div> %>
   <ul class="fake-tab">
     <li>My profile</li>
@@ -14,7 +14,7 @@
 </div>
 
 <div class="recipe-dishes-container">
-  <h3 class="py-4">Recipes under development</h3>
+  <h3 class="py-4"><i class="fas fa-caret-right"></i> Recipes under development</h3>
   <div class="btn-pka-sec mb-4">
     <%= link_to "Add a new recipe", new_recipe_path %>
   </div>
@@ -40,7 +40,7 @@
     <% end %>
   </div>
 
-  <h3 class="py-4">Recipes added to <i class="fas fa-map-marker-alt"></i> <%= link_to "#{current_user.restaurant.name}", restaurant_path(current_user.restaurant) %> </h3>
+  <h3 class="py-4 mt-4"><i class="fas fa-caret-right"></i> Recipes added to <i class="fas fa-map-marker-alt"></i> <%= link_to "#{current_user.restaurant.name}", restaurant_path(current_user.restaurant) %> </h3>
   <div>
   <!-- recipes that were converted to dishes at the restaurant -->
    <% @assigned_recipes.each do |recipe| %>
@@ -54,7 +54,7 @@
             </div>
             <div class="dish-infos-dashboard">
               <h5> <%= recipe.name %></h5>
-              <p><%= recipe.dishes.first.description %></p>
+              <p style="height:48px"><%= recipe.dishes.first.description %></p>
               <p>Allergens:
                   <% if recipe.dishes.first.allergens.empty? %>
                     None
@@ -65,7 +65,7 @@
                   <% end %>
               </p>
             </div>
-            <div class="price">
+            <div class="price p-dashboard">
               <h5>£ <%= recipe.dishes.first.price.to_i%></h5>
             </div>
           </div>
