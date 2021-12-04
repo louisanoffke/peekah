@@ -1,10 +1,10 @@
 .main-form-container {
   margin-top: 50px;
-  text-align: center;
 }
 
 .main-form-container h1 {
   font-weight: 700;
+  text-align: center;
 }
 
 .inline-recipe-container {
@@ -33,11 +33,11 @@
   padding: 40px;
   margin: 30px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  text-align: initial;
 }
 
 .ingredient-form h4 {
   margin-bottom: 20px;
+  color: $accent-g;
 }
 
 .optional {
