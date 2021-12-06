@@ -1,1 +1,1 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+Rails app created as the final project for the Web Dev Le Wagon bootcamp London #752. Hosted at www.pka.ai (via Heroku)
