@@ -1,1 +1,1 @@
-Rails app created as the final project for the Web Dev Le Wagon bootcamp London #752. Hosted at www.pka.ai (via Heroku)
+Rails app created as the final project for the Web Dev Le Wagon bootcamp London #752. This work is protected by copyright and all requests to re-use any or all parts of this repository are to be directed to  LouNovo Ltd. at louno@lounovo.com
